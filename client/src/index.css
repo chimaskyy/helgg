@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.sticky-nav {
+     animation: sticky-nav 300ms;
+}
+    
+@keyframes sticky-nav {
+    0% {
+        transform: translateY(-6em)
+    }
+
+    100% {
+        transform: translateY(0)
+    }
+}
+
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px); /* Adjust this value for more or less bounce */
+  }
+}
+
+.animate-bounce {
+  animation: bounce 1s infinite; /* Adjust duration for speed */
+}

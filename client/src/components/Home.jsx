@@ -1,0 +1,287 @@
+import helgg from "../assets/helgg1.jpeg";
+import loot from "../assets/loot.gif";
+import ContentSection from "../layouts/imageSection";
+import mockup from "../assets/mockup.png";
+import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import Sponsors from "../layouts/sponsors";
+import Testimonial from "../layouts/Testimonial";
+import Widget from "../layouts/NewsSection";
+import AppDownload from "../layouts/AppDownload";
+import DownloadIcon from "@mui/icons-material/Download";
+
+const sectionStyle = {
+  backgroundImage: `url(${helgg})`,
+};
+
+const overlayClass = "absolute inset-0 bg-black opacity-50 rounded-lg";
+const buttonClass = "py-2 px-4 rounded-lg hover:bg-opacity-80";
+const sectionClass =
+  "m-12 flex flex-col items-center p-8 bg-background text-foreground";
+const titleClass = "text-3xl text-gray-800 font-bold mb-4";
+const textClass = "text-lg text-gray-400 text-center max-w-2xl";
+const dividerClass = "flex justify-center mt-6";
+const dotClass = "w-2 h-2 bg-primary rounded-full mr-2";
+const lineClass = "w-6 h-2 bg-accent";
+
+const Home = () => {
+  return (
+    <>
+      <section
+        className="m-6 rounded shadow-lg relative bg-cover bg-center bg-no-repeat h-screen"
+        style={sectionStyle}
+      >
+        <div className={overlayClass}></div>
+        <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white animate-fadeIn">
+          <h1 className="text-6xl flex justify-center text-white font-bold md:text-6xl lg:text-9xl mb-4 opacity-0 animate-slideIn delay-300">
+            Embrace the Future of Smart Transport
+          </h1>
+          <p className="text-2xl max-w-2xl text-gray-400 mb-8 m-4 opacity-0 animate-slideIn delay-300">
+            Transforming the African transportation landscape one electric
+            vehicle at a time.
+          </p>
+          <div className="flex space-x-4">
+            <a href="#">
+              <button
+                type="submit"
+                className="flex text-sm text-gray-900 justify-center gap-2 items-center mx-auto shadow-xl text-lg bg-green-200 backdrop-blur-md lg:font-semibold isolation-auto border-gray-50 before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-green-500 hover:text-gray-50 before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 relative z-10 px-4 py-2 overflow-hidden border-2 rounded-full group opacity-0 animate-slideIn delay-500"
+              >
+                Download App
+                <DownloadIcon style={{ color: "gray" }} />
+              </button>
+            </a>
+            <a href="https://www.youtube.com/watch?v=h8lzv_fyRDQ">
+              <button
+                type="submit"
+                className="text-sm mt-4 text-white opacity-0 animate-slideIn delay-700"
+              >
+                How to Ride
+                <ChevronRightIcon />
+              </button>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section className={sectionClass}>
+        <h2 className={titleClass}>Who we are</h2>
+        <p className={textClass}>
+          We are a micro-mobility company creating a shared network of electric
+          vehicles that will redefine and transform the African transport
+          industry.
+        </p>
+        <div className={dividerClass}>
+          <div className={dotClass}></div>
+          <div className={lineClass}></div>
+        </div>
+        <div className="self-end">
+          <figure
+            id="lqd-draw-shape-01d0f95"
+            className="lqd-draw-shape"
+            data-lqd-draw-shape="true"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="124"
+              height="70"
+              viewBox="0 0 124 70"
+              fill="none"
+            >
+              <g clipPath="url(#clip0_447_11012)">
+                <path
+                  d="M3 24.5L22 4.5L27.5 28L57.5 3L59 44.5L86.5 7C90.5 27.3333 98.5 67.9 98.5 67.5C98.5 67.1 113.5 29.3333 121 10.5"
+                  stroke="url(#paint0_linear_447_11012)"
+                  strokeWidth="5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                ></path>
+              </g>
+              <defs>
+                <linearGradient
+                  id="paint0_linear_447_11012"
+                  x1="0"
+                  y1="23.5"
+                  x2="123.5"
+                  y2="15.5"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stopColor="#ACEDAB"></stop>
+                  <stop offset="1" stopColor="#171E26"></stop>
+                </linearGradient>
+                <clipPath id="clip0_447_11012">
+                  <rect width="124" height="70" fill="white"></rect>
+                </clipPath>
+              </defs>
+            </svg>
+          </figure>
+        </div>
+      </section>
+
+      <section className="video-section">
+        <div className="video-container">
+          {/* Second Image: Video Thumbnail */}
+          <img
+            className="video-thumbnail"
+            src="https://helgg.com/wp-content/uploads/2023/01/IMG_4675.png"
+            alt="Video Thumbnail"
+          />
+
+          {/* Play Button */}
+          <a
+            href="https://youtu.be/K--K8rjro40"
+            target="_blank"
+            rel="nofollow"
+            className="play-button"
+          >
+            <i className="icon-ion-ios-play"></i>
+          </a>
+
+          {/* First Image: Logo positioned at the bottom right */}
+          <img
+            className="logo-overlay"
+            src="https://helgg.com/wp-content/uploads/2022/07/helgg-logo-white.png"
+            alt="Helgg Logo"
+          />
+        </div>
+      </section>
+      <section>
+        <div className="flex flex-col lg:flex-row items-center p-6 bg-background text-foreground">
+          <div className="w-full lg:w-1/2 flex justify-center lg:justify-start">
+            <img src={loot} alt="" width={300} height={200} />
+          </div>
+          <div className="w-full lg:w-1/2 lg:text-left mt-4 lg:mt-0">
+            <h1 className="text-2xl md:text-5xl lg:text-left lg:text-left lg:text-5xl text-gray-800 font-bold max-w-2xl">
+              Experience seamless transportation on campus riding e-scooters and
+              bicycles
+            </h1>
+            <p className="mt-6 text-center lg:text-left text-xl">
+              Unlock a vehicle, ride with friends, pay for trips, and create
+              moments together.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div className="flex flex-col lg:flex-row items-center p-6 bg-background text-foreground">
+          <div className="w-full lg:w-1/2 lg:text-left mt-4 lg:mt-0">
+            <h1 className="text-2xl md:text-5xl text-center lg:text-left lg:text-5xl text-gray-800 font-bold max-w-2xl">
+              Zero Carbon Emission
+            </h1>
+            <p className="mt-6 text-center lg:text-left text-xl">
+              Reduce your carbon footprint by opting for eco-friendly and
+              sustainable means of transportation
+            </p>
+          </div>
+          <div className=" lg:w-1/2 flex justify-center lg:justify-start">
+            <img src={loot} alt="" width={300} height={200} className="" />
+          </div>
+        </div>
+      </section>
+      <section className="m-8">
+        <h1 className="text-3xl mb-6  md:text-5xl text-center lg:text-left lg:text-5xl text-gray-800 font-bold max-w-2xl">
+          A seamless interconnected electric vehhicle ecosystem
+        </h1>
+        <div className="flex flex-col md:flex-row p-6">
+          <div className="md:w-3/4 flex flex-col md:flex-row items-center">
+            <div>
+              <h1 className="text-2xl font-bold text-gray-800">
+                Electric Bicyle
+              </h1>
+              <p className="mt-4 text-xl text-gray-600">
+                Rideshare e-bicycles with an electric motor and rechargeable
+                battery, providing assistance while pedaling, with a range of
+                35–65 Km.
+              </p>
+              <button className="mt-4 mb-12 text-sm text-green-500">
+                Learn More
+                <ChevronRightIcon />
+              </button>
+            </div>
+            <div className="shadow-5xl rounded-[100px] p-0 m-0">
+              <img
+                src={mockup}
+                alt=""
+                width={900}
+                height={900}
+                className="p-0 m-0"
+              />
+            </div>
+          </div>
+          <div className="md:w-1/2 md:pl-12 mt-24">
+            <div>
+              <h1 className="text-2xl text-gray-800 font-bold text-primary">
+                Electric Cars
+              </h1>
+              <p className="mt-4 text-xl text-gray-600">
+                Book zero-emission vehicles powered by electricity, with a range
+                of around 100 Km on a single charge.
+              </p>
+              <button className="mt-4 text-sm text-green-500">
+                Learn More
+                <ChevronRightIcon />
+              </button>
+            </div>
+            <div className="mt-24">
+              <h1 className="text-gray-800 text-2xl font-bold text-primary">
+                Electric Scooters
+              </h1>
+              <p className="mt-4 text-xl text-gray-600">
+                Rideshare e-scooters with a rechargeable battery with a range of
+                30–59 Km on full charge. Offering convenience for urban
+                commutes.
+              </p>
+              <button className="mt-4 text-sm text-green-500">
+                Learn More
+                <ChevronRightIcon />
+              </button>
+            </div>
+          </div>
+        </div>
+        <div className="text-center">
+          <button className="text-center bg-green-300 rounded-full p-4 mt-24 mb-8">
+            Explore the Ev Store
+          </button>
+        </div>
+      </section>
+      <section className="flex flex-col lg:flex-row items-center p-6 bg-background text-foreground">
+        <div className="w-full lg:w-1/2 lg:text-left mt-4 lg:mt-0">
+          <h1 className="text-4xl mb-8 text-center md:text-5xl lg:text-left lg:text-left lg:text-5xl text-gray-800 font-bold max-w-2xl">
+            Unlock the world of electric biking with Helgg.
+          </h1>
+          <p className="mt-6 text-center lg:text-left text-2xl">
+            With the Helgg Mobile app , you have access to a network of
+            e-bicycles around you. Simply Scan a QR code, ride and pay for trips
+            with the Helgg Virtual wallet.
+          </p>
+        </div>
+        <div className=" lg:w-1/2 flex justify-center lg:justify-start">
+          <img src={loot} alt="" width={300} height={200} className="" />
+        </div>
+      </section>
+      <section>
+        <div className="flex flex-col md:flex-col lg:flex-row items-center p-6 bg-background text-foreground">
+          {/* Text section first */}
+          <div className="w-full lg:w-1/2 lg:text-left mt-4 lg:mt-0">
+            <h1 className="text-4xl md:text-5xl text-center lg:text-left lg:text-5xl text-gray-800 font-bold max-w-2xl">
+              Get to where you want to be at an affordable rate
+            </h1>
+            <p className="mt-12 text-center lg:text-left text-xl">
+              Save money on cabs and buses by ride sharing our electric cars at
+              affordable rates.
+            </p>
+          </div>
+
+          {/* Image section second */}
+          <div className="w-full md:w-full lg:w-1/2 flex justify-center lg:justify-start mt-4 md:mt-4 lg:mt-0 order-2 lg:order-1">
+            <img src={loot} alt="" width={300} height={200} />
+          </div>
+        </div>
+      </section>
+      <ContentSection />
+      <Sponsors />
+      <Testimonial />
+      <Widget />
+      <AppDownload />
+    </>
+  );
+};
+
+export default Home;
