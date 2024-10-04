@@ -1,9 +1,11 @@
 import { useEffect, useRef, useState } from "react";
 import Logo from "../assets/helgg-logo-mint-and-cobalt.png";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import Sidemenu from "./SideMenu";
 
 function Header() {
   const [state, setState] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
   const navRef = useRef();
 
   const navigation = [
@@ -27,37 +29,40 @@ function Header() {
     };
   }, [state]);
 
+  const toggleMenuHandler = () => {
+    setMenuOpen(!menuOpen); // Toggling the menu open/close
+  };
+
   return (
     <nav ref={navRef} className="bg-white w-full top-0 z-20 shadow-lg">
       <div className="items-center px-4 max-w-screen-xl mx-auto md:px-8 lg:flex lg:justify-between">
         {/* Logo on the left */}
         <div className="flex items-center justify-between py-3 lg:py-4 lg:block lg:w-1/3">
           <Link to="/">
-            <img src={Logo} width={150} height={90} alt="Helgg UI logo" />
+            <img src={Logo} width={100} height={80} alt="Helgg UI logo" />
           </Link>
-
-          {/* Button and Toggle Icon - aligned on the same row with the logo on medium screens */}
           <div className="flex items-center lg:hidden">
             <a
               href="https://play.google.com/store/apps/details?id=com.helggscooters.android&pli=1"
               target="_blank"
               aria-label="Download button"
               rel="noreferrer noopener"
-              className="mr-32"
+              className="mr-16"
             >
               <button
                 aria-label="Download Button"
-                className="group relative px-4 sm:px-6 py-2 sm:py-4 text-xs sm:text-sm rounded-full shadow-xl transition-transform transform bg-green-200 border-2 border-white hover:scale-105 hover:border-green-600 hover:shadow-green-500/50 hover:shadow-3xl focus:outline-none"
+                className="group relative px-4 sm:px-6 py-2 sm:py-4 text-xs sm:text-sm rounded-full shadow-xl transition-transform transform bg-customGreen border-2 border-white hover:scale-105 hover:border-green-600 hover:shadow-green-500/50 hover:shadow-3xl focus:outline-none"
                 id="downloadButton"
               >
                 <span>Get the App</span>
               </button>
             </a>
+
             <button
               className="text-gray-700 outline-none p-2 rounded-md focus:border-gray-400 focus:border"
-              onClick={() => setState(!state)}
+              onClick={toggleMenuHandler}
             >
-              {state ? (
+              {menuOpen ? (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-6 w-6"
@@ -92,7 +97,7 @@ function Header() {
           </div>
         </div>
 
-        {/* Navigation Links and Button */}
+        {/* Navigation Links */}
         <div
           className={`flex-1 justify-between lg:flex lg:items-center ${
             state
@@ -100,16 +105,25 @@ function Header() {
               : "hidden lg:flex lg:h-auto"
           }`}
         >
-          {/* Links in the middle on large screens */}
           <ul className="text-lg text-extrabold justify-center items-center space-y-8 lg:flex lg:space-x-6 lg:space-y-0 lg:flex-1">
             {navigation.map((item, idx) => (
-              <li key={idx} className="text-gray-800 hover:text-gray-1000">
-                <Link to={item.path}>{item.title}</Link>
+              <li
+                key={idx}
+                className="text-gray-600 font-bold hover:text-gray-1000 hover:bg-gray-100 p-2 rounded-lg"
+              >
+                <NavLink
+                  to={item.path}
+                  className={({ isActive }) =>
+                    isActive ? "bg-gray-100 text-gray-900 p-1 rounded-lg" : ""
+                  }
+                >
+                  {item.title}
+                </NavLink>
               </li>
             ))}
           </ul>
 
-          {/* Button - hidden on medium screens, right-aligned on large screens */}
+          {/* Button - hidden on medium screens */}
           <div
             className={`hidden lg:block lg:justify-end ${
               state ? "lg:hidden" : ""
@@ -132,6 +146,9 @@ function Header() {
           </div>
         </div>
       </div>
+
+      {/* Side Menu */}
+      <Sidemenu menuOpen={menuOpen} toggleMenuHandler={toggleMenuHandler} />
     </nav>
   );
 }

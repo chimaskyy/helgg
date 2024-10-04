@@ -10,7 +10,7 @@ const ContentSection = () => {
   const textDiv =
     "m-6 absolute inset-0 z-10 flex flex-col items-start justify-end text-white sm:pl-8 sm:pb-8  lg:pl-6 lg:pb-6";
   return (
-    <section className="p-12 m-2">
+    <section className="p-12 m-2 lg:m-24">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
         {/* First Column */}
         <div className={`group ${fullDiv}`}>

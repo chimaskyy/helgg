@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { } from "react";
 import Header from "./layouts/Header";
 import Footer from "./layouts/Footer";
 import {
@@ -6,7 +6,8 @@ import {
   Route,
   Routes,
 } from "react-router-dom";
-import Home from "./components/Home";
+import Home from "./pages/Home";
+import About from "./pages/About"
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
       </Routes>
       <Footer />
     </Router>

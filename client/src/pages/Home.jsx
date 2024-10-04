@@ -1,5 +1,7 @@
 import helgg from "../assets/helgg1.jpeg";
 import loot from "../assets/loot.gif";
+import Logo from "../assets/helgg-logo-mint-and-cobalt.png";
+import map from "../assets/map.png";
 import ContentSection from "../layouts/imageSection";
 import mockup from "../assets/mockup.png";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
@@ -8,26 +10,30 @@ import Testimonial from "../layouts/Testimonial";
 import Widget from "../layouts/NewsSection";
 import AppDownload from "../layouts/AppDownload";
 import DownloadIcon from "@mui/icons-material/Download";
+import ReactPlayer from "react-player";
+import PlayCircleIcon from "@mui/icons-material/PlayCircle";
+import { useState } from "react";
 
 const sectionStyle = {
   backgroundImage: `url(${helgg})`,
 };
 
 const overlayClass = "absolute inset-0 bg-black opacity-50 rounded-lg";
-const buttonClass = "py-2 px-4 rounded-lg hover:bg-opacity-80";
 const sectionClass =
   "m-12 flex flex-col items-center p-8 bg-background text-foreground";
 const titleClass = "text-3xl text-gray-800 font-bold mb-4";
-const textClass = "text-lg text-gray-400 text-center max-w-2xl";
+const textClass = "text-lg text-gray-500 text-center max-w-2xl";
 const dividerClass = "flex justify-center mt-6";
 const dotClass = "w-2 h-2 bg-primary rounded-full mr-2";
 const lineClass = "w-6 h-2 bg-accent";
 
 const Home = () => {
+  const [isPlaying, setIsPlaying] = useState(false);
+
   return (
     <>
       <section
-        className="m-6 rounded shadow-lg relative bg-cover bg-center bg-no-repeat h-screen"
+        className="m-6 lg:m-24 rounded shadow-lg relative bg-cover bg-center bg-no-repeat h-screen"
         style={sectionStyle}
       >
         <div className={overlayClass}></div>
@@ -35,7 +41,7 @@ const Home = () => {
           <h1 className="text-6xl flex justify-center text-white font-bold md:text-6xl lg:text-9xl mb-4 opacity-0 animate-slideIn delay-300">
             Embrace the Future of Smart Transport
           </h1>
-          <p className="text-2xl max-w-2xl text-gray-400 mb-8 m-4 opacity-0 animate-slideIn delay-300">
+          <p className="text-2xl max-w-2xl text-gray-400 mb-8 m-4 opacity-0 animate-slideIn delay-100">
             Transforming the African transportation landscape one electric
             vehicle at a time.
           </p>
@@ -43,7 +49,7 @@ const Home = () => {
             <a href="#">
               <button
                 type="submit"
-                className="flex text-sm text-gray-900 justify-center gap-2 items-center mx-auto shadow-xl text-lg bg-green-200 backdrop-blur-md lg:font-semibold isolation-auto border-gray-50 before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-green-500 hover:text-gray-50 before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 relative z-10 px-4 py-2 overflow-hidden border-2 rounded-full group opacity-0 animate-slideIn delay-500"
+                className="flex text-sm text-gray-900 justify-center gap-2 items-center mx-auto shadow-xl text-lg bg-customGreen backdrop-blur-md lg:font-semibold isolation-auto border-gray-50 before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-green-500 hover:text-gray-50 before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 relative z-10 px-4 py-2 overflow-hidden border-2 rounded-full group opacity-0 animate-slideIn delay-500"
               >
                 Download App
                 <DownloadIcon style={{ color: "gray" }} />
@@ -115,34 +121,43 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="video-section">
-        <div className="video-container">
-          {/* Second Image: Video Thumbnail */}
-          <img
-            className="video-thumbnail"
-            src="https://helgg.com/wp-content/uploads/2023/01/IMG_4675.png"
-            alt="Video Thumbnail"
-          />
-
-          {/* Play Button */}
-          <a
-            href="https://youtu.be/K--K8rjro40"
-            target="_blank"
-            rel="nofollow"
-            className="play-button"
-          >
-            <i className="icon-ion-ios-play"></i>
-          </a>
-
-          {/* First Image: Logo positioned at the bottom right */}
-          <img
-            className="logo-overlay"
-            src="https://helgg.com/wp-content/uploads/2022/07/helgg-logo-white.png"
-            alt="Helgg Logo"
-          />
+      <section className="m-6 lg:m-32 pb-24">
+        <div
+          className="relative w-full h-[22.5rem]"
+          onClick={() => setIsPlaying((prev) => !prev)}
+        >
+          {!isPlaying ? (
+            <>
+              <img
+                src={
+                  "https://helgg.com/wp-content/uploads/2023/01/IMG_4675.png"
+                }
+                alt="Video Thumbnail"
+                className="absolute top-0 left-0 h-[22.5rem] lg:h-[32.5rem] w-full object-cover cursor-pointer rounded-[70px]"
+              />
+              <div className="lg:mt-24 bg-customGreen w-200 h-100 rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                <PlayCircleIcon
+                  style={{ fontSize: 100, color: "black" }}
+                  className="cursor-pointer animate-pulse"
+                />
+              </div>
+            </>
+          ) : (
+            <ReactPlayer
+              url={
+                "https://www.youtube.com/embed/K--K8rjro40?autoplay=1&mute=1&loop=1&playlist=K--K8rjro40"
+              }
+              playing={isPlaying}
+              controls
+              width="100%"
+              height="100%"
+              className="absolute top-0 left-0 rounded-[80px]"
+            />
+          )}
         </div>
       </section>
-      <section>
+
+      <section className="lg:m-24 pt-12">
         <div className="flex flex-col lg:flex-row items-center p-6 bg-background text-foreground">
           <div className="w-full lg:w-1/2 flex justify-center lg:justify-start">
             <img src={loot} alt="" width={300} height={200} />
@@ -152,37 +167,38 @@ const Home = () => {
               Experience seamless transportation on campus riding e-scooters and
               bicycles
             </h1>
-            <p className="mt-6 text-center lg:text-left text-xl">
-              Unlock a vehicle, ride with friends, pay for trips, and create
+            <p className="text-gray-900  mt-6 text-center lg:text-left text-2xl">
+              Unlock a vehicle, ride with friends, pay for trips, and create{" "}
+              <br />
               moments together.
             </p>
           </div>
         </div>
       </section>
-      <section>
+      <section className="lg:m-24">
         <div className="flex flex-col lg:flex-row items-center p-6 bg-background text-foreground">
+          <div className=" lg:w-1/2 flex justify-center lg:justify-start">
+            <img src={loot} alt="" width={300} height={200} className="" />
+          </div>
           <div className="w-full lg:w-1/2 lg:text-left mt-4 lg:mt-0">
-            <h1 className="text-2xl md:text-5xl text-center lg:text-left lg:text-5xl text-gray-800 font-bold max-w-2xl">
+            <h1 className="text-xl md:text-5xl text-center lg:text-left lg:text-5xl text-gray-800 font-bold max-w-2xl">
               Zero Carbon Emission
             </h1>
-            <p className="mt-6 text-center lg:text-left text-xl">
+            <p className="mt-6 mb-12 text-center lg:text-left text-xl">
               Reduce your carbon footprint by opting for eco-friendly and
               sustainable means of transportation
             </p>
           </div>
-          <div className=" lg:w-1/2 flex justify-center lg:justify-start">
-            <img src={loot} alt="" width={300} height={200} className="" />
-          </div>
         </div>
       </section>
-      <section className="m-8">
-        <h1 className="text-3xl mb-6  md:text-5xl text-center lg:text-left lg:text-5xl text-gray-800 font-bold max-w-2xl">
+      <section className="lg:m-24">
+        <h1 className="text-3xl mb-6 md:text-5xl text-center lg:text-left lg:text-5xl text-gray-800 font-bold max-w-2xl">
           A seamless interconnected electric vehhicle ecosystem
         </h1>
         <div className="flex flex-col md:flex-row p-6">
           <div className="md:w-3/4 flex flex-col md:flex-row items-center">
             <div>
-              <h1 className="text-2xl font-bold text-gray-800">
+              <h1 className="mt-8 text-2xl font-bold text-gray-800">
                 Electric Bicyle
               </h1>
               <p className="mt-4 text-xl text-gray-600">
@@ -190,18 +206,24 @@ const Home = () => {
                 battery, providing assistance while pedaling, with a range of
                 35–65 Km.
               </p>
-              <button className="mt-4 mb-12 text-sm text-green-500">
+              <button className="mt-4 mb-12 text-sm text-customGreen">
                 Learn More
                 <ChevronRightIcon />
               </button>
             </div>
-            <div className="shadow-5xl rounded-[100px] p-0 m-0">
+            <div className="relative shadow-5xl rounded-[80px] p-0 m-0">
               <img
                 src={mockup}
-                alt=""
+                alt="phone mockup"
                 width={900}
                 height={900}
                 className="p-0 m-0"
+              />
+              <img
+                src={map}
+                alt="map"
+                className="absolute rounded-[20px] top-0 left-0 w-[85%] h-[90%] object-cover"
+                style={{ top: "4%", left: "5%", bottom: "5%" }}
               />
             </div>
           </div>
@@ -214,7 +236,7 @@ const Home = () => {
                 Book zero-emission vehicles powered by electricity, with a range
                 of around 100 Km on a single charge.
               </p>
-              <button className="mt-4 text-sm text-green-500">
+              <button className="mt-4 text-sm text-customGreen">
                 Learn More
                 <ChevronRightIcon />
               </button>
@@ -228,7 +250,7 @@ const Home = () => {
                 30–59 Km on full charge. Offering convenience for urban
                 commutes.
               </p>
-              <button className="mt-4 text-sm text-green-500">
+              <button className="mt-4 text-sm text-customGreen">
                 Learn More
                 <ChevronRightIcon />
               </button>
@@ -236,12 +258,12 @@ const Home = () => {
           </div>
         </div>
         <div className="text-center">
-          <button className="text-center bg-green-300 rounded-full p-4 mt-24 mb-8">
+          <button className="text-center bg-customGreen rounded-full p-4 mt-24 mb-8">
             Explore the Ev Store
           </button>
         </div>
       </section>
-      <section className="flex flex-col lg:flex-row items-center p-6 bg-background text-foreground">
+      <section className="lg:m-24 flex flex-col lg:flex-row items-center p-6 bg-background text-foreground">
         <div className="w-full lg:w-1/2 lg:text-left mt-4 lg:mt-0">
           <h1 className="text-4xl mb-8 text-center md:text-5xl lg:text-left lg:text-left lg:text-5xl text-gray-800 font-bold max-w-2xl">
             Unlock the world of electric biking with Helgg.
@@ -256,7 +278,7 @@ const Home = () => {
           <img src={loot} alt="" width={300} height={200} className="" />
         </div>
       </section>
-      <section>
+      <section className="lg:m-24">
         <div className="flex flex-col md:flex-col lg:flex-row items-center p-6 bg-background text-foreground">
           {/* Text section first */}
           <div className="w-full lg:w-1/2 lg:text-left mt-4 lg:mt-0">

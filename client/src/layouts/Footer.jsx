@@ -3,6 +3,9 @@ import YouTubeIcon from "@mui/icons-material/YouTube";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import Logo from "../assets/helgg-logo-mint-and-cobalt.png";
+import WysiwygIcon from "@mui/icons-material/Wysiwyg";
+import VerifiedUserTwoToneIcon from "@mui/icons-material/VerifiedUserTwoTone";
+import LiveHelpTwoToneIcon from "@mui/icons-material/LiveHelpTwoTone";
 
 const footerClasses = "bg-gray-900 text-gray-300 p-6";
 const headingClasses = "font-semibold text-gray-400";
@@ -114,7 +117,7 @@ const SupportLinks = () => {
 const CommunitySection = () => {
   return (
     <div className="lg:col-span-1 col-span-1 lg:row-auto mt-6 lg:mt-0">
-      <div className="h-[16em] w-[24em] border-2 border-[rgba(75,30,133,0.5)] rounded-[1.5em] bg-gradient-to-br from-green-400 to-g-200 text-white font-nunito p-[1em] flex justify-center items-left flex-col gap-[0.75em] backdrop-blur-[12px]">
+      <div className="h-[16em] w-[20em] border-2 border-[rgba(75,30,133,0.5)] rounded-[1.5em] bg-gradient-to-br from-green-400 to-g-200 text-white font-nunito p-[1em] flex items-left flex-col gap-[0.75em] backdrop-blur-[12px]">
         <div>
           <h4 className="text-[1.5em] font-medium">Join our EV community 🚀</h4>
           <p className="mt-2 text-[1em]">
@@ -147,7 +150,7 @@ const CommunitySection = () => {
 const ExtraLink = () => {
   return (
     <>
-      <div className="mt-12 space-x-24 lg:mt-0 w-full flex flex-col lg:justify-center lg:flex-row items-center">
+      <div className="mt-12 gap-12 space-x-18 lg:mt-0 w-full flex flex-col  lg:flex-row items-center">
         {/* Logo */}
         <div className="flex justify-center  w-full lg:w-auto mb-4 lg:mb-0">
           <img src={Logo} alt="Logo" width={100} height={90} />
@@ -155,29 +158,28 @@ const ExtraLink = () => {
 
         {/* Navigation Links */}
         <div className="flex mt-6">
-          <ul className="flex space-x-6">
+          <ul className="flex space-x-12">
             <li>
               <a href="" className="hover:text-gray-500">
+                <WysiwygIcon style={{ fontSize: 20 }} />
                 Blog
               </a>
             </li>
             <li>
               <a href="" className="hover:text-gray-500">
-                Language
-              </a>
-            </li>
-            <li>
-              <a href="" className="hover:text-gray-500">
+                <VerifiedUserTwoToneIcon style={{ fontSize: 20 }} />
                 Privacy Policy
               </a>
             </li>
             <li>
               <a href="" className="hover:text-gray-500">
-                User Agreement
+                <VerifiedUserTwoToneIcon style={{ fontSize: 20 }} />
+                Agreement
               </a>
             </li>
             <li>
               <a href="" className="hover:text-gray-500">
+                <LiveHelpTwoToneIcon style={{ fontSize: 20 }} />
                 FAQ
               </a>
             </li>
@@ -185,25 +187,25 @@ const ExtraLink = () => {
         </div>
       </div>
       <div>
-        <ul className="flex justify-center space-x-6 mt-8">
+        <ul className="flex justify-center space-x-12 mt-12 mb-12">
           <li>
             <a href="" className="hover:text-gray-500">
-              <InstagramIcon style={{ fontSize: 40 }} />
+              <InstagramIcon style={{ fontSize: 30 }} />
             </a>
           </li>
           <li>
             <a href="" className="hover:text-gray-500">
-              <TwitterIcon style={{ fontSize: 40 }} />
+              <TwitterIcon style={{ fontSize: 30 }} />
             </a>
           </li>
           <li>
             <a href="" className="hover:text-gray-500">
-              <LinkedInIcon style={{ fontSize: 40 }} />
+              <LinkedInIcon style={{ fontSize: 30 }} />
             </a>
           </li>
           <li>
             <a href="" className="hover:text-gray-500">
-              <YouTubeIcon style={{ fontSize: 40 }} />
+              <YouTubeIcon style={{ fontSize: 30 }} />
             </a>
           </li>
         </ul>

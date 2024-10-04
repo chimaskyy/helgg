@@ -3,24 +3,32 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      colors: {
+        customGreen: "rgb(173, 237, 171)",
+        customBlue: "rgb(26, 115, 232)",
+      },
       boxShadow: {
         "5xl": "0 20px 50px rgba(0, 0, 0, 0.7)",
       },
-       animation: {
-        fadeIn: 'fadeIn 1s ease-in-out forwards',
-        slideIn: 'slideIn 1s ease-in-out forwards',
+      animation: {
+        fadeIn: "fadeIn 1s ease-in-out forwards",
+        slideIn: "slideIn 1s ease-in-out forwards",
+        "spin-slow": "spin 3s linear infinite",
       },
       keyframes: {
         fadeIn: {
-          '0%': { opacity: '0' },
-          '100%': { opacity: '1' },
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
         },
         slideIn: {
-          '0%': { opacity: '0', transform: 'translateY(20px)' },
-          '100%': { opacity: '1', transform: 'translateY(0)' },
+          "0%": { opacity: "0", transform: "translateY(20px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
         },
+      },
+      letterSpacing: {
+        widest: ".8em",
+      },
     },
   },
-},
   plugins: [],
 };
