@@ -1,5 +1,6 @@
 import helgg from "../assets/helgg1.jpeg";
 import loot from "../assets/loot.gif";
+import banner6 from "../assets/banner6.jpg";
 import Logo from "../assets/helgg-logo-mint-and-cobalt.png";
 import map from "../assets/map.png";
 import ContentSection from "../layouts/imageSection";
@@ -12,13 +13,13 @@ import AppDownload from "../layouts/AppDownload";
 import DownloadIcon from "@mui/icons-material/Download";
 import ReactPlayer from "react-player";
 import PlayCircleIcon from "@mui/icons-material/PlayCircle";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const sectionStyle = {
-  backgroundImage: `url(${helgg})`,
+  backgroundImage: `url(${banner6})`,
 };
 
-const overlayClass = "absolute inset-0 bg-black opacity-60 rounded-lg";
+const overlayClass = "absolute inset-0 bg-black opacity-70";
 const sectionClass =
   "m-12 flex flex-col items-center p-8 bg-background text-foreground";
 const titleClass = "font-roboto text-3xl text-gray-800 font-bold mb-4";
@@ -27,17 +28,39 @@ const textClass = "font-roboto text-lg text-gray-500 text-center max-w-2xl";
 const Home = () => {
   const [isPlaying, setIsPlaying] = useState(false);
 
+  const bannerTexts = [
+    "We are Helgg",
+    "A whole new way to travel",
+    "Cruise round the campus with ease",
+    "Unlock the world of electric biking",
+    "Embrace the Future of Smart Transport",
+  ];
+  const [bannerIndex, setBannerIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setBannerIndex((prev) => (prev + 1) % bannerTexts.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, [bannerTexts.length]);
+
   return (
     <>
       <section
-        className="w-full relative bg-cover bg-center bg-no-repeat h-screen"
+        className="w-full relative bg-cover bg-center object-cover bg-no-repeat h-[93vh]"
         style={sectionStyle}
       >
         <div className={overlayClass}></div>
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white animate-fadeIn">
           <h1 className="font-roboto text-7xl flex justify-center text-white font-bold md:text-6xl lg:text-9xl mb-4 opacity-0 animate-slideIn delay-300">
-            We are{"  "} <span className="text-customGreen"> Helgg</span>
-            {/* Embrace the Future of Smart Transport */}
+            {bannerTexts[bannerIndex].includes("Helgg") ? (
+              <>
+                {bannerTexts[bannerIndex].split("Helgg")[0]}{" "}
+                <span className="text-customGreen"> Helgg</span>{" "}
+              </>
+            ) : (
+              bannerTexts[bannerIndex]
+            )}
           </h1>
           <p className="font-roboto text-3xl max-w-2xl text-gray-500 mb-8 m-4 opacity-0 animate-slideIn delay-100">
             Your Journey to eco-friendly <br /> transit starts
