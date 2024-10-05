@@ -3,6 +3,9 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        roboto: ["Roboto", "sans-serif"],
+      },
       colors: {
         customGreen: "rgb(173, 237, 171)",
         customBlue: "rgb(26, 115, 232)",
