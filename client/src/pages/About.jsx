@@ -9,6 +9,7 @@ import Rhoda from "../assets/Images/Group-2.png";
 import Ore from "../assets/Images/group3.png";
 import Paul from "../assets/Images/group4.jpg";
 import ArrowDownwardTwoToneIcon from "@mui/icons-material/ArrowDownwardTwoTone";
+import { Link } from "react-router-dom";
 
 const sects = "m-4 p-4";
 const para = "text-xl text-gray-800 font-extrabold mb-8 pt-8";
@@ -296,9 +297,11 @@ function About() {
                 collaborate to change the status quo together. Exciting
                 opportunities await!
               </p>
+              <Link to="/career">
               <button className="font-extrabold m-6 w-[200px] bg-customGreen h-[60px] my-3 flex items-center justify-center rounded-xl cursor-pointer  overflow-hidden transition-all t shadow-md  hover:shadow-lg hover:bg-white">
                 See Job openings
               </button>
+              </Link>
             </div>
 
             <div className="w-full lg:w-3/5 p-6 lg:mt-52">
