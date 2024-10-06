@@ -1,5 +1,6 @@
 import helgg from "../assets/helgg1.jpeg";
-import loot from "../assets/loot.gif";
+import loot from "../assets/electric-scooter.gif";
+import banner6 from "../assets/banner6.jpg";
 import Logo from "../assets/helgg-logo-mint-and-cobalt.png";
 import map from "../assets/map.png";
 import ContentSection from "../layouts/imageSection";
@@ -12,13 +13,14 @@ import AppDownload from "../layouts/AppDownload";
 import DownloadIcon from "@mui/icons-material/Download";
 import ReactPlayer from "react-player";
 import PlayCircleIcon from "@mui/icons-material/PlayCircle";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { Player } from "@lottiefiles/react-lottie-player";
 
 const sectionStyle = {
-  backgroundImage: `url(${helgg})`,
+  backgroundImage: `url(${banner6})`,
 };
 
-const overlayClass = "absolute inset-0 bg-black opacity-60 rounded-lg";
+const overlayClass = "absolute inset-0 bg-black opacity-70";
 const sectionClass =
   "m-12 flex flex-col items-center p-8 bg-background text-foreground";
 const titleClass = "font-roboto text-3xl text-gray-800 font-bold mb-4";
@@ -27,17 +29,39 @@ const textClass = "font-roboto text-lg text-gray-500 text-center max-w-2xl";
 const Home = () => {
   const [isPlaying, setIsPlaying] = useState(false);
 
+  const bannerTexts = [
+    "We are Helgg",
+    "A whole new way to travel",
+    "Cruise round the campus with ease",
+    "Unlock the world of electric biking",
+    "Embrace the Future of Smart Transport",
+  ];
+  const [bannerIndex, setBannerIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setBannerIndex((prev) => (prev + 1) % bannerTexts.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, [bannerTexts.length]);
+
   return (
     <>
       <section
-        className="w-full relative bg-cover bg-center bg-no-repeat h-screen"
+        className="w-full relative bg-cover bg-center object-cover bg-no-repeat h-[93vh]"
         style={sectionStyle}
       >
         <div className={overlayClass}></div>
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white animate-fadeIn">
-          <h1 className="font-roboto text-7xl flex justify-center text-white font-bold md:text-6xl lg:text-9xl mb-4 opacity-0 animate-slideIn delay-300">
-            We are{"  "} <span className="text-customGreen"> Helgg</span>
-            {/* Embrace the Future of Smart Transport */}
+          <h1 className="font-roboto text-7xl justify-center text-white font-bold md:text-6xl lg:text-9xl mb-4 opacity-0 animate-slideIn delay-300">
+            {bannerTexts[bannerIndex].includes("Helgg") ? (
+              <>
+                {bannerTexts[bannerIndex].split("Helgg")[0]}{" "}
+                <span className="text-customGreen"> Helgg</span>{" "}
+              </>
+            ) : (
+              bannerTexts[bannerIndex]
+            )}
           </h1>
           <p className="font-roboto text-3xl max-w-2xl text-gray-500 mb-8 m-4 opacity-0 animate-slideIn delay-100">
             Your Journey to eco-friendly <br /> transit starts
@@ -160,7 +184,13 @@ const Home = () => {
       <section className="lg:m-24 pt-12">
         <div className="flex flex-col lg:flex-row items-center p-6 bg-background text-foreground">
           <div className="w-full lg:w-1/2 flex justify-center lg:justify-start">
-            <img src={loot} alt="" width={300} height={200} />
+            <Player
+              src="https://lottie.host/026b5ede-8e07-432f-8ab6-be7509ccc807/PzvxgODDlW.json"
+              className="player"
+              loop
+              autoplay
+              style={{ height: "400px", width: "400px" }}
+            />
           </div>
           <div className="w-full lg:w-1/2 lg:text-left mt-4 lg:mt-0">
             <h1 className="font-roboto text-2xl md:text-5xl lg:text-left lg:text-left lg:text-5xl text-gray-800 font-bold max-w-2xl">
@@ -175,20 +205,18 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className="lg:m-24">
-        <div className="flex flex-col lg:flex-row items-center p-6 bg-background text-foreground">
-          <div className=" lg:w-1/2 flex justify-center lg:justify-start">
-            <img src={loot} alt="" width={300} height={200} className="" />
-          </div>
-          <div className="w-full lg:w-1/2 lg:text-left mt-4 lg:mt-0">
-            <h1 className="font-roboto text-xl md:text-5xl text-center lg:text-left lg:text-5xl text-gray-800 font-bold max-w-2xl">
-              Zero Carbon Emission
-            </h1>
-            <p className="font-roboto mt-6 mb-12 text-center lg:text-left text-xl">
-              Reduce your carbon footprint by opting for eco-friendly and
-              sustainable means of transportation
-            </p>
-          </div>
+      <section className="lg:m-24 flex flex-col-reverse lg:flex-row items-center p-6 bg-background text-foreground">
+        <div className="w-full lg:w-1/2 lg:text-left mt-4 lg:mt-0">
+          <h1 className="font-roboto text-4xl mb-8 text-center md:text-5xl lg:text-left lg:text-left lg:text-5xl text-gray-800 font-bold max-w-2xl">
+            Zero Carbon Emissions
+          </h1>
+          <p className="font-roboto mt-6 mb-12 text-center lg:text-left text-2xl">
+            Reduce your carbon footprint by opting for an eco-friendly and
+            sustainable means of transportation.
+          </p>
+        </div>
+        <div className=" lg:w-1/2 flex justify-center lg:justify-start">
+          <img src={loot} alt="" width={400} height={400} className="" />
         </div>
       </section>
       <section className="lg:m-24">
@@ -275,7 +303,12 @@ const Home = () => {
           </p>
         </div>
         <div className=" lg:w-1/2 flex justify-center lg:justify-start">
-          <img src={loot} alt="" width={300} height={200} className="" />
+          <Player
+            src="https://lottie.host/cbb5c895-985f-4990-b2cc-09b0250be903/kaPLRZGgVp.json"
+            className="player"
+            loop
+            autoplay
+          />
         </div>
       </section>
       <section className="lg:m-24">

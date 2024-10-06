@@ -13,13 +13,6 @@ const subHeadingClasses = "mt-8 font-semibold text-gray-400";
 const textClasses = "mt-6 text-sm";
 const linkClasses = "text-sm hover:text-gray-500";
 
-// const socialLinks = [
-//   { label: "Instagram", icon: InstagramIcon, href: "#" },
-//   { label: "Twitter", icon: TwitterIcon, href: "#" },
-//   { label: "LinkedIn", icon: LinkedInIcon, href: "#" },
-//   { label: "YouTube", icon: YouTubeIcon, href: "#" },
-// ];
-
 const Footer = () => {
   return (
     <footer className={footerClasses}>
