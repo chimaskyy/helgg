@@ -42,13 +42,7 @@ function Header() {
             <img src={Logo} width={100} height={80} alt="Helgg UI logo" />
           </Link>
           <div className="flex items-center lg:hidden">
-            <a
-              href="https://play.google.com/store/apps/details?id=com.helggscooters.android&pli=1"
-              target="_blank"
-              aria-label="Download button"
-              rel="noreferrer noopener"
-              className="mr-16"
-            >
+            <Link to="/download">
               <button
                 aria-label="Download Button"
                 className="group relative px-4 sm:px-6 py-2 sm:py-4 text-xs sm:text-sm rounded-full shadow-xl transition-transform transform bg-customGreen border-2 border-white hover:scale-105 hover:border-green-600 hover:shadow-green-500/50 hover:shadow-3xl focus:outline-none"
@@ -56,7 +50,7 @@ function Header() {
               >
                 <span>Get the App</span>
               </button>
-            </a>
+            </Link>
 
             <button
               className="text-gray-700 outline-none p-2 rounded-md focus:border-gray-400 focus:border"
@@ -129,12 +123,7 @@ function Header() {
               state ? "lg:hidden" : ""
             }`}
           >
-            <a
-              href="https://play.google.com/store/apps/details?id=com.helggscooters.android&pli=1"
-              target="_blank"
-              aria-label="Google Play Store"
-              rel="noreferrer noopener"
-            >
+            <Link to="/download">
               <button
                 aria-label="Google Play Store"
                 className="group relative px-4 sm:px-6 py-2 sm:py-4 text-xs sm:text-sm rounded-full shadow-xl transition-transform transform bg-green-200 border-2 border-white hover:scale-105 hover:border-green-600 hover:shadow-green-500/50 hover:shadow-3xl focus:outline-none"
@@ -142,7 +131,7 @@ function Header() {
               >
                 <span>Get the App</span>
               </button>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

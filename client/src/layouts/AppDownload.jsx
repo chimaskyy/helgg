@@ -1,4 +1,4 @@
-import App from "../assets/appp.png";
+import AppImg from "../assets/gallery/img5.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGooglePlay, faApple } from "@fortawesome/free-brands-svg-icons";
 
@@ -7,10 +7,10 @@ function AppDownload() {
     <section className="py-14">
       <div className="max-w-screen-xl mx-auto px-4 md:px-8">
         {/* Flex container for text and testimonials */}
-        <div className="m-8 flex flex-col lg:flex-row lg:justify-between lg:items-center">
+        <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center">
           {/* Text Content */}
           <div className="lg:w-3/5">
-            <img src={App} alt="" />
+            <img src={AppImg} alt="App design image" />
           </div>
 
           <div className="lg:w-2/5 mt-38">
