@@ -28,7 +28,7 @@ function FlutterPosition() {
             />
           </div>
         </div>
-        <div className="font-roboto bg-white shadow-2xl mt-16 p-32">
+        <div className="font-roboto bg-white shadow-2xl mt-16 p-12 lg:p-32">
           <h1 className="text-center text-2xl text-gray-800 font-bold p-8 lg:text-left">
             Job Description
           </h1>

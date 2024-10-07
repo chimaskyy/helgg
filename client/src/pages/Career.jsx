@@ -46,9 +46,9 @@ function Career() {
           </div>
           <div className="flex flex-col gap-6">
             <Link to="/career/flutter-position">
-            <button className="bg-customGreen p-2 w-40 h-30 text-lg rounded-full">
-              Apply Now
-            </button>
+              <button className="bg-customGreen p-2 w-40 h-30 text-lg rounded-full">
+                Apply Now
+              </button>
             </Link>
             <p className="text-customBlue font-bold pl-4">Status: undergoing</p>
           </div>
@@ -71,9 +71,11 @@ function Career() {
             </h3>
           </div>
           <div className="flex flex-col gap-6">
-            <button className="bg-customGreen p-2 w-40 h-30 text-lg rounded-full">
-              Apply Now
-            </button>
+            <Link to="/career/technical-writer">
+              <button className="bg-customGreen p-2 w-40 h-30 text-lg rounded-full">
+                Apply Now
+              </button>
+            </Link>
             <p className="text-customBlue font-bold pl-4">Status: undergoing</p>
           </div>
         </div>
@@ -92,9 +94,11 @@ function Career() {
             </h3>
           </div>
           <div className="flex flex-col gap-6">
-            <button className="bg-customGreen font-roboto p-2 w-40 h-30 text-lg rounded-full">
-              Apply Now
-            </button>
+            <Link to="/career/iot-engineer">
+              <button className="bg-customGreen p-2 w-40 h-30 text-lg rounded-full">
+                Apply Now
+              </button>
+            </Link>
             <p className="text-customBlue font-bold pl-4">Status: undergoing</p>
           </div>
         </div>

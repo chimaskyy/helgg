@@ -11,6 +11,8 @@ import About from "./pages/About"
 import Download from "./pages/Download";
 import Career from "./pages/Career";
 import FlutterPosition from "./pages/FlutterPosition";
+import IoT from "./pages/IoT";
+import TechWriter from "./pages/TechWriter";
 
 function App() {
   return (
@@ -22,6 +24,8 @@ function App() {
         <Route path="/download" element={<Download />} />
         <Route path="/career" element={<Career />} />
         <Route path="career/flutter-position" element={<FlutterPosition />} />
+        <Route path="career/iot-engineer" element={<IoT />} />
+        <Route path="career/technical-writer" element={<TechWriter />} />
       </Routes>
       <Footer />
     </Router>
