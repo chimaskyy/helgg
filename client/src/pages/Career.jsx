@@ -1,12 +1,13 @@
 import React from "react";
 import Carr from "../assets/gallery/carr.png";
 import whitelogo2 from "../assets/gallery/WhiteLogo.jpg";
+import { Link } from "react-router-dom";
 
 function Career() {
   return (
     <>
       <main className="mt-4 p-6 lg:p-24">
-        <div className="flex flex-col lg:flex-row justify-between lg:items-center gap-12">
+        <div className="flex flex-col lg:flex-row justify-between lg:items-center  lg:items-start gap-12">
           <div className="">
             <h2 className="text-xl font-extrabold mr-4">Career</h2>
             {/* <hr className="border-t-2 border-gray-400 w-24" /> */}
@@ -44,9 +45,11 @@ function Career() {
             </h3>
           </div>
           <div className="flex flex-col gap-6">
+            <Link to="/career/flutter-position">
             <button className="bg-customGreen p-2 w-40 h-30 text-lg rounded-full">
               Apply Now
             </button>
+            </Link>
             <p className="text-customBlue font-bold pl-4">Status: undergoing</p>
           </div>
         </div>
