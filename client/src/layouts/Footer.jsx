@@ -34,15 +34,33 @@ const ContactInfo = () => {
   return (
     <div>
       <h3 className={headingClasses}>CONTACT US</h3>
-      <p className={textClasses}>Twitter support</p>
+      <a
+        href="https://twitter.com/helgg_"
+        target="_blank"
+        className={textClasses}
+      >
+        Twitter support
+      </a>
       <h4 className={subHeadingClasses}>OUR LOCATION</h4>
-      <p className={textClasses}>
+      <a
+        href="https://goo.gl/maps/cvNPBdC7Pkwn8DFA9"
+        target="_blank"
+        className={textClasses}
+      >
         Owena Street, Parkview, Ikoyi, Lagos, Nigeria.
-      </p>
+      </a>
       <h4 className={subHeadingClasses}>CALL US DIRECTLY</h4>
-      <p className={textClasses}>(+234) 8165810438</p>
+      <a
+        href="tel:(+234)8057091624%E2%80%8B"
+        target="_blank"
+        className={textClasses}
+      >
+        (+234) 8165810438
+      </a>
       <h4 className={subHeadingClasses}>SEND US AN EMAIL</h4>
-      <p className={textClasses}>contact@helgg.com</p>
+      <a href="mailto:info@helgg.com" target="_blank" className={textClasses}>
+        contact@helgg.com
+      </a>
     </div>
   );
 };
@@ -53,24 +71,24 @@ const CompanyLinks = () => {
       <h3 className={headingClasses}>COMPANY</h3>
       <ul className="mt-2 space-y-2">
         <li>
-          <a href="#" className={linkClasses}>
+          <Link to="/store" className={linkClasses}>
             E-Bikes
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#" className={linkClasses}>
+          <Link to="/store" className={linkClasses}>
             Universities
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#" className={linkClasses}>
+          <Link to="/career" className={linkClasses}>
             Careers
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#" className={linkClasses}>
+          <Link to="/store" className={linkClasses}>
             Electric Cars
-          </a>
+          </Link>
         </li>
       </ul>
     </div>
@@ -84,24 +102,24 @@ const SupportLinks = () => {
       <h3 className={headingClasses}>SUPPORT</h3>
       <ul className="mt-2 space-y-2">
         <li>
-          <a href="#" className={linkClasses}>
+          <Link to="/safety" className={linkClasses}>
             Safety
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#" className={linkClasses}>
+          <Link to="/safety" className={linkClasses}>
             Estates
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#" className={linkClasses}>
+          <Link to="/store" className={linkClasses}>
             Partners
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#" className={linkClasses}>
+          <Link to="/about" className={linkClasses}>
             About Us
-          </a>
+          </Link>
         </li>
       </ul>
     </div>
@@ -149,7 +167,9 @@ const ExtraLink = () => {
       <div className="mt-12 gap-12 space-x-18 lg:mt-0 w-full flex flex-col  lg:flex-row items-center">
         {/* Logo */}
         <div className="flex justify-center  w-full lg:w-auto mb-4 lg:mb-0">
-          <img src={Logo} alt="Logo" width={100} height={90} />
+          <Link to="/">
+            <img src={Logo} alt="Logo" width={100} height={90} />
+          </Link>
         </div>
 
         {/* Navigation Links */}
@@ -162,22 +182,22 @@ const ExtraLink = () => {
               </a>
             </li>
             <li>
-              <a href="" className="hover:text-gray-500">
+              <Link to="/privacy" className="hover:text-gray-500">
                 <VerifiedUserTwoToneIcon style={{ fontSize: 20 }} />
                 Privacy Policy
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="" className="hover:text-gray-500">
+              <Link to="/agreement" className="hover:text-gray-500">
                 <VerifiedUserTwoToneIcon style={{ fontSize: 20 }} />
                 Agreement
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="" className="hover:text-gray-500">
+              <Link to="/faq" className="hover:text-gray-500">
                 <LiveHelpTwoToneIcon style={{ fontSize: 20 }} />
                 FAQ
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -187,6 +207,7 @@ const ExtraLink = () => {
           <li>
             <a
               href="https://www.instagram.com/helgg_/"
+              target="_blank"
               className="hover:text-gray-500"
             >
               <InstagramIcon style={{ fontSize: 30 }} />
@@ -195,6 +216,7 @@ const ExtraLink = () => {
           <li>
             <a
               href="https://twitter.com/helgg_"
+              target="_blank"
               className="hover:text-gray-500"
             >
               <XIcon style={{ fontSize: 30 }} />
@@ -204,6 +226,7 @@ const ExtraLink = () => {
             <a
               href="https://ng.linkedin.com/company/helggscooters"
               className="hover:text-gray-500"
+              target="_blank"
             >
               <LinkedInIcon style={{ fontSize: 30 }} />
             </a>
@@ -212,6 +235,7 @@ const ExtraLink = () => {
             <a
               href="https://www.youtube.com/@helggcommunity1642"
               className="hover:text-gray-500"
+              target="_blank"
             >
               <YouTubeIcon style={{ fontSize: 30 }} />
             </a>

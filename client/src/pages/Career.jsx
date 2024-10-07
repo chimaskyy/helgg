@@ -29,7 +29,7 @@ function Career() {
             {/* <img src={whitelogo2} alt="Helgg white logo" className="absolute"/> */}
           </div>
         </div>
-        <div className="mb-4 mt-24 mb-24 font-roboto bg-white shadow-2xl rounded-xl flex flex-col items-center p-16 gap-6 w-full lg:flex-row">
+        <div className="mb-4 mt-24 mb-24 font-roboto bg-white shadow-2xl rounded-xl flex flex-col items-center p-4 md:p-16 gap-6 w-full lg:flex-row">
           <div className="m-6 lg:w-3/4">
             <h1 className="font-bold text-center lg:text-left text-2xl  m-6">
               Flutter Developer (Nigeria)
@@ -53,7 +53,7 @@ function Career() {
             <p className="text-customBlue font-bold pl-4">Status: undergoing</p>
           </div>
         </div>
-        <div className="mb-4 mt-24 mb-24 font-roboto bg-white shadow-2xl rounded-xl flex flex-col items-center p-16 gap-6 w-full lg:flex-row">
+        <div className="mb-4 mt-24 mb-24 font-roboto bg-white shadow-2xl rounded-xl flex flex-col items-center p-4 md:p-16 gap-6 w-full lg:flex-row">
           <div className="m-6 lg:w-3/4">
             <h1 className="font-bold text-center lg:text-left text-2xl  m-6">
               Technical Writer (Nigeria)
@@ -79,7 +79,7 @@ function Career() {
             <p className="text-customBlue font-bold pl-4">Status: undergoing</p>
           </div>
         </div>
-        <div className="mb-4 mt-24 mb-24 font-roboto bg-white shadow-2xl rounded-xl flex flex-col items-center p-16 gap-6 w-full lg:flex-row">
+        <div className="mb-4 mt-24 mb-24 font-roboto bg-white shadow-2xl rounded-xl flex flex-col items-center p-4 md:p-16 gap-6 w-full lg:flex-row">
           <div className="m-6 lg:w-3/4">
             <h1 className="font-bold text-center lg:text-left text-2xl  m-6">
               IoT Engineer (Nigeria)

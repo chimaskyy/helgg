@@ -14,7 +14,11 @@ import FlutterPosition from "./pages/FlutterPosition";
 import IoT from "./pages/IoT";
 import TechWriter from "./pages/TechWriter";
 import Community from "./pages/Community";
-
+import Privacy from "./pages/Privacy";
+import Faq from "./pages/Faq";
+import Agreement from "./pages/Agreement";
+import Safety from "./pages/Safety";
+import Store from "./pages/Store";
 function App() {
   return (
     <Router>
@@ -28,6 +32,11 @@ function App() {
         <Route path="career/iot-engineer" element={<IoT />} />
         <Route path="career/technical-writer" element={<TechWriter />} />
         <Route path="/community" element={<Community />} />
+        <Route path="/privacy" element={<Privacy />} />
+        <Route path="/faq" element={<Faq />} />
+        <Route path="/agreement" element={<Agreement />} />
+        <Route path="/safety" element={<Safety />} />
+        <Route path="/store" element={<Store />} />
       </Routes>
       <Footer />
     </Router>
