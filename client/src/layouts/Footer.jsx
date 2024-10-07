@@ -1,4 +1,4 @@
-import TwitterIcon from "@mui/icons-material/Twitter";
+import XIcon from "@mui/icons-material/X";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
@@ -6,6 +6,7 @@ import Logo from "../assets/helgg-logo-mint-and-cobalt.png";
 import WysiwygIcon from "@mui/icons-material/Wysiwyg";
 import VerifiedUserTwoToneIcon from "@mui/icons-material/VerifiedUserTwoTone";
 import LiveHelpTwoToneIcon from "@mui/icons-material/LiveHelpTwoTone";
+import { Link } from "react-router-dom";
 
 const footerClasses = "bg-gray-900 text-gray-300 p-6";
 const headingClasses = "font-semibold text-gray-400";
@@ -118,23 +119,25 @@ const CommunitySection = () => {
             reducing carbon footprint.
           </p>
         </div>
-        <button className="h-fit w-fit px-[1em] py-[0.25em] border-[1px] rounded-full flex justify-center items-center gap-[0.5em] overflow-hidden group hover:translate-y-[0.125em] duration-200 backdrop-blur-[12px]">
-          <p>Join the Community</p>
-          <svg
-            className="w-6 h-6 group-hover:translate-x-[10%] duration-300"
-            stroke="currentColor"
-            strokeWidth="1"
-            viewBox="0 0 24 24"
-            fill="white"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
-              strokeLinejoin="round"
-              strokeLinecap="round"
-            ></path>
-          </svg>
-        </button>
+        <Link to="/community">
+          <button className="h-fit w-fit px-[1em] py-[0.25em] border-[1px] rounded-full flex justify-center items-center gap-[0.5em] overflow-hidden group hover:translate-y-[0.125em] duration-200 backdrop-blur-[12px]">
+            <p>Join the Community</p>
+            <svg
+              className="w-6 h-6 group-hover:translate-x-[10%] duration-300"
+              stroke="currentColor"
+              strokeWidth="1"
+              viewBox="0 0 24 24"
+              fill="white"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+                strokeLinejoin="round"
+                strokeLinecap="round"
+              ></path>
+            </svg>
+          </button>
+        </Link>
       </div>
     </div>
   );
@@ -182,22 +185,34 @@ const ExtraLink = () => {
       <div>
         <ul className="flex justify-center space-x-12 mt-12 mb-12">
           <li>
-            <a href="" className="hover:text-gray-500">
+            <a
+              href="https://www.instagram.com/helgg_/"
+              className="hover:text-gray-500"
+            >
               <InstagramIcon style={{ fontSize: 30 }} />
             </a>
           </li>
           <li>
-            <a href="" className="hover:text-gray-500">
-              <TwitterIcon style={{ fontSize: 30 }} />
+            <a
+              href="https://twitter.com/helgg_"
+              className="hover:text-gray-500"
+            >
+              <XIcon style={{ fontSize: 30 }} />
             </a>
           </li>
           <li>
-            <a href="" className="hover:text-gray-500">
+            <a
+              href="https://ng.linkedin.com/company/helggscooters"
+              className="hover:text-gray-500"
+            >
               <LinkedInIcon style={{ fontSize: 30 }} />
             </a>
           </li>
           <li>
-            <a href="" className="hover:text-gray-500">
+            <a
+              href="https://www.youtube.com/@helggcommunity1642"
+              className="hover:text-gray-500"
+            >
               <YouTubeIcon style={{ fontSize: 30 }} />
             </a>
           </li>
