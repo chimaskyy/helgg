@@ -32,9 +32,9 @@ function App() {
         <Route path="career/iot-engineer" element={<IoT />} />
         <Route path="career/technical-writer" element={<TechWriter />} />
         <Route path="/community" element={<Community />} />
-        <Route path="/privacy" element={<Privacy />} />
+        <Route path="/privacy-policy" element={<Privacy />} />
         <Route path="/faq" element={<Faq />} />
-        <Route path="/agreement" element={<Agreement />} />
+        <Route path="/user-agreement" element={<Agreement />} />
         <Route path="/safety" element={<Safety />} />
         <Route path="/store" element={<Store />} />
       </Routes>
