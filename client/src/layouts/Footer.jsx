@@ -182,13 +182,13 @@ const ExtraLink = () => {
               </a>
             </li>
             <li>
-              <Link to="/privacy" className="hover:text-gray-500">
+              <Link to="/privacy-policy" className="hover:text-gray-500">
                 <VerifiedUserTwoToneIcon style={{ fontSize: 20 }} />
                 Privacy Policy
               </Link>
             </li>
             <li>
-              <Link to="/agreement" className="hover:text-gray-500">
+              <Link to="/user-agreement" className="hover:text-gray-500">
                 <VerifiedUserTwoToneIcon style={{ fontSize: 20 }} />
                 Agreement
               </Link>
