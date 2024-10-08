@@ -23,7 +23,7 @@ import pic15 from "../assets/gallery/pic15.jpg";
 
 const imageStyle = {
   width: "400px",
-  height: "450px",
+  height: "500px",
   borderRadius: "20px",
   border: "1px solid #FFFFFF33",
 };

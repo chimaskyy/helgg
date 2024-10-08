@@ -1,4 +1,4 @@
-import { } from "react";
+import { useState } from 'react';
 import Header from "./layouts/Header";
 import Footer from "./layouts/Footer";
 import {
@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About"
+import Services from "./pages/Services";
 import Download from "./pages/Download";
 import Career from "./pages/Career";
 import FlutterPosition from "./pages/FlutterPosition";
@@ -26,6 +27,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path='/services' element={<Services />}/>
         <Route path="/download" element={<Download />} />
         <Route path="/career" element={<Career />} />
         <Route path="career/flutter-position" element={<FlutterPosition />} />
