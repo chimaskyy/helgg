@@ -54,7 +54,7 @@ export default function Widget() {
               <h3 className="text-gray-600 font-semibold">{post.title}</h3>
               <a
                 href={post.link}
-                className="text-green-800 hover:underline mt-2 inline-block"
+                className="text-customGreen hover:underline mt-2 inline-block"
               >
                 read more &rarr;
               </a>
@@ -62,7 +62,7 @@ export default function Widget() {
           </div>
         ))}
         <div className="text-center">
-          <button className="text-sm text-center bg-green-200 rounded-full p-4 mt-10 mb-8">
+          <button className="text-sm text-center bg-customGreen rounded-full p-4 mt-10 mb-8">
             View more
             <ChevronRightIcon />
           </button>

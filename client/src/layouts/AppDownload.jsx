@@ -1,4 +1,4 @@
-import App from "../assets/appp.png";
+import AppImg from "../assets/gallery/img5.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGooglePlay, faApple } from "@fortawesome/free-brands-svg-icons";
 
@@ -7,10 +7,10 @@ function AppDownload() {
     <section className="py-14">
       <div className="max-w-screen-xl mx-auto px-4 md:px-8">
         {/* Flex container for text and testimonials */}
-        <div className="m-8 flex flex-col lg:flex-row lg:justify-between lg:items-center">
+        <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center">
           {/* Text Content */}
           <div className="lg:w-3/5">
-            <img src={App} alt="" />
+            <img src={AppImg} alt="App design image" />
           </div>
 
           <div className="lg:w-2/5 mt-38">
@@ -29,7 +29,7 @@ function AppDownload() {
               >
                 <button
                   aria-label="Google Play Store"
-                  className="group relative px-4 sm:px-6 py-2 sm:py-4 text-xs sm:text-sm rounded-full shadow-xl transition-transform transform bg-green-300 border-2 border-white hover:scale-105 hover:border-green-600 hover:shadow-green-500/50 hover:shadow-3xl focus:outline-none"
+                  className="group relative px-4 sm:px-6 py-2 sm:py-4 text-xs sm:text-sm rounded-full shadow-xl transition-transform transform bg-customGreen border-2 border-white hover:scale-105 hover:border-green-600 hover:shadow-green-500/50 hover:shadow-3xl focus:outline-none"
                   id="downloadButton"
                 >
                   <FontAwesomeIcon

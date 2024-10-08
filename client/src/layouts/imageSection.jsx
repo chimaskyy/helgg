@@ -1,6 +1,10 @@
 import QrCodeScannerIcon from "@mui/icons-material/QrCodeScanner";
 import AccountBalanceWalletIcon from "@mui/icons-material/AccountBalanceWallet";
 import ElectricScooterIcon from "@mui/icons-material/ElectricScooter";
+import pic4 from "../assets/gallery/pic4.jpg";
+import pic5 from "../assets/gallery/scanner.jpeg";
+import pic6 from "../assets/gallery/payment.png";
+
 const ContentSection = () => {
   const fullDiv =
     "transition-transform transform hover:scale-110 relative rounded-lg shadow-4xl";
@@ -10,7 +14,7 @@ const ContentSection = () => {
   const textDiv =
     "m-6 absolute inset-0 z-10 flex flex-col items-start justify-end text-white sm:pl-8 sm:pb-8  lg:pl-6 lg:pb-6";
   return (
-    <section className="p-12 m-2">
+    <section className="p-12 m-2 lg:m-24">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
         {/* First Column */}
         <div className={`group ${fullDiv}`}>
@@ -18,7 +22,7 @@ const ContentSection = () => {
           <div className={opaqueDiv}></div>
           <img
             className="w-full h-full object-cover rounded-xl"
-            src="https://helgg.com/wp-content/uploads/2023/01/WhatsApp-Image-2023-01-08-at-11.06.07-PM.jpeg"
+            src={pic5}
             alt="QR Code Scan"
           />
           {/* Gradient effect on hover */}
@@ -40,8 +44,8 @@ const ContentSection = () => {
           <div className={opaqueDiv}></div>
           <img
             className="w-full h-full object-cover rounded-xl"
-            src="https://helgg.com/wp-content/uploads/2023/01/young-adult-using-credit-card-make-purchase-smartphone-modern-woman-holding-mobile-phone-buy-clothes-online-shopping-from-retail-store-person-doing-payment-transaction-1.png"
-            alt="Pay with Credit Card"
+            src={pic6}
+            alt="Young adult using credit card to make payment"
           />
           {/* Gradient effect on hover */}
           <div className="absolute inset-0 bg-gradient-to-b from-transparent to-green-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-b-lg"></div>
@@ -64,8 +68,8 @@ const ContentSection = () => {
           <div className={opaqueDiv}></div>
           <img
             className="w-full h-full object-cover rounded-xl"
-            src="https://helgg.com/wp-content/uploads/2023/01/young-adult-using-credit-card-make-purchase-smartphone-modern-woman-holding-mobile-phone-buy-clothes-online-shopping-from-retail-store-person-doing-payment-transaction-1.png"
-            alt="Pay with Credit Card"
+            src={pic4}
+            alt="Image of a scooter"
           />
           {/* Gradient effect on hover */}
           <div className="absolute inset-0 bg-gradient-to-b from-transparent to-gray-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-b-lg"></div>
