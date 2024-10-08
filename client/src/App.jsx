@@ -21,6 +21,8 @@ import Agreement from "./pages/Agreement";
 import Safety from "./pages/Safety";
 import Store from "./pages/Store";
 import Blog1 from './pages/Blog1';
+import Locations from './pages/Locations';
+import Blog from './pages/Blog';
 function App() {
   return (
     <div className="p-0 m-0">
@@ -30,6 +32,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/locations" element={<Locations />} />
+          <Route path="/blog" element={<Blog />} />
           <Route path="/download" element={<Download />} />
           <Route path="/career" element={<Career />} />
           <Route path="career/flutter-position" element={<FlutterPosition />} />
