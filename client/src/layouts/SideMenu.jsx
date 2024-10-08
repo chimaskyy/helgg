@@ -52,6 +52,18 @@ function Sidemenu({ menuOpen, toggleMenuHandler }) {
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
+            <ListItemButton
+              component={Link}
+              to="/services"
+              onClick={toggleMenuHandler}
+            >
+              <ListItemText
+                primary="Services"
+                sx={{ fontSize: "1.2rem", fontWeight: "bold" }}
+              />
+            </ListItemButton>
+          </ListItem>
+          <ListItem disablePadding>
             <ListItemButton component={Link} to="/" onClick={toggleMenuHandler}>
               <ListItemText
                 primary="Location"
@@ -68,7 +80,7 @@ function Sidemenu({ menuOpen, toggleMenuHandler }) {
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
-            <ListItemButton component={Link} to="/" onClick={toggleMenuHandler}>
+            <ListItemButton component={Link} to="/store" onClick={toggleMenuHandler}>
               <ListItemText
                 primary="Ev store"
                 sx={{ fontSize: "1.2rem", fontWeight: "bold" }}

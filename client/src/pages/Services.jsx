@@ -8,7 +8,7 @@ import '../styles/ecofriendly.css';
 const Services = () => {
   return (
     <main className='font-body'>
-      <div className='animatedGradient flex flex-col justify-center items-center h-80 bg-custom-green text-custom-black'>
+      <div className='animatedGradient flex flex-col justify-center items-center h-80 bg-customGreen text-custom-black'>
         <h1 className='font-bold text-[32px] md:text-5xl mb-12 mt-28'>
           Helgg Services
         </h1>

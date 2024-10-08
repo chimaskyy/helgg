@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { MessageCircleMore } from "lucide-react";
 import Hand from "../assets/hand.png";
 import Domi from "../assets/Domi.jpeg";
+import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 
 const Testimonial = () => {
   const testimonials = [
@@ -63,6 +65,19 @@ const Testimonial = () => {
     return () => clearInterval(interval); // Clear interval on component unmount
   }, [testimonials.length]);
 
+  const previousTestimonial = () => {
+    if (currentTestimonial === 0) {
+      setCurrentTestimonial(testimonials.length - 1);
+    }
+    setCurrentTestimonial(currentTestimonial - 1);
+  }
+  const nextTestimonial = () => {
+    if (currentTestimonial === testimonials.length - 1) {
+      setCurrentTestimonial(0);
+    }
+    setCurrentTestimonial(currentTestimonial + 1);
+  }
+
   return (
     <section className="py-14">
       <div className="max-w-screen-xl mx-auto px-4 md:px-8">
@@ -87,14 +102,14 @@ const Testimonial = () => {
           </div>
 
           {/* Testimonial Content */}
-          <div className="lg:w-3/5 mt-38">
+          <div className="lg:w-3/5 mt-38 relative">
             <img src={Hand} alt="" width={80} className="animate-bounce" />
             <div className="max-w-2xl mx-auto text-center m-6">
               <ul>
                 {testimonials.map((item, idx) =>
                   currentTestimonial === idx ? (
                     <li key={idx}>
-                      <figure className="bg-white shadow-xl hover:shadow-2xl transition-shadow duration-300 rounded-lg p-8">
+                      <figure className="relative bg-white shadow-xl hover:shadow-2xl transition-shadow duration-300 rounded-lg p-8 min-h-[350px] h-auto">
                         {/* Star Rating */}
                         <span className="text-green-500 mb-4 font-bold">
                           ★★★★★
@@ -145,6 +160,22 @@ const Testimonial = () => {
                 )}
               </ul>
             </div>
+              
+              {/* Navigation Buttons */}
+              <div className="absolute top-1/2 transform -translate-y-1/2 w-full flex justify-between px-4">
+                <button
+                  onClick={previousTestimonial}
+                  className="p-2 bg-green-400 rounded-full"
+                >
+                  <ChevronLeftIcon />
+                </button>
+                <button
+                  onClick={nextTestimonial}
+                  className="p-2 bg-green-400 rounded-full"
+                >
+                  <ChevronRightIcon />
+                </button>
+              </div>
           </div>
         </div>
       </div>
