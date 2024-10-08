@@ -19,6 +19,8 @@
     "@lottiefiles/react-lottie-player": "^3.5.4",
     "@mui/icons-material": "^6.1.1",
     "@mui/material": "^6.1.1",
+    "@splidejs/react-splide": "^0.7.12",
+    "@splidejs/splide-extension-auto-scroll": "^0.5.3",
     "lucide-react": "^0.447.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",

@@ -15,6 +15,7 @@ import ReactPlayer from "react-player";
 import PlayCircleIcon from "@mui/icons-material/PlayCircle";
 import { useEffect, useState } from "react";
 import { Player } from "@lottiefiles/react-lottie-player";
+import Carousel from "../layouts/Carousel";
 
 const sectionStyle = {
   backgroundImage: `url(${banner6})`,
@@ -333,6 +334,7 @@ const Home = () => {
       <ContentSection />
       <Sponsors />
       <Testimonial />
+      <Carousel />
       <Widget />
       <AppDownload />
     </>
