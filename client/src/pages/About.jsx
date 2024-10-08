@@ -26,17 +26,19 @@ function About() {
               Helgg
               <p>isn&apos;t just a company, it&apos;s an experience</p>
             </h1>
-            <div className="animate-bounce text-thin flex items-center space-x-2">
-              <ArrowDownwardTwoToneIcon
-                style={{
-                  fontSize: 30,
-                  color: "black",
-                }}
-              />
-              <p className="mb-8">
-                Scroll Down <br /> to Explore
-              </p>
-            </div>
+            <a href="#our-story">
+              <div className="animate-bounce text-thin flex items-center space-x-2">
+                <ArrowDownwardTwoToneIcon
+                  style={{
+                    fontSize: 30,
+                    color: "black",
+                  }}
+                />
+                <p className="mb-8">
+                  Scroll Down <br /> to Explore
+                </p>
+              </div>
+            </a>
           </div>
           <div className="relative flex-1">
             <div className="animate-bounce">
@@ -45,7 +47,7 @@ function About() {
                 alt=""
                 className="rounded-2xl lg:max-w-md h-full"
               />
-              <p className="text-sm font-bold tracking-widest absolute lg:-left-48 lg:top-1/2 transform lg:-rotate-90 lg:text-lg text-customGreen origin-bottom">
+              <p className="text-sm font-extrabold tracking-widest absolute lg:-left-56 lg:top-1/2 transform lg:-rotate-90 lg:text-xl text-customGreen origin-bottom">
                 Helgg Experience
               </p>
             </div>
@@ -53,7 +55,7 @@ function About() {
         </div>
       </section>
       {/* Sticky Nav */}
-      <nav className="mt-8 hidden lg:block pl-6 sticky top-[65px] bg-white text-gray-800 font-bold z-20">
+      <nav className="mt-8 hidden lg:block pl-6 sticky top-[80px] bg-white text-gray-800 font-bold z-20">
         <ul className="flex space-x-8 py-6">
           <li className="cursor-pointer relative group">
             <a href="#our-story">Our Story</a>
@@ -298,9 +300,9 @@ function About() {
                 opportunities await!
               </p>
               <Link to="/career">
-              <button className="font-extrabold m-6 w-[200px] bg-customGreen h-[60px] my-3 flex items-center justify-center rounded-xl cursor-pointer  overflow-hidden transition-all t shadow-md  hover:shadow-lg hover:bg-white">
-                See Job openings
-              </button>
+                <button className="font-extrabold m-6 w-[200px] bg-customGreen h-[60px] my-3 flex items-center justify-center rounded-xl cursor-pointer  overflow-hidden transition-all t shadow-md  hover:shadow-lg hover:bg-white">
+                  See Job openings
+                </button>
               </Link>
             </div>
 

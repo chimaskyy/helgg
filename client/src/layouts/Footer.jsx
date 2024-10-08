@@ -2,7 +2,7 @@ import XIcon from "@mui/icons-material/X";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import Logo from "../assets/helgg-logo-mint-and-cobalt.png";
+import Logo from "../assets/gallery/whitelogo2.png";
 import WysiwygIcon from "@mui/icons-material/Wysiwyg";
 import VerifiedUserTwoToneIcon from "@mui/icons-material/VerifiedUserTwoTone";
 import LiveHelpTwoToneIcon from "@mui/icons-material/LiveHelpTwoTone";
@@ -168,7 +168,7 @@ const ExtraLink = () => {
         {/* Logo */}
         <div className="flex justify-center  w-full lg:w-auto mb-4 lg:mb-0">
           <Link to="/">
-            <img src={Logo} alt="Logo" width={100} height={90} />
+            <img src={Logo} alt="Logo" width={100} height={100} />
           </Link>
         </div>
 
@@ -176,25 +176,25 @@ const ExtraLink = () => {
         <div className="flex mt-6">
           <ul className="flex space-x-12">
             <li>
-              <a href="" className="hover:text-gray-500">
+              <a href="" className="hover:text-customGreen">
                 <WysiwygIcon style={{ fontSize: 20 }} />
                 Blog
               </a>
             </li>
             <li>
-              <Link to="/privacy-policy" className="hover:text-gray-500">
+              <Link to="/privacy-policy" className="hover:text-customGreen">
                 <VerifiedUserTwoToneIcon style={{ fontSize: 20 }} />
                 Privacy Policy
               </Link>
             </li>
             <li>
-              <Link to="/user-agreement" className="hover:text-gray-500">
+              <Link to="/user-agreement" className="hover:text-customGreen">
                 <VerifiedUserTwoToneIcon style={{ fontSize: 20 }} />
                 Agreement
               </Link>
             </li>
             <li>
-              <Link to="/faq" className="hover:text-gray-500">
+              <Link to="/faq" className="hover:text-customGreen">
                 <LiveHelpTwoToneIcon style={{ fontSize: 20 }} />
                 FAQ
               </Link>
