@@ -1,28 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 .sticky-nav {
-     animation: sticky-nav 300ms;
+  animation: sticky-nav 300ms;
 }
-    
+
 @keyframes sticky-nav {
-    0% {
-        transform: translateY(-6em)
-    }
+  0% {
+    transform: translateY(-6em);
+  }
 
-    100% {
-        transform: translateY(0)
-    }
+  100% {
+    transform: translateY(0);
+  }
 }
-
 
 @keyframes bounce {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-10px); /* Adjust this value for more or less bounce */
+    transform: translateY(
+      -10px
+    ); /* Adjust this value for more or less bounce */
   }
 }
 
