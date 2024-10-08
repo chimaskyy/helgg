@@ -53,7 +53,7 @@ function About() {
         </div>
       </section>
       {/* Sticky Nav */}
-      <nav className="mt-8 hidden lg:block pl-6 sticky top-[70px] bg-white text-gray-800 font-bold z-20">
+      <nav className="mt-8 hidden lg:block pl-6 sticky top-[65px] bg-white text-gray-800 font-bold z-20">
         <ul className="flex space-x-8 py-6">
           <li className="cursor-pointer relative group">
             <a href="#our-story">Our Story</a>
@@ -125,10 +125,10 @@ function About() {
             </div>
 
             {/* Text and heading div */}
-            <div className="lg:w-[70%]">
+            <div className="lg:w-[70%] text-left">
               <p className={para}>Values</p>
               <h1 className={`${head} lg:text-6xl lg:max-w-lg`}>
-                We are more <br /> than <br /> transportation
+                We are more than transportation
               </h1>
               <p className="mt-6 mb-8 text-lg lg:text-xl text-gray-700 lg:max-w-lg">
                 Our values are the tenets that our leaders <br /> have

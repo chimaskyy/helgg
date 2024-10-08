@@ -16,6 +16,7 @@ import PlayCircleIcon from "@mui/icons-material/PlayCircle";
 import { useEffect, useState } from "react";
 import { Player } from "@lottiefiles/react-lottie-player";
 import Carousel from "../layouts/Carousel";
+import { Link } from "react-router-dom";
 
 const sectionStyle = {
   backgroundImage: `url(${banner6})`,
@@ -23,7 +24,7 @@ const sectionStyle = {
 
 const overlayClass = "absolute inset-0 bg-black opacity-70";
 const sectionClass =
-  "m-12 flex flex-col items-center p-8 bg-background text-foreground";
+  "m-12 flex flex-col items-center p-8 ";
 const titleClass = "font-roboto text-3xl text-gray-800 font-bold mb-4";
 const textClass = "font-roboto text-lg text-gray-500 text-center max-w-2xl";
 
@@ -72,7 +73,7 @@ const Home = () => {
           {/* Transforming the African transportation landscape one electric
             vehicle at a time. */}
           <div className="flex space-x-4">
-            <a href="#">
+            <Link to="/download">
               <button
                 type="submit"
                 className="flex text-roboto text-sm text-gray-900 justify-center gap-2 items-center mx-auto shadow-xl text-lg bg-customGreen backdrop-blur-md lg:font-semibold isolation-auto border-gray-50 before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-green-500 hover:text-gray-50 before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 relative z-10 px-4 py-2 overflow-hidden border-2 rounded-full group opacity-0 animate-slideIn delay-500"
@@ -80,8 +81,10 @@ const Home = () => {
                 Download App
                 <DownloadIcon style={{ color: "gray" }} />
               </button>
-            </a>
-            <a href="https://www.youtube.com/watch?v=h8lzv_fyRDQ">
+            </Link>
+            <a
+            target="_blank" 
+            href="https://www.youtube.com/watch?v=h8lzv_fyRDQ">
               <button
                 type="submit"
                 className="text-roboto text-sm mt-2 text-white opacity-0 animate-slideIn delay-700"

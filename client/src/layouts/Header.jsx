@@ -13,7 +13,7 @@ function Header() {
     { title: "Services", path: "/services" },
     { title: "Locations", path: "/locations" },
     { title: "Blog", path: "/blog" },
-    { title: "Ev Store", path: "/ev-store" },
+    { title: "Ev Store", path: "/store" },
   ];
 
   useEffect(() => {
@@ -34,63 +34,70 @@ function Header() {
   };
 
   return (
-    <nav ref={navRef} className="bg-white w-full top-0 z-20 shadow-lg">
-      <div className="items-center px-4 max-w-screen-xl mx-auto md:px-8 lg:flex lg:justify-between">
+    <nav ref={navRef} className="bg-white w-full top-0 z-20 shadow-lg h-24">
+      {" "}
+      {/* Increased height here */}
+      <div className="flex items-center justify-between px-8 max-w-screen-xl mx-auto md:px-8 lg:flex lg:justify-between h-full">
+        {" "}
+        {/* Added h-full for full height alignment */}
         {/* Logo on the left */}
-        <div className="flex items-center justify-between py-3 lg:py-4 lg:block lg:w-1/3">
+        <div className="flex items-center lg:w-1/3">
           <Link to="/">
             <img src={Logo} width={100} height={80} alt="Helgg UI logo" />
           </Link>
-          <div className="flex items-center lg:hidden">
-            <Link to="/download">
-              <button
-                aria-label="Download Button"
-                className="group relative px-4 sm:px-6 py-2 sm:py-4 text-xs sm:text-sm rounded-full shadow-xl transition-transform transform bg-customGreen border-2 border-white hover:scale-105 hover:border-green-600 hover:shadow-green-500/50 hover:shadow-3xl focus:outline-none"
-                id="downloadButton"
-              >
-                <span>Get the App</span>
-              </button>
-            </Link>
-
-            <button
-              className="text-gray-700 outline-none p-2 rounded-md focus:border-gray-400 focus:border"
-              onClick={toggleMenuHandler}
-            >
-              {menuOpen ? (
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
-              ) : (
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M4 6h16M4 12h16m-7 6h7"
-                  />
-                </svg>
-              )}
-            </button>
-          </div>
         </div>
-
+        {/* Download Button Centered */}
+        <div className="flex items-center justify-center lg:hidden">
+          {" "}
+          {/* Center on small screens */}
+          <Link to="/download">
+            <button
+              aria-label="Download Button"
+              className="group relative items-center px-4 sm:px-6 py-2 sm:py-4 text-xs sm:text-sm rounded-full shadow-xl transition-transform transform bg-customGreen border-2 border-white hover:scale-105 hover:border-green-600 hover:shadow-green-500/50 hover:shadow-3xl focus:outline-none"
+              id="downloadButton"
+            >
+              <span>Get the App</span>
+            </button>
+          </Link>
+        </div>
+        <div className="flex items-center lg:hidden">
+          <button
+            className="text-gray-700 outline-none p-2 rounded-md focus:border-gray-400 focus:border"
+            onClick={toggleMenuHandler}
+          >
+            {menuOpen ? (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            ) : (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16m-7 6h7"
+                />
+              </svg>
+            )}
+          </button>
+        </div>
         {/* Navigation Links */}
         <div
           className={`flex-1 justify-between lg:flex lg:items-center ${
@@ -135,7 +142,6 @@ function Header() {
           </div>
         </div>
       </div>
-
       {/* Side Menu */}
       <Sidemenu menuOpen={menuOpen} toggleMenuHandler={toggleMenuHandler} />
     </nav>
