@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import helgg from "../assets/helgg1.jpeg";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 
@@ -10,7 +11,7 @@ export default function Widget() {
       date: "2 years ago",
       title:
         "How Helgg Scooters is enabling planet-friendly transport in Nigeria",
-      link: "#",
+      link: "/how-helgg-scooters-is-enabling-planet-friendly-transport-in-nigeria/",
     },
     {
       id: 2,
@@ -39,26 +40,28 @@ export default function Widget() {
       >
         {blogPosts.map((post) => (
           <div key={post.id} className="overflow-hidden">
-            <div className="relative">
-              <img
-                src={post.imgSrc}
-                alt={post.title}
-                className="w-full h-48 object-cover"
-              />
-              {/* Positioned date at bottom left */}
-              <span className="absolute bottom-0 left-0 bg-white text-green-400 text-sm p-2">
-                {post.date}
-              </span>
-            </div>
-            <div className="pt-6">
-              <h3 className="text-gray-600 font-semibold">{post.title}</h3>
-              <a
-                href={post.link}
-                className="text-customGreen hover:underline mt-2 inline-block"
-              >
-                read more &rarr;
-              </a>
-            </div>
+            <Link to={post.link}>
+              <div className="relative">
+                <img
+                  src={post.imgSrc}
+                  alt={post.title}
+                  className="w-full h-48 object-cover"
+                />
+                {/* Positioned date at bottom left */}
+                <span className="absolute bottom-0 left-0 bg-white text-green-400 text-sm p-2">
+                  {post.date}
+                </span>
+              </div>
+              <div className="pt-6">
+                <h3 className="text-gray-600 font-semibold">{post.title}</h3>
+                <Link
+                  to={post.link}
+                  className="text-customGreen hover:underline mt-2 inline-block"
+                >
+                  read more &rarr;
+                </Link>
+              </div>
+            </Link>
           </div>
         ))}
         <div className="text-center">
