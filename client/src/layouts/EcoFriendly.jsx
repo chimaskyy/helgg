@@ -4,7 +4,9 @@ import '../styles/ecofriendly.css';
 
 const EcoFriendly = () => {
   return (
-    <div className='px-5 lg:pt-32 lg:ml-16 flex flex-col-reverse lg:flex-col'>
+    <>
+    <main>
+      <div className='px-5 lg:pt-32 lg:ml-16 flex flex-col-reverse lg:flex-col'>
       <div className=''>
         <img
           src={bicycle}
@@ -69,6 +71,9 @@ const EcoFriendly = () => {
         </div>
       </div>
     </div>
+    </main>
+    </>
+    
   );
 };
 
