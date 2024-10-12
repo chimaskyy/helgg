@@ -5,7 +5,7 @@ import { faGooglePlay, faApple } from "@fortawesome/free-brands-svg-icons";
 function AppDownload() {
   return (
     <section className="py-14">
-      <div className="max-w-screen-xl mx-auto px-4 md:px-8">
+      <div className="max-w-screen-xl ">
         {/* Flex container for text and testimonials */}
         <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center">
           {/* Text Content */}
@@ -13,12 +13,12 @@ function AppDownload() {
             <img src={AppImg} alt="App design image" />
           </div>
 
-          <div className="lg:w-2/5 mt-38">
-            <p className="text-sm bg-gray-200 rounded-full w-10 p-2 font-thin">
+          <div className="lg:w-2/5 mt-38 ml-24">
+            <p className="text-sm bg-gray-200 rounded-full w-24 p-1 tracking-tight  font-thin">
               GET THE APP
             </p>
             <h1 className="text-5xl font-bold text-gray-800">
-              Download Helgg app and start Riding!
+              Download the <br /> Helgg App today!
             </h1>
             <div className="pt-12 flex gap-4 flex-wrap justify-center">
               <a

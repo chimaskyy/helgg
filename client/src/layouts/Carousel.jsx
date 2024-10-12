@@ -1,9 +1,6 @@
-import React from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
 import "@splidejs/splide/dist/css/splide.min.css";
-
-import banner from "../assets/banner5.png";
 import banner2 from "../assets/banner6.jpg";
 import pic0 from "../assets/gallery/pic0.jpg";
 import pic1 from "../assets/gallery/pic1.jpg";
@@ -22,83 +19,80 @@ import pic14 from "../assets/gallery/pic14.jpg";
 import pic15 from "../assets/gallery/pic15.jpg";
 
 const imageStyle = {
-  width: "400px",
-  height: "500px",
-  borderRadius: "20px",
+  width: "300px",
+  height: "400px",
+  borderRadius: "10px",
   border: "1px solid #FFFFFF33",
+  objectFit: "cover",
 };
 
 function Carousel() {
-
   return (
     <div className="flex h-full bg-white">
       <div className="container max-w-screen-xl mx-auto overflow-x-hidden">
         <Splide
           options={{
-            type: "loop", 
+            type: "loop",
             autoScroll: {
-              pauseOnHover: false, 
-              pauseOnFocus: false, 
-              rewind: true, 
-              speed: 1, 
+              pauseOnHover: false,
+              pauseOnFocus: false,
+              rewind: true,
+              speed: 1,
             },
-            arrows: false, 
-            pagination: false, 
-            fixedWidth: "445px", 
-            gap: "10px", 
+            arrows: false,
+            pagination: false,
+            fixedWidth: "300px",
+            gap: "2px",
           }}
-          extensions={{ AutoScroll }} // Use the AutoScroll extension
+          extensions={{ AutoScroll }}
         >
           <SplideSlide>
-            <img src={pic0} alt="Poster Macao" style={imageStyle} />
+            <img src={pic0} alt="Customer riding" style={imageStyle} />
           </SplideSlide>
           <SplideSlide>
-            <img src={pic1} alt="Poster Navada" style={imageStyle} />
+            <img src={pic1} alt="Customer riding" style={imageStyle} />
           </SplideSlide>
           <SplideSlide>
-            <img src={pic11} alt="Poster Macao" style={imageStyle} />
+            <img src={pic11} alt="Customer riding" style={imageStyle} />
           </SplideSlide>
           <SplideSlide>
-            <img src={pic12} alt="Poster Navada" style={imageStyle} />
+            <img src={pic12} alt="Customer riding" style={imageStyle} />
           </SplideSlide>
           <SplideSlide>
-            <img src={pic13} alt="Poster Navada" style={imageStyle} />
+            <img src={pic13} alt="Customer riding" style={imageStyle} />
           </SplideSlide>
           <SplideSlide>
-            <img src={pic14} alt="Poster Navada" style={imageStyle} />
+            <img src={pic14} alt="Customer riding" style={imageStyle} />
           </SplideSlide>
           <SplideSlide>
-            <img src={pic15} alt="Poster Navada" style={imageStyle} />
+            <img src={pic15} alt="Customer riding" style={imageStyle} />
           </SplideSlide>
           <SplideSlide>
-            <img src={pic2} alt="Poster Navada" style={imageStyle} />
+            <img src={pic2} alt="Customer riding" style={imageStyle} />
           </SplideSlide>
           <SplideSlide>
-            <img src={pic3} alt="Poster Navada" style={imageStyle} />
+            <img src={pic3} alt="Customer riding" style={imageStyle} />
           </SplideSlide>
           <SplideSlide>
-            <img src={pic4} alt="Poster Navada" style={imageStyle} />
+            <img src={pic4} alt="Customer riding" style={imageStyle} />
           </SplideSlide>
           <SplideSlide>
-            <img src={pic5} alt="Poster Navada" style={imageStyle} />
+            <img src={pic5} alt="Customer riding" style={imageStyle} />
           </SplideSlide>
           <SplideSlide>
-            <img src={pic6} alt="Poster Navada" style={imageStyle} />
+            <img src={pic6} alt="Customer riding" style={imageStyle} />
           </SplideSlide>
           <SplideSlide>
-            <img src={pic7} alt="Poster Navada" style={imageStyle} />
+            <img src={pic7} alt="Customer riding" style={imageStyle} />
           </SplideSlide>
           <SplideSlide>
-            <img src={pic8} alt="Poster Navada" style={imageStyle} />
+            <img src={pic8} alt="Customer riding" style={imageStyle} />
           </SplideSlide>
           <SplideSlide>
-            <img src={pic9} alt="Poster Navada" style={imageStyle} />
+            <img src={pic9} alt="Customer riding" style={imageStyle} />
           </SplideSlide>
           <SplideSlide>
-            <img src={banner} alt="Poster Navada" style={imageStyle} />
-          </SplideSlide>
-          <SplideSlide>
-            <img src={banner2} alt="Poster Navada" style={imageStyle} />
+            <img src={banner2} alt="Customer riding" style={imageStyle} />
           </SplideSlide>
         </Splide>
       </div>

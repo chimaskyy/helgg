@@ -13,9 +13,14 @@ export default {
         body: ['Be Vietname Pro'],
 
       },
+      borderRadius: {
+        'custom-large': '32px',  
+        'custom-small': '6px',  
+      },
       colors: {
         customGreen: "rgb(173, 237, 171)",
         customBlue: "rgb(26, 115, 232)",
+        customGray: "rgb(23, 32, 38)",
 
       },
       boxShadow: {

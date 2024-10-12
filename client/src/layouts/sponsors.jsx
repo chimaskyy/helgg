@@ -8,9 +8,9 @@ function Sponsors() {
   return (
     <div className="py-14">
       <div className="max-w-screen-xl mx-auto px-4 md:px-8">
-        <h3 className="text-lg mb-8 md:text-lg lg:text-center flex justify-center text-gray-800 font-bold max-w-2xl">
+        <h1 className="font-roboto text-2xl text-gray-800 font-bold mb-4 text-center pb-8">
           Helgg is trusted and supported by these reputable organizations
-        </h3>
+        </h1>
         <div className="mt-6">
           <ul className="flex gap-y-6 flex-wrap items-center justify-center [&>*]:px-12 lg:divide-x">
             <li className="flex-none">
