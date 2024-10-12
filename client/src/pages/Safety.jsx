@@ -1,119 +1,140 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import { HardHat, CheckCircle } from "lucide-react";
+import TrafficIcon from "@mui/icons-material/Traffic";
+import LightIcon from "@mui/icons-material/Light";
+import ElectricScooterIcon from "@mui/icons-material/ElectricScooter";
+import traffic from "../assets/gallery/traffic.jpeg";
+import helmet from "../assets/gallery/helmet.jpg";
+import light from "../assets/gallery/light.jpg";
+import scooter from "../assets/banner6.jpg";
 
 function Safety() {
   return (
-    <div className="font-roboto p-8 bg-gray-100 min-h-screen">
-      <div className="max-w-screen-lg mx-auto">
-        <h1 className="text-3xl font-bold text-center mb-8">
-          Safety Guidelines
-        </h1>
+    <div className="max-w-4xl mx-auto p-6 space-y-8">
+      <h1 className="text-3xl font-bold text-center mb-8 text-customGray font-roboto">
+        Safety Guidelines
+      </h1>
 
-        <section className="mb-8">
-          <h2 className="text-left font-bold text-lg mb-4">
-            Safety First, Always
+      <p className="leading-loose mb-4 text-lg text-customGray">
+        At Helgg, safety is our number one priority. Whether you&apos;re riding
+        our electric bikes, scooters, or any other vehicle in our fleet, we want
+        to ensure that you have a safe and enjoyable experience. Please read and
+        follow our safety guidelines carefully before using our services.
+      </p>
+      <div className="grid md:grid-cols-2 gap-8">
+        <div className="space-y-4">
+          <h2 className="text-2xl text-customGray font-semibold flex items-center">
+            <HardHat className="mr-2 text-customGray" />
+            Wear Protective Helmet
           </h2>
-          <p className="leading-loose mb-4">
-            At Helgg, safety is our number one priority. Whether you're riding
-            our electric bikes, scooters, or any other vehicle in our fleet, we
-            want to ensure that you have a safe and enjoyable experience. Please
-            read and follow our safety guidelines carefully before using our
-            services.
-          </p>
-        </section>
+          <img
+            src={helmet}
+            alt="Person wearing a HardHat and protective gear"
+            className="rounded-lg w-[400px] h-[400px] object-cover"
+          />
+          <ul className="space-y-2">
+            <li className="flex items-start">
+              <CheckCircle className="mr-2 text-green-500 flex-shrink-0 mt-1" />
+              Always wear a HardHat while riding.
+            </li>
+            <li className="flex items-start">
+              <CheckCircle className="mr-2 text-green-500 flex-shrink-0 mt-1" />
+              Make sure your HardHat fits properly and tightly fastened.
+            </li>
 
-        <section className="mb-8">
-          <h2 className="text-left font-bold text-lg mb-4">Wear a Helmet</h2>
-          <p className="leading-loose mb-4">
-            Always wear a helmet while riding. Helmets can reduce the risk of
-            head injuries significantly in case of accidents. Make sure your
-            helmet fits properly and is securely fastened.
-          </p>
-        </section>
+            <li className="flex items-start">
+              <CheckCircle className="mr-2 text-green-500 flex-shrink-0 mt-1" />
+              Use knee and elbow pads for additional protection
+            </li>
+          </ul>
+        </div>
 
-        <section className="mb-8">
-          <h2 className="text-left font-bold text-lg mb-4">
+        <div className="space-y-4">
+          <h2 className="text-2xl font-semibold text-customGray flex items-center">
+            <TrafficIcon className="mr-2 text-primary" />
             Follow Traffic Rules
           </h2>
-          <p className="leading-loose mb-4">
-            Obey all local traffic laws and signals. Ride on the correct side of
-            the road, yield to pedestrians, and never use your phone while
-            riding.
-          </p>
-        </section>
+          <img
+            src={traffic}
+            alt="Electric scooter and bicycle following traffic signs"
+            className="rounded-lg w-[400px] h-[400px] object-cover"
+          />
+          <ul className="space-y-2">
+            <li className="flex items-start">
+              <CheckCircle className="mr-2 text-green-500 flex-shrink-0 mt-1" />
+              Obey all traffic signs and signals
+            </li>
+            <li className="flex items-start">
+              <CheckCircle className="mr-2 text-green-500 flex-shrink-0 mt-1" />
+              Ride on the correct side of the road, yield to pedestrians, and
+              never use your phone while riding.
+            </li>
+            <li className="flex items-start">
+              <CheckCircle className="mr-2 text-green-500 flex-shrink-0 mt-1" />
+              Use hand signals for turns and stops
+            </li>
+          </ul>
+        </div>
 
-        <section className="mb-8">
-          <h2 className="text-left font-bold text-lg mb-4">
-            Check Your Vehicle
+        <div className="space-y-4">
+          <h2 className="text-2xl text-customGray font-semibold flex items-center">
+            <LightIcon className="mr-2 text-primary" />
+            Be Visible and Alert
           </h2>
-          <p className="leading-loose mb-4">
-            Before each ride, inspect the vehicle. Check the brakes, tires, and
-            lights to ensure everything is in good working condition. Report any
-            malfunctions through our app before you ride.
-          </p>
-        </section>
+          <img
+            src={light}
+            alt="Rider with reflective gear and lights"
+            className="rounded-lg w-[400px] h-[400px] object-cover"
+          />
+          <ul className="space-y-2">
+            <li className="flex items-start">
+              <CheckCircle className="mr-2 text-green-500 flex-shrink-0 mt-1" />
+              Wear bright or reflective clothing
+            </li>
+            <li className="flex items-start">
+              <CheckCircle className="mr-2 text-green-500 flex-shrink-0 mt-1" />
+              Use lights during low visibility conditions
+            </li>
+            <li className="flex items-start">
+              <CheckCircle className="mr-2 text-green-500 flex-shrink-0 mt-1" />
+              Stay aware of your surroundings at all times
+            </li>
+          </ul>
+        </div>
 
-        <section className="mb-8">
-          <h2 className="text-left font-bold text-lg mb-4">Stay Alert</h2>
-          <p className="leading-loose mb-4">
-            Be aware of your surroundings at all times. Avoid riding in
-            inclement weather or on roads with heavy traffic. Stay focused and
-            use both hands while riding.
-          </p>
-        </section>
-
-        <section className="mb-8">
-          <h2 className="text-left font-bold text-lg mb-4">
-            Ride in Designated Areas
+        <div className="space-y-4">
+          <h2 className="text-2xl text-customGray font-semibold flex items-center">
+            <ElectricScooterIcon className="mr-2 text-primary" />
+            Maintain Your Vehicle
           </h2>
-          <p className="leading-loose mb-4">
-            Only ride in areas where riding is permitted. Avoid sidewalks,
-            pedestrian paths, and other areas not meant for vehicles. Riding in
-            designated areas ensures the safety of both riders and pedestrians.
-          </p>
-        </section>
-
-        <section className="mb-8">
-          <h2 className="text-left font-bold text-lg mb-4">
-            Riding Under the Influence
-          </h2>
-          <p className="leading-loose mb-4">
-            Never ride under the influence of alcohol or drugs. Riding while
-            impaired increases the risk of accidents and endangers both the
-            rider and others.
-          </p>
-        </section>
-
-        <section className="mb-8">
-          <h2 className="text-left font-bold text-lg mb-4">
-            Report Unsafe Conditions
-          </h2>
-          <p className="leading-loose mb-4">
-            If you encounter any unsafe conditions during your ride, report them
-            immediately through our customer care service. Your report helps us maintain a safe
-            environment for all users.
-          </p>
-        </section>
-
-        <section className="mb-8">
-          <h2 className="text-left font-bold text-lg mb-4">
-            In Case of Emergency
-          </h2>
-          <p className="leading-loose mb-4">
-            If you are involved in an accident or an emergency situation, please
-            contact local authorities immediately. You can also reach out to our
-            support team through the app for assistance.
-          </p>
-        </section>
-
-        <section className="mb-8">
-          <h2 className="text-left font-bold text-lg mb-4">Respect Others</h2>
-          <p className="leading-loose mb-4">
-            Be courteous to other riders, drivers, and pedestrians. A safe
-            riding experience depends on everyone following the rules and
-            respecting each other's space.
-          </p>
-        </section>
+          <img
+            src={scooter}
+            alt="Parked scooter"
+            className="rounded-lg w-[400px] h-[400px] object-cover"
+          />
+          <ul className="space-y-2">
+            <li className="flex items-start">
+              <CheckCircle className="mr-2 text-green-500 flex-shrink-0 mt-1" />
+              Check brakes and tires before each ride
+            </li>
+            <li className="flex items-start">
+              <CheckCircle className="mr-2 text-green-500 flex-shrink-0 mt-1" />
+              Ensure lights and reflectors are working before each ride, inspect
+              the vehicle. ride.
+            </li>
+            <li className="flex items-start">
+              <CheckCircle className="mr-2 text-green-500 flex-shrink-0 mt-1" />
+              Report any malfunctions through our app before you ride.
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div className="bg-gray-200 p-6 rounded-lg mt-8">
+        <h2 className="text-2xl font-semibold mb-4">Remember</h2>
+        <p className="text-lg">
+          Your safety is our top priority. Always ride responsibly and within
+          your abilities. If you&apos;re new to electric scooters or bicycles,
+          take time to practice in a safe area before venturing into traffic.
+        </p>
       </div>
     </div>
   );
