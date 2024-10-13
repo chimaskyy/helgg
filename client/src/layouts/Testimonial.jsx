@@ -84,18 +84,20 @@ const Testimonial = () => {
   };
 
   return (
-    <section className="py-14">
-      <div className="max-w-screen-xl mx-auto px-4 md:px-8">
-        <div className="m-8 flex flex-col lg:flex-row lg:justify-between lg:items-center">
+    <section className="md:py-14">
+      <div className="my-12 max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+        <div className="flex flex-col lg:flex-row lg:justify-between ">
           <div className="lg:w-2/5">
-            <div className="text-gray-600 m-4 flex items-center">
-              <p className="bg-green-400 rounded-full inline-flex p-3">
+            <div className="m-4 flex items-center">
+              <p className="bg-green-400 rounded-full p-3">
                 <MessageCircleMore className="text-white" />
               </p>
 
-              <p className="ml-4 text-xl">— 97.6% Rider Satisfaction</p>
+              <p className="text-customGray ml-2 text-lg sm:text-xl">
+                — 97.6% Rider Satisfaction
+              </p>
             </div>
-            <h1 className="text-4xl font-bold m-12 ml-4">
+            <h1 className="text-4xl font-bold ml-4 mt-12 sm:text-4xl md:text-4xl md:ml-12">
               Hear from{" "}
               <span className="bg-gradient-to-l from-green-500 to-green-300 bg-clip-text text-transparent">
                 happy
@@ -103,14 +105,14 @@ const Testimonial = () => {
               Helgg Users.
             </h1>
           </div>
-          <div className="lg:w-3/5 mt-38 relative">
+          <div className="lg:w-3/5  relative">
             <img
               src={Hand}
               alt="A clapping hand icon"
               width={80}
-              className="animate-bounce"
+              className="animate-bounce "
             />
-            <div className="max-w-7xl mx-auto text-center m-6">
+            <div className="max-w-7xl mx-auto text-center m-2">
               <ul>
                 {testimonials.map((item, idx) =>
                   currentTestimonial === idx ? (
@@ -145,18 +147,20 @@ const Testimonial = () => {
                           </p>
                         </blockquote>
 
-                        {/* User Info */} 
+                        {/* User Info */}
                         <div className="mt-6">
                           <img
                             src={item.avatar}
                             alt={item.name}
-                            className="w-16 h-16 mx-auto rounded-full"
+                            width={64}
+                            height={64}
+                            className="mx-auto rounded-full"
                           />
                           <div className="mt-3">
                             <span className="block text-gray-800 font-semibold">
                               {item.name}
                             </span>
-                            <span className="block text-gray-600 text-sm mt-0.5">
+                            <span className="hidden lg:block text-gray-600 text-sm mt-0.5">
                               {item.title}
                             </span>
                           </div>
@@ -187,12 +191,12 @@ const Testimonial = () => {
             </div>
 
             {/* Navigation Buttons */}
-            <div className="">
+            <div className="hidden lg:block">
               <button
                 onClick={previousTestimonial}
                 role="button"
                 aria-label="Previous Testimonial"
-                className="-ml-6 mt-12 absolute top-1/2 w-16 h-16 left-0 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-lg hover:bg-green-900"
+                className="hidden -ml-6 mt-12 absolute top-1/2 w-16 h-16 left-0 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-lg hover:bg-green-900 md:block lg:block"
               >
                 <ChevronLeftIcon className="text-customGreen hover:text-white" />
               </button>
@@ -200,7 +204,7 @@ const Testimonial = () => {
                 onClick={nextTestimonial}
                 role="button"
                 aria-label="Next Testimonial"
-                className="-mr-6 mt-12 absolute top-1/2 w-16 h-16 right-0 transform -translate-y-1/2  bg-white rounded-full p-2 shadow-lg hover:bg-green-900"
+                className="hidden -mr-6 mt-12 absolute top-1/2 w-16 h-16 right-0 transform -translate-y-1/2  bg-white rounded-full p-2 shadow-lg hover:bg-green-900 md:block lg:block"
               >
                 <ChevronRightIcon className="text-customGreen hover:text-white" />
               </button>
