@@ -20,7 +20,7 @@ function AppDownload() {
             <h1 className="text-4xl font-bold text-gray-800">
               Download the <br /> Helgg App today!
             </h1>
-            <div className="pt-12 flex gap-4 ml-4 lg:ml-0 ">
+            <div className="w-full pt-12 flex gap-4 ml-4 lg:ml-0 ">
               <a
                 href="https://play.google.com/store/apps/details?id=com.helggscooters.android&pli=1"
                 target="_blank"
@@ -29,7 +29,7 @@ function AppDownload() {
               >
                 <button
                   aria-label="Google Play Store"
-                  className="h-12 w-40 group  relative px-4 sm:px-6 py-2 sm:py-4 text-xs sm:text-sm rounded-full shadow-xl transition-transform transform bg-customGreen border-2 border-white hover:scale-105 hover:border-green-600 hover:shadow-green-500/50 hover:shadow-3xl focus:outline-none lg:w-52 lg:h-16"
+                  className="h-12 w-full group  relative px-4 sm:px-6 py-2 sm:py-4 text-xs sm:text-sm rounded-full shadow-xl transition-transform transform bg-customGreen border-2 border-white hover:scale-105 hover:border-green-600 hover:shadow-green-500/50 hover:shadow-3xl focus:outline-none md:w-full h-16 lg:w-52 lg:h-16"
                   id="downloadButton"
                 >
                   <FontAwesomeIcon
@@ -48,7 +48,7 @@ function AppDownload() {
               >
                 <button
                   aria-label="Apple Play Store"
-                  className="h-12 w-40 group relative px-4 sm:px-6 py-2 sm:py-4 text-xs sm:text-sm rounded-full shadow-xl transition-transform transform bg-transparent border-2 border-black hover:scale-105 hover:border-green-600 hover:shadow-green-500/50 hover:shadow-3xl focus:outline-none lg:w-52 lg:h-16"
+                  className="h-12 w-full group relative px-4 sm:px-6 py-2 sm:py-4 text-xs sm:text-sm rounded-full shadow-xl transition-transform transform bg-transparent border-2 border-black hover:scale-105 hover:border-green-600 hover:shadow-green-500/50 hover:shadow-3xl focus:outline-none md:w-full h-16 lg:w-52 lg:h-16"
                   id="downloadButton"
                 >
                   <FontAwesomeIcon
