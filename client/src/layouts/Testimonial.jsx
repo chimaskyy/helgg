@@ -84,7 +84,7 @@ const Testimonial = () => {
   };
 
   return (
-    <section className="md:py-14">
+    <section className="md:py-14 bg-slate-100 mb-24">
       <div className="my-12 max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row lg:justify-between ">
           <div className="lg:w-2/5">
@@ -142,7 +142,7 @@ const Testimonial = () => {
                         </div>
 
                         <blockquote>
-                          <p className="font-roboto text-lg text-customGray">
+                          <p className="font-roboto text-lg text-black">
                             “{item.quote}“
                           </p>
                         </blockquote>
@@ -157,7 +157,7 @@ const Testimonial = () => {
                             className="mx-auto rounded-full"
                           />
                           <div className="mt-3">
-                            <span className="block text-gray-800 font-semibold">
+                            <span className="block text-black font-semibold">
                               {item.name}
                             </span>
                             <span className="hidden lg:block text-gray-600 text-sm mt-0.5">
