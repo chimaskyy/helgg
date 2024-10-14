@@ -1,9 +1,51 @@
-import React from "react";
 import Team3 from "../assets//gallery/techinalWritter.png";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { useRef } from "react";
+import emailjs from "@emailjs/browser"; 
+
 
 function TechWriter() {
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm("service_c6s5385", "template_tswc2y6", form.current, {
+        publicKey: "UeReoa1Fh9EayLmr-",
+      })
+      .then(
+        () => {
+          toast.success("Application sent successfully!", {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+          });
+        },
+        (error) => {
+          toast.error(`Failed to send application! ${error.text}`, {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+          });
+        }
+      );
+    e.target.reset();
+  };
+
   return (
     <>
+      <ToastContainer />
       <div className="flex flex-col items-center justify-center min-h-screen m-8">
         <div className="flex flex-col lg:flex-row justify-between lg:items-center lg:items-start gap-12">
           <div>
@@ -45,7 +87,7 @@ function TechWriter() {
           </h1>
           <ul className="list-disc p-8">
             <li>
-              Bachelor's degree in technical writing, engineering, or a related
+              Bachelor&apos;s degree in technical writing, engineering, or a related
               field.
             </li>
             <li>
@@ -79,7 +121,7 @@ function TechWriter() {
           <ul className="list-disc p-8">
             <li>
               Develop technical documentation for electric vehicles, including
-              owner's manuals, service manuals, and instructional guides.
+              owner&apos;s manuals, service manuals, and instructional guides.
             </li>
             <li>
               Collaborate with engineering and design teams to ensure technical
@@ -107,9 +149,65 @@ function TechWriter() {
             </li>
           </ul>
         </div>
-        <div className="bg-white shadow-2xl mt-16 p-12 w-full">
-          <h1>Application form</h1>
-          <p>To apply, please fill out the form below:</p>
+        <div className="bg-white shadow-2xl mt-16 p-12 w-full flex flex-col items-center">
+          <h1 className="text-2xl font-roboto ">Application form</h1>
+
+          <form
+            ref={form}
+            onSubmit={sendEmail}
+            className="bg-white w-[90vw] md:w-[50vw] p-6 rounded-lg shadow-md"
+          >
+            <div className="mb-4">
+              <label
+                htmlFor="title"
+                className="block text-gray-700 text-sm font-bold mb-2"
+              >
+                Name
+              </label>
+              <input
+                placeholder="Enter your Name"
+                type="text"
+                name="user_name"
+                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              />
+            </div>
+            <div className="mb-4">
+              <label
+                htmlFor="title"
+                className="block text-gray-700 text-sm font-bold mb-2"
+              >
+                Email
+              </label>
+              <input
+                name="user_email"
+                placeholder="Enter your Email"
+                type="text"
+                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              />
+            </div>
+            <div className="mb-4">
+              <label
+                htmlFor="content"
+                className="block text-gray-700 text-sm font-bold mb-2"
+              >
+                Message
+              </label>
+              <textarea
+                name="message"
+                rows="5"
+                placeholder="Provide link to you resume or your portfolio"
+                id="content"
+                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              ></textarea>
+            </div>
+            <div className="flex items-center justify-between">
+              <input
+                type="submit"
+                value="Send"
+                className="bg-blue-500 text-sm hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              />
+            </div>
+          </form>
         </div>
       </div>
     </>

@@ -26,13 +26,13 @@ const Home = () => {
       <main className="bg-gray-50">
         {/* Hero section */}
         <section
-          className="m-2 lg:m-16 rounded-custom-large shadow-3xl  relative bg-cover bg-center object-cover bg-no-repeat h-[93vh] overflow-hidden"
+          className="mx-2 mb-2 mt-0 rounded-custom-large shadow-3xl  relative bg-cover bg-center object-cover bg-no-repeat h-[100vh] overflow-hidden lg:mx-16 lg:mb-16 lg:mt-0"
           style={sectionStyle}
           aria-label="Hero section"
         >
           <div className="absolute inset-0 bg-black opacity-70"></div>
           <div className="relative z-20 h-full flex flex-col justify-center items-center text-center px-4 sm:px-6 lg:px-8">
-            <h1 className="group font-roboto text-5xl justify-center text-white font-bold md:text-6xl lg:text-9xl mb-4 opacity-0 animate-slideIn delay-300">
+            <h1 className="group font-roboto text-5xl justify-center text-white font-bold md:text-6xl lg:text-8xl mb-4 opacity-0 animate-slideIn delay-300">
               Embrace the Future of
               <br />
               <span className="relative inline-block">
