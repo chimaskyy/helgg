@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -23,14 +23,41 @@
   100% {
     transform: translateY(0);
   }
-  50% {
+  20% {
     transform: translateY(
-      -10px
+      -0.2px
     ); /* Adjust this value for more or less bounce */
-    transform: translateY(-10px);
+    transform: translateY(-0.2px);
   }
 }
 
 .animate-bounce {
-  animation: bounce 1.5s infinite;
+  animation: bounce 5.5s infinite;
+}
+@keyframes dropIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px); /* Start 20 pixels above */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* End at the original position */
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.animate-drop-in {
+  animation: dropIn 0.3s ease forwards; /* Animation for the Download text */
+}
+
+.group-hover .hidden {
+  animation: fadeOut 0.3s ease forwards; /* Animation for the Get the App text */
 }

@@ -8,6 +8,7 @@ import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 const Testimonial = () => {
   const testimonials = [
     {
+      rating: 5,
       avatar: Domi,
       name: "Dominon Ikpeawujor",
       title: "Student",
@@ -15,6 +16,7 @@ const Testimonial = () => {
         "It was a triving experience! The breeze while riding and how quiet the scooters are make the ride wholesome for m. You might need to strengthen your balance on the first go, but in general, it is an enjoyable experienc!",
     },
     {
+      rating: 4,
       avatar: Domi,
       name: "Joy Eromonsele",
       title: "Student",
@@ -22,6 +24,7 @@ const Testimonial = () => {
         "It was very easy to learn, balanced, easy to navigate and portable. It was so much fun. Easily on of my best esperience.",
     },
     {
+      rating: 5,
       avatar: Domi,
       name: "Adeolu Adegboye",
       title: "Student",
@@ -29,6 +32,7 @@ const Testimonial = () => {
         "It was really fun and convinient to commute using Helgg scooters. Through Hell I'm able to estimate the amount of time it helps me to cover last mile distances so I can plan how to get to my destinationsin time.",
     },
     {
+      rating: 4,
       avatar: Domi,
       name: "Daniel Jesusegun",
       title: "Student",
@@ -36,6 +40,7 @@ const Testimonial = () => {
         "My experience riding Helgg has been amazing. The flexibility of the scooter and the speed is also great. It's easy to if you are familiar with riding a bicycle and even if you are not familiar it can be taught easily.",
     },
     {
+      rating: 4,
       avatar: Domi,
       name: "Dean Obi",
       title: "Student",
@@ -44,6 +49,7 @@ const Testimonial = () => {
     },
 
     {
+      rating: 5,
       avatar: Domi,
       name: "Faji Olaotan",
       title: "Student",
@@ -66,33 +72,32 @@ const Testimonial = () => {
   }, [testimonials.length]);
 
   const previousTestimonial = () => {
-    if (currentTestimonial === 0) {
-      setCurrentTestimonial(testimonials.length - 1);
-    }
-    setCurrentTestimonial(currentTestimonial - 1);
-  }
+    setCurrentTestimonial((prev) =>
+      prev === 0 ? testimonials.length - 1 : prev - 1
+    );
+  };
+
   const nextTestimonial = () => {
-    if (currentTestimonial === testimonials.length - 1) {
-      setCurrentTestimonial(0);
-    }
-    setCurrentTestimonial(currentTestimonial + 1);
-  }
+    setCurrentTestimonial((prev) =>
+      prev === testimonials.length - 1 ? 0 : prev + 1
+    );
+  };
 
   return (
-    <section className="py-14">
-      <div className="max-w-screen-xl mx-auto px-4 md:px-8">
-        {/* Flex container for text and testimonials */}
-        <div className="m-8 flex flex-col lg:flex-row lg:justify-between lg:items-center">
-          {/* Text Content */}
+    <section className="md:py-14 bg-slate-100 mb-24">
+      <div className="my-12 max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+        <div className="flex flex-col lg:flex-row lg:justify-between ">
           <div className="lg:w-2/5">
-            <div className="text-gray-600 m-4 flex items-center">
-              <p className="bg-green-400 rounded-full inline-flex p-3">
+            <div className="m-4 flex items-center">
+              <p className="bg-green-400 rounded-full p-3">
                 <MessageCircleMore className="text-white" />
               </p>
-              {/* Apply margin-left here */}
-              <p className="ml-4 text-xl">— 97.6% Rider Satisfaction</p>
+
+              <p className="text-customGray ml-2 text-lg sm:text-xl">
+                — 97.6% Rider Satisfaction
+              </p>
             </div>
-            <h1 className="text-4xl font-bold m-12 ml-4">
+            <h1 className="text-4xl font-bold ml-4 mt-12 sm:text-4xl md:text-4xl md:ml-12">
               Hear from{" "}
               <span className="bg-gradient-to-l from-green-500 to-green-300 bg-clip-text text-transparent">
                 happy
@@ -100,38 +105,62 @@ const Testimonial = () => {
               Helgg Users.
             </h1>
           </div>
-
-          {/* Testimonial Content */}
-          <div className="lg:w-3/5 mt-38 relative">
-            <img src={Hand} alt="" width={80} className="animate-bounce" />
-            <div className="max-w-2xl mx-auto text-center m-6">
+          <div className="lg:w-3/5  relative">
+            <img
+              src={Hand}
+              alt="A clapping hand icon"
+              width={80}
+              className="animate-bounce "
+            />
+            <div className="max-w-7xl mx-auto text-center m-2">
               <ul>
                 {testimonials.map((item, idx) =>
                   currentTestimonial === idx ? (
                     <li key={idx}>
                       <figure className="relative bg-white shadow-xl hover:shadow-2xl transition-shadow duration-300 rounded-lg p-8 min-h-[350px] h-auto">
                         {/* Star Rating */}
-                        <span className="text-green-500 mb-4 font-bold">
-                          ★★★★★
-                        </span>
+                        <div className="mb-4">
+                          {[...Array(5)].map((_, starIdx) => (
+                            <svg
+                              key={starIdx}
+                              xmlns="http://www.w3.org/2000/svg"
+                              className={`w-6 h-6 ${
+                                starIdx < item.rating
+                                  ? "text-green-900"
+                                  : "text-gray-300"
+                              } fill-current inline`}
+                              viewBox="0 0 20 20"
+                              fill="currentColor"
+                            >
+                              <path
+                                fillRule="evenodd"
+                                d="M10 2l2.5 6.5H18l-5 3.5 2 7-5-4-5 4 2-7-5-3.5h5.5L10 2z"
+                                clipRule="evenodd"
+                              />
+                            </svg>
+                          ))}
+                        </div>
 
                         <blockquote>
-                          <p className="text-gray-800 font-semibold sm:text-2xl">
+                          <p className="font-roboto text-lg text-black">
                             “{item.quote}“
                           </p>
                         </blockquote>
 
-                        {/* Testimonial Avatar and Info */}
+                        {/* User Info */}
                         <div className="mt-6">
                           <img
                             src={item.avatar}
-                            className="w-16 h-16 mx-auto rounded-full"
+                            alt={item.name}
+                            width={64}
+                            height={64}
+                            className="mx-auto rounded-full"
                           />
                           <div className="mt-3">
-                            <span className="block text-gray-800 font-semibold">
+                            <span className="block text-black font-semibold">
                               {item.name}
                             </span>
-                            <span className="block text-gray-600 text-sm mt-0.5">
+                            <span className="hidden lg:block text-gray-600 text-sm mt-0.5">
                               {item.title}
                             </span>
                           </div>
@@ -145,7 +174,7 @@ const Testimonial = () => {
                                 <button
                                   className={`w-2.5 h-2.5 rounded-full duration-150 ring-offset-2 ring-indigo-600 focus:ring ${
                                     currentTestimonial === btnIdx
-                                      ? "bg-green-400"
+                                      ? "bg-green-900"
                                       : "bg-gray-300"
                                   }`}
                                   onClick={() => setCurrentTestimonial(btnIdx)}
@@ -160,22 +189,26 @@ const Testimonial = () => {
                 )}
               </ul>
             </div>
-              
-              {/* Navigation Buttons */}
-              <div className="absolute top-1/2 transform -translate-y-1/2 w-full flex justify-between px-4">
-                <button
-                  onClick={previousTestimonial}
-                  className="p-2 bg-green-400 rounded-full"
-                >
-                  <ChevronLeftIcon />
-                </button>
-                <button
-                  onClick={nextTestimonial}
-                  className="p-2 bg-green-400 rounded-full"
-                >
-                  <ChevronRightIcon />
-                </button>
-              </div>
+
+            {/* Navigation Buttons */}
+            <div className="hidden lg:block">
+              <button
+                onClick={previousTestimonial}
+                role="button"
+                aria-label="Previous Testimonial"
+                className="hidden -ml-6 mt-12 absolute top-1/2 w-16 h-16 left-0 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-lg hover:bg-green-900 md:block lg:block"
+              >
+                <ChevronLeftIcon className="text-customGreen hover:text-white" />
+              </button>
+              <button
+                onClick={nextTestimonial}
+                role="button"
+                aria-label="Next Testimonial"
+                className="hidden -mr-6 mt-12 absolute top-1/2 w-16 h-16 right-0 transform -translate-y-1/2  bg-white rounded-full p-2 shadow-lg hover:bg-green-900 md:block lg:block"
+              >
+                <ChevronRightIcon className="text-customGreen hover:text-white" />
+              </button>
+            </div>
           </div>
         </div>
       </div>

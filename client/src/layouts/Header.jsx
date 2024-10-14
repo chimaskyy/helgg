@@ -30,33 +30,31 @@ function Header() {
   }, [state]);
 
   const toggleMenuHandler = () => {
-    setMenuOpen(!menuOpen); // Toggling the menu open/close
+    setMenuOpen(!menuOpen);
   };
 
   return (
     <nav ref={navRef} className="bg-white w-full top-0 z-20 shadow-lg h-24">
-      {" "}
-      {/* Increased height here */}
-      <div className="flex items-center justify-between px-8 max-w-screen-xl mx-auto md:px-8 lg:flex lg:justify-between h-full">
-        {" "}
-        {/* Added h-full for full height alignment */}
-        {/* Logo on the left */}
+      <div className="flex items-center justify-between px-8 max-w-screen-xl mx-auto md:px-8 lg:flex lg:justify-between lg:px-0 h-full">
         <div className="flex items-center lg:w-1/3">
           <Link to="/">
             <img src={Logo} width={100} height={80} alt="Helgg UI logo" />
           </Link>
         </div>
-        {/* Download Button Centered */}
+
         <div className="flex items-center justify-center lg:hidden">
-          {" "}
-          {/* Center on small screens */}
           <Link to="/download">
             <button
               aria-label="Download Button"
-              className="group relative items-center px-4 sm:px-6 py-2 sm:py-4 text-xs sm:text-sm rounded-full shadow-xl transition-transform transform bg-customGreen border-2 border-white hover:scale-105 hover:border-green-600 hover:shadow-green-500/50 hover:shadow-3xl focus:outline-none"
+              className="group relative items-center px-4 sm:px-6 py-2 sm:py-4 text-xs sm:text-sm rounded-full shadow-xl transition-transform transform bg-customGreen border-2 border-white hover:scale-105 hover:border-green-600 hover:bg-customGray hover:text-white hover:shadow-3xl focus:outline-none"
               id="downloadButton"
             >
-              <span>Get the App</span>
+              <span className="group-hover:hidden text-lg font-bold">
+                Get the App
+              </span>
+              <span className="hidden group-hover:inline text-lg font-bold animate-drop-in">
+                Download
+              </span>
             </button>
           </Link>
         </div>
@@ -106,11 +104,11 @@ function Header() {
               : "hidden lg:flex lg:h-auto"
           }`}
         >
-          <ul className="text-lg text-extrabold justify-center items-center space-y-8 lg:flex lg:space-x-6 lg:space-y-0 lg:flex-1">
+          <ul className="text-xl justify-center items-center space-y-8 lg:flex lg:space-x-6 lg:space-y-0 lg:flex-1">
             {navigation.map((item, idx) => (
               <li
                 key={idx}
-                className="text-gray-600 font-bold hover:text-gray-1000 hover:bg-gray-100 p-2 rounded-lg"
+                className="text-gray-600 font-roboto hover:text-customBlue hover:bg-gray-100 p-2 rounded-lg"
               >
                 <NavLink
                   to={item.path}
@@ -133,10 +131,13 @@ function Header() {
             <Link to="/download">
               <button
                 aria-label="Google Play Store"
-                className="group relative px-4 sm:px-6 py-2 sm:py-4 text-xs sm:text-sm rounded-full shadow-xl transition-transform transform bg-green-200 border-2 border-white hover:scale-105 hover:border-green-600 hover:shadow-green-500/50 hover:shadow-3xl focus:outline-none"
+                className="group relative items-center px-4 sm:px-6 py-2 sm:py-4 text-xs sm:text-sm rounded-full shadow-xl transition-transform transform bg-customGreen border-2 border-white hover:scale-105 hover:border-green-600 hover:bg-customGray hover:text-white hover:shadow-3xl focus:outline-none"
                 id="downloadButton"
               >
-                <span>Get the App</span>
+                <span className="group-hover:hidden text-lg">Get the App</span>
+                <span className="hidden group-hover:inline text-lg font-bold animate-drop-in">
+                  Download
+                </span>
               </button>
             </Link>
           </div>

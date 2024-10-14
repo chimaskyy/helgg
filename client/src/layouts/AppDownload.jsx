@@ -5,7 +5,7 @@ import { faGooglePlay, faApple } from "@fortawesome/free-brands-svg-icons";
 function AppDownload() {
   return (
     <section className="py-14">
-      <div className="max-w-screen-xl mx-auto px-4 md:px-8">
+      <div className="max-w-screen-xl ">
         {/* Flex container for text and testimonials */}
         <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center">
           {/* Text Content */}
@@ -13,14 +13,14 @@ function AppDownload() {
             <img src={AppImg} alt="App design image" />
           </div>
 
-          <div className="lg:w-2/5 mt-38">
-            <p className="text-sm bg-gray-200 rounded-full w-10 p-2 font-thin">
+          <div className="lg:w-2/5 mt-38  ml:12 lg:ml-24">
+            <p className="text-sm bg-gray-200 rounded-full w-24 p-1 tracking-tight  font-thin">
               GET THE APP
             </p>
-            <h1 className="text-5xl font-bold text-gray-800">
-              Download Helgg app and start Riding!
+            <h1 className="text-4xl font-bold text-gray-800">
+              Download the <br /> Helgg App today!
             </h1>
-            <div className="pt-12 flex gap-4 flex-wrap justify-center">
+            <div className="w-full pt-12 flex gap-4 ml-4 lg:ml-0 ">
               <a
                 href="https://play.google.com/store/apps/details?id=com.helggscooters.android&pli=1"
                 target="_blank"
@@ -29,7 +29,7 @@ function AppDownload() {
               >
                 <button
                   aria-label="Google Play Store"
-                  className="group relative px-4 sm:px-6 py-2 sm:py-4 text-xs sm:text-sm rounded-full shadow-xl transition-transform transform bg-customGreen border-2 border-white hover:scale-105 hover:border-green-600 hover:shadow-green-500/50 hover:shadow-3xl focus:outline-none"
+                  className="h-12 w-full group  relative px-4 sm:px-6 py-2 sm:py-4 text-xs sm:text-sm rounded-full shadow-xl transition-transform transform bg-customGreen border-2 border-white hover:scale-105 hover:border-green-600 hover:shadow-green-500/50 hover:shadow-3xl focus:outline-none md:w-full h-16 lg:w-52 lg:h-16"
                   id="downloadButton"
                 >
                   <FontAwesomeIcon
@@ -48,7 +48,7 @@ function AppDownload() {
               >
                 <button
                   aria-label="Apple Play Store"
-                  className="group relative px-4 sm:px-6 py-2 sm:py-4 text-xs sm:text-sm rounded-full shadow-xl transition-transform transform bg-transparent border-2 border-black hover:scale-105 hover:border-green-600 hover:shadow-green-500/50 hover:shadow-3xl focus:outline-none"
+                  className="h-12 w-full group relative px-4 sm:px-6 py-2 sm:py-4 text-xs sm:text-sm rounded-full shadow-xl transition-transform transform bg-transparent border-2 border-black hover:scale-105 hover:border-green-600 hover:shadow-green-500/50 hover:shadow-3xl focus:outline-none md:w-full h-16 lg:w-52 lg:h-16"
                   id="downloadButton"
                 >
                   <FontAwesomeIcon
