@@ -1,8 +1,4 @@
-import helgg from "../assets/helgg1.jpeg";
-import map from "../assets/map.png";
 import banner6 from "../assets/banner6.jpg";
-import Logo from "../assets/helgg-logo-mint-and-cobalt.png";
-
 import ContentSection from "../layouts/imageSection";
 import mockup from "../assets/Images/helggMockup.png";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
@@ -22,25 +18,21 @@ const sectionStyle = {
   backgroundImage: `url(${banner6})`,
 };
 
-const overlayClass = "absolute inset-0 bg-black opacity-70";
-const sectionClass = "m-12 flex flex-col items-center p-8 ";
-const titleClass = "font-roboto text-4xl text-gray-800 font-bold mb-4";
-const textClass = "font-roboto text-lg text-gray-500 text-center max-w-2xl";
-
 const Home = () => {
   const [isPlaying, setIsPlaying] = useState(false);
 
   return (
     <>
-      <main>
+      <main className="bg-gray-50">
+        {/* Hero section */}
         <section
-          className="m-8 lg:m-16 rounded-custom-large shadow-3xl  relative bg-cover bg-center object-cover bg-no-repeat h-[93vh] overflow-hidden"
+          className="m-2 lg:m-16 rounded-custom-large shadow-3xl  relative bg-cover bg-center object-cover bg-no-repeat h-[93vh] overflow-hidden"
           style={sectionStyle}
           aria-label="Hero section"
         >
-          <div className={overlayClass}></div>
+          <div className="absolute inset-0 bg-black opacity-70"></div>
           <div className="relative z-20 h-full flex flex-col justify-center items-center text-center px-4 sm:px-6 lg:px-8">
-            <h1 className="group font-roboto text-4xl justify-center text-white font-bold md:text-6xl lg:text-9xl mb-4 opacity-0 animate-slideIn delay-300">
+            <h1 className="group font-roboto text-5xl justify-center text-white font-bold md:text-6xl lg:text-9xl mb-4 opacity-0 animate-slideIn delay-300">
               Embrace the Future of
               <br />
               <span className="relative inline-block">
@@ -106,28 +98,31 @@ const Home = () => {
             </div>
           </div>
         </section>
-        <section className={sectionClass}>
-          <h1 className={`${titleClass} animate-slideIn delay-300`}>
-            Who we are
-          </h1>
-          <p className={`${textClass} animate-slideIn delay-300`}>
-            We are a micro-mobility company creating a shared network of
-            electric vehicles that will redefine and transform the African
-            transport industry.
-          </p>
 
-          <div className="self-end mt-8">
-            <figure
-              id="lqd-draw-shape-01d0f95"
-              className="lqd-draw-shape"
-              data-lqd-draw-shape="true"
+        {/* Who We Are Section */}
+        <section className="px-4 py-12 sm:px-6 lg:px-8 lg:py-24 bg-gray-50">
+          <div className="max-w-3xl mx-auto">
+            <h1
+              className={`text-3xl text-center font-bold text-gray-900 mb-6 animate-slideIn delay-300 sm:text-4xl lg:text-5xl`}
             >
+              Who we are
+            </h1>
+            <p
+              className={`text-lg  text-center  text-gray-700 mb-12 animate-slideIn delay-300 sm:text-xl lg:text-2xl`}
+            >
+              We are a micro-mobility company creating a shared network of
+              electric vehicles that will redefine and transform the African
+              transport industry.
+            </p>
+
+            <div className="flex justify-end">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="124"
                 height="70"
                 viewBox="0 0 124 70"
                 fill="none"
+                className="w-32 h-auto sm:w-40 lg:w-48"
               >
                 <g clipPath="url(#clip0_447_11012)">
                   <path
@@ -155,202 +150,236 @@ const Home = () => {
                   </clipPath>
                 </defs>
               </svg>
-            </figure>
+            </div>
           </div>
         </section>
 
-        <section className="m-6 lg:m-32 pb-24">
-          <div
-            className="relative w-full h-[22.5rem]"
-            onClick={() => setIsPlaying((prev) => !prev)}
-          >
-            {!isPlaying ? (
-              <>
-                <img
-                  src={
-                    "https://helgg.com/wp-content/uploads/2023/01/IMG_4675.png"
-                  }
-                  alt="Video Thumbnail"
-                  className="absolute top-0 left-0 h-[22.5rem] lg:h-[32.5rem] w-full object-cover cursor-pointer rounded-[70px]"
-                />
-                <div className="lg:mt-24 bg-customGreen w-200 h-100 rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                  <PlayCircleIcon
-                    style={{ fontSize: 100, color: "black" }}
-                    className="cursor-pointer animate-pulse"
+        {/* Video Player Section */}
+        <section className="px-4 py-12 sm:px-6 lg:px-8 lg:py-24">
+          <div className="max-w-7xl mx-auto">
+            <div
+              className="relative w-full aspect-video cursor-pointer rounded-2xl sm:rounded-3xl lg:rounded-[40px] overflow-hidden"
+              onClick={() => setIsPlaying((prev) => !prev)}
+            >
+              {!isPlaying ? (
+                <>
+                  <img
+                    src={
+                      "https://helgg.com/wp-content/uploads/2023/01/IMG_4675.png"
+                    }
+                    alt="Video Thumbnail"
+                    className="absolute top-0 left-0 w-full h-full object-cover"
                   />
-                </div>
-              </>
-            ) : (
-              <ReactPlayer
-                url={
-                  "https://www.youtube.com/embed/K--K8rjro40?autoplay=1&mute=1&loop=1&playlist=K--K8rjro40"
-                }
-                playing={isPlaying}
-                controls
-                width="100%"
-                height="100%"
-                aria-label="Video player"
-                role="application"
-                className="absolute top-0 left-0 rounded-[80px]"
-              />
-            )}
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="bg-customGreen rounded-full p-2 animate-pulse">
+                      <PlayCircleIcon
+                        style={{ fontSize: 100, color: "black" }}
+                      />
+                    </div>
+                  </div>
+                </>
+              ) : (
+                <ReactPlayer
+                  url={
+                    "https://www.youtube.com/embed/K--K8rjro40?autoplay=1&mute=1&loop=1&playlist=K--K8rjro40"
+                  }
+                  playing={isPlaying}
+                  controls
+                  width="100%"
+                  height="100%"
+                  aria-label="Video player"
+                  role="application"
+                  className="absolute top-0 left-0"
+                />
+              )}
+            </div>
           </div>
         </section>
 
-        <section className="lg:m-24 pt-12">
-          <div className="flex flex-col lg:flex-row items-center p-6 bg-background text-foreground">
-            <div className="w-full lg:w-1/2 flex justify-center lg:justify-start">
-              <Player
-                src="https://lottie.host/026b5ede-8e07-432f-8ab6-be7509ccc807/PzvxgODDlW.json"
-                className="player"
-                loop
-                autoplay
-                style={{ height: "400px", width: "400px" }}
-              />
-            </div>
-            <div className="w-full lg:w-1/2 lg:text-left mt-4 lg:mt-0">
-              <h1 className="font-roboto text-2xl md:text-5xl lg:text-left lg:text-left lg:text-5xl text-gray-800 font-bold max-w-2xl">
-                Experience seamless transportation on campus riding e-scooters
-                and bicycles
-              </h1>
-              <p className="font-roboto text-gray-900  mt-6 text-center lg:text-left text-2xl">
-                Unlock a vehicle, ride with friends, pay for trips, and create{" "}
-                <br />
-                moments together.
-              </p>
-            </div>
-          </div>
-        </section>
-        <section className="lg:m-24 flex flex-col-reverse lg:flex-row items-center p-6 text-foreground">
-          <div className="w-full lg:w-1/2 lg:text-left mt-4 lg:mt-0">
-            <h1 className="font-roboto text-4xl mb-8 text-center md:text-5xl lg:text-left lg:text-left lg:text-5xl text-gray-800 font-bold max-w-2xl">
-              Zero Carbon Emissions
-            </h1>
-            <p className="font-roboto mt-6 mb-12 text-center lg:text-left text-2xl">
-              Reduce your carbon footprint by opting for an eco-friendly and
-              sustainable means of transportation.
-            </p>
-          </div>
-          <div className="w-full lg:w-1/2 flex justify-center lg:justify-start">
-            <Player
-              src="https://lottie.host/f9c7a233-c8d2-41a7-8d14-c47a5b096a67/gjmvilzAjw.json"
-              className="player"
-              loop
-              autoplay
-              style={{ height: "500px", width: "700px" }}
-            />
-          </div>
-        </section>
-        <section className="lg:m-24">
-          <h1 className="font-roboto text-3xl mb-6 md:text-5xl text-center lg:text-left lg:text-5xl text-gray-800 font-bold max-w-2xl">
-            A seamless interconnected electric vehhicle ecosystem
-          </h1>
-          <div className="flex flex-col md:flex-row p-6">
-            <div className="md:w-3/4 flex flex-col md:flex-row items-center">
-              <div>
-                <h1 className="font-roboto mt-8 text-2xl font-bold text-gray-800">
-                  Electric Bicyle
-                </h1>
-                <p className="font-roboto mt-4 text-xl text-gray-600">
-                  Rideshare e-bicycles with an electric motor and rechargeable
-                  battery, providing assistance while pedaling, with a range of
-                  35–65 Km.
-                </p>
-                <button className="font-roboto mt-4 mb-12 text-sm text-customGreen">
-                  Learn More
-                  <ChevronRightIcon />
-                </button>
+        {/* Features Section */}
+        <section className="px-1 py-12 sm:px-6 lg:px-8 lg:py-24">
+          <div className="max-w-7xl mx-auto">
+            <div className="flex flex-col lg:flex-row items-center text-gray-800 rounded-lg overflow-hidden">
+              <div className="w-full p-6  flex justify-center lg:justify-start lg:p-12 lg:w-1/2">
+                <Player
+                  src="https://lottie.host/026b5ede-8e07-432f-8ab6-be7509ccc807/PzvxgODDlW.json"
+                  className="player"
+                  loop
+                  autoplay
+                  style={{
+                    width: "100%",
+                    maxWidth: "400px",
+                    height: "auto",
+                    aspectRatio: "1 / 1",
+                  }}
+                />
               </div>
-              <div
-                className="relative p-0 m-0 bg-cover bg-no-repeat lg:bg-none"
-                style={{ backgroundImage: `url(${map})` }}
-              >
-                <img
-                  src={mockup}
-                  alt="Helgg phone mockup"
-                  className="p-0 m-0 bg-transparent w-[400px] h-[700px] lg:w-[1000px] lg:h-[600px]"
+              <div className="w-full p-6 lg:p-12 lg:w-1/2">
+                <h1 className="font-roboto text-2xl text-gray-900  text-center font-extrabold mb-6 sm:text-3xl lg:text-4xl xl:text-5xl lg:text-left ">
+                  Experience seamless transportation on campus riding e-scooters
+                  and bicycles
+                </h1>
+                <p className="font-roboto text-gray-600  sm:text-xl lg:text-2xl text-center lg:text-left">
+                  Unlock a vehicle, ride with friends, pay for trips, and create
+                  moments together.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="px-4 py-12 sm:px-6 lg:px-8 lg:py-24">
+          <div className="max-w-7xl mx-auto">
+            <div className="flex flex-col-reverse lg:flex-row items-center">
+              <div className="w-full lg:w-1/2 lg:pr-12 mt-8 lg:mt-0">
+                <h1 className="font-roboto text-3xl sm:text-4xl lg:text-5xl text-center lg:text-left text-gray-800 font-bold mb-6">
+                  Zero Carbon Emissions
+                </h1>
+                <p className="font-roboto text-lg sm:text-xl lg:text-2xl text-center lg:text-left text-gray-600 mb-8">
+                  Reduce your carbon footprint by opting for an eco-friendly and
+                  sustainable means of transportation.
+                </p>
+              </div>
+              <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
+                <Player
+                  src="https://lottie.host/f9c7a233-c8d2-41a7-8d14-c47a5b096a67/gjmvilzAjw.json"
+                  className="player"
+                  loop
+                  autoplay
+                  style={{
+                    width: "100%",
+                    maxWidth: "700px",
+                    height: "auto",
+                    aspectRatio: "1.4 / 1",
+                  }}
                 />
               </div>
             </div>
-            <div className="md:w-1/2 md:pl-12 mt-24">
-              <div>
-                <h1 className="font-roboto text-2xl text-gray-800 font-bold text-primary">
-                  Electric Cars
-                </h1>
-                <p className="font-roboto mt-4 text-xl text-gray-600">
-                  Book zero-emission vehicles powered by electricity, with a
-                  range of around 100 Km on a single charge.
-                </p>
-                <button className="font-roboto mt-4 text-sm text-customGreen">
-                  Learn More
-                  <ChevronRightIcon />
-                </button>
-              </div>
-              <div className="mt-24">
-                <h1 className="font-roboto text-gray-800 text-2xl font-bold text-primary">
-                  Electric Scooters
-                </h1>
-                <p className="font-roboto mt-4 text-xl text-gray-600">
-                  Rideshare e-scooters with a rechargeable battery with a range
-                  of 30–59 Km on full charge. Offering convenience for urban
-                  commutes.
-                </p>
-                <button className="font-roboto mt-4 text-sm text-customGreen">
-                  Learn More
-                  <ChevronRightIcon />
-                </button>
-              </div>
-            </div>
-          </div>
-          <div className="text-center">
-            <button className="font-roboto text-center bg-customGreen rounded-full p-4 mt-24 mb-8">
-              Explore the Ev Store
-            </button>
           </div>
         </section>
-        <section className="lg:m-24 flex flex-col lg:flex-row items-center p-6">
-          <div className="w-full lg:w-1/2 lg:text-left mt-4 lg:mt-0">
-            <h1 className="font-roboto text-4xl mb-8 text-center md:text-5xl lg:text-left lg:text-left lg:text-5xl text-gray-800 font-bold max-w-2xl">
-              Unlock the world of electric biking with Helgg.
+        <section className="bg-gray-100 px-4 py-12 sm:px-6 lg:px-8 lg:py-24">
+          <div className="max-w-7xl mx-auto">
+            <h1 className="font-roboto text-2xl text-center text-gray-800 font-bold mb-12 md:text-center sm:text-4xl lg:text-5xl lg:center">
+              A seamless interconnected electric vehhicle ecosystem
             </h1>
-            <p className="font-roboto mt-6 text-center lg:text-left text-2xl">
-              With the Helgg Mobile app , you have access to a network of
-              e-bicycles around you. Simply Scan a QR code, ride and pay for
-              trips with the Helgg Virtual wallet.
-            </p>
-          </div>
-          <div className=" lg:w-1/2 flex justify-center lg:justify-start">
-            <Player
-              src="https://lottie.host/cbb5c895-985f-4990-b2cc-09b0250be903/kaPLRZGgVp.json"
-              className="player"
-              loop
-              autoplay
-              style={{ height: "500px", width: "700px" }}
-            />
+            <div className="flex flex-col md:flex-row lg:flex-row">
+              <div className="md:w-3/4 flex flex-col md:flex-row items-center">
+                <div className="mb-12 lg:mb-0">
+                  <h1 className="font-roboto text-2xl font-bold text-gray-800 mb-4">
+                    Electric Bicyle
+                  </h1>
+                  <p className="font-roboto text-lg sm:text-xl text-gray-600 mb-4">
+                    Rideshare e-bicycles with an electric motor and rechargeable
+                    battery, providing assistance while pedaling, with a range
+                    of 35–65 Km.
+                  </p>
+                  <button className="font-roboto text-sm text-green-600 flex items-center">
+                    Learn More
+                    <ChevronRightIcon className="ml-1 w-4 h-4" />
+                  </button>
+                </div>
+                <div className="relative mt-8 lg:mt-12">
+                  <div
+                    className="inset-0 bg-cover bg-center bg-no-repeat md:bg-none lg:bg-none"
+                    // style={{ backgroundImage: `url(${map})` }}
+                  >
+                    <img
+                      src={mockup}
+                      alt="Helgg phone mockup"
+                      width={400}
+                      height={600}
+                      className="transparent  relative z-10 mx-auto lg:mx-0 w-full lg:w-auto"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div className="md:w-1/2 md:pl-12 mt-24">
+                <div className="mb-12">
+                  <h1 className="font-roboto text-2xl text-gray-800 font-bold mb-4">
+                    Electric Cars
+                  </h1>
+                  <p className="font-roboto text-lg sm:text-xl text-gray-600 mb-4">
+                    Book zero-emission vehicles powered by electricity, with a
+                    range of around 100 Km on a single charge.
+                  </p>
+                  <button className="font-roboto text-sm text-green-600 flex items-center">
+                    Learn More
+                    <ChevronRightIcon className="ml-1 w-4 h-4" />
+                  </button>
+                </div>
+                <div className="mt-24">
+                  <h1 className="font-roboto text-gray-800 text-2xl font-bold ">
+                    Electric Scooters
+                  </h1>
+                  <p className="font-roboto text-lg sm:text-xl text-gray-600 mb-4">
+                    Rideshare e-scooters with a rechargeable battery with a
+                    range of 30–59 Km on full charge. Offering convenience for
+                    urban commutes.
+                  </p>
+                  <button className="font-roboto text-sm text-green-600 flex items-center">
+                    Learn More
+                    <ChevronRightIcon className="ml-1 w-4 h-4" />
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div className="text-center mt-16">
+              <button className="font-roboto text-center bg-customGreen rounded-full px-6 py-3 text-lg hover:bg-green-800 hover:shadow-xl hover:text-white transition-colors">
+                Explore the Ev Store
+              </button>
+            </div>
           </div>
         </section>
-        <section className="lg:m-24">
-          <div className="flex flex-col md:flex-col lg:flex-row-reverse items-center p-6 bg-background text-foreground">
-            {/* Text section first */}
-            <div className="font-roboto w-full lg:w-1/2 lg:text-left mt-4 lg:mt-0">
-              <h1 className="text-4xl md:text-5xl text-center lg:text-left lg:text-5xl text-gray-800 font-bold max-w-2xl">
-                Get to where you want to be at an affordable rate
-              </h1>
-              <p className="font-roboto mt-12 text-center lg:text-left text-2xl">
-                Save money on cabs and buses by ride sharing our electric cars
-                at affordable rates.
-              </p>
+        <section className="px-4 py-12 sm:px-6 lg:px-8 lg:py-24">
+          <div className="max-w-7xl mx-auto">
+            <div className="flex flex-col lg:flex-row items-center">
+              <div className="w-full lg:w-1/2 lg:pr-8">
+                <h1 className="font-roboto text-3xl sm:text-4xl lg:text-5xl text-center lg:text-left text-gray-800 font-bold mb-6">
+                  Unlock the world of electric biking with Helgg.
+                </h1>
+                <p className="font-roboto text-lg sm:text-xl lg:text-2xl text-center lg:text-left text-gray-600 mt-4">
+                  With the Helgg Mobile app , you have access to a network of
+                  e-bicycles around you. Simply Scan a QR code, ride and pay for
+                  trips with the Helgg Virtual wallet.
+                </p>
+              </div>
+              <div className="w-full lg:w-1/2 mt-12 lg:mt-0">
+                <Player
+                  src="https://lottie.host/cbb5c895-985f-4990-b2cc-09b0250be903/kaPLRZGgVp.json"
+                  className="player"
+                  loop
+                  autoplay
+                  style={{
+                    width: "100%",
+                    maxWidth: "500px",
+                    height: "auto",
+                    aspectRatio: "1 / 1",
+                  }}
+                />
+              </div>
             </div>
-
-            {/* Image section second */}
-            <div className="w-full lg:w-1/2 flex justify-center lg:justify-start">
-              <Player
-                src="https://lottie.host/ddcb3534-4fed-4c45-b6a2-11aefa2ee392/oRGtFpGmeo.json"
-                className="player"
-                loop
-                autoplay
-                style={{ height: "400px", width: "400px" }}
-              />
+          </div>
+        </section>
+        <section className="py-12 px-0 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="flex flex-col items-center lg:gap-4 lg:flex-row-reverse  ">
+              <div className="font-roboto px-4  w-full space-y-6 lg:w-1/2 ">
+                <h1 className="text-3xl sm:text-4xl lg:text-5xl text-gray-800 font-bold text-center lg:text-left">
+                  Get to where you want to be at an affordable rate
+                </h1>
+                <p className="font-roboto pt-4 text-lg text-gray-600 text-center sm:p-8 sm:text-xl md:text-3xl lg:text-2xl md:mt-2 lg:pt-4 lg:text-left">
+                  Save money on cabs and buses by ride sharing our electric cars
+                  at affordable rates.
+                </p>
+              </div>
+              <div className="w-full lg:w-1/2 flex justify-center lg:justify-start">
+                <Player
+                  src="https://lottie.host/ddcb3534-4fed-4c45-b6a2-11aefa2ee392/oRGtFpGmeo.json"
+                  className="player"
+                  loop
+                  autoplay
+                  style={{ height: "400px", width: "400px", maxWidth: "100%" }}
+                />
+              </div>
             </div>
           </div>
         </section>

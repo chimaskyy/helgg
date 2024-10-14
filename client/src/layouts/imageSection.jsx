@@ -29,7 +29,7 @@ const ContentSection = () => {
       icon: ElectricScooterIcon,
       image: pic4,
       alt: "Image of a scooter",
-      gradientColor: "from-transparent to-gray-g00",
+      gradientColor: "from-transparent to-gray-600",
     },
   ];
   return (
