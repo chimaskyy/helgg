@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { MessageCircleMore } from "lucide-react";
-import Hand from "../assets/hand.png";
-import Domi from "../assets/Domi.jpeg";
+import Hand from "../assets/gallery/hand.png";
+import Domi from "../assets/gallery/Domi.jpeg";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 

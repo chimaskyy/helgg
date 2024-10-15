@@ -20,7 +20,7 @@ function TechWriter() {
         () => {
           toast.success("Application sent successfully!", {
             position: "top-right",
-            autoClose: 5000,
+            autoClose: 3000,
             hideProgressBar: false,
             closeOnClick: true,
             pauseOnHover: true,
@@ -31,7 +31,7 @@ function TechWriter() {
         (error) => {
           toast.error(`Failed to send application! ${error.text}`, {
             position: "top-right",
-            autoClose: 5000,
+            autoClose: 3000,
             hideProgressBar: false,
             closeOnClick: true,
             pauseOnHover: true,

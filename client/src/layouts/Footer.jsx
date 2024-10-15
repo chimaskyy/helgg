@@ -15,28 +15,36 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div>
-            <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase mb-4">
+            <h3 className="text-xl font-semibold text-gray-400 tracking-wider uppercase mb-6">
               CONTACT US
             </h3>
-            <ul className="space-y-4">
+            <ul className="space-y-6 text-lg">
               <li>
-                <a target="_blank" href="https://twitter.com/helgg_">
+                <a
+                  target="_blank"
+                  href="https://twitter.com/helgg_"
+                  rel="noopener noreferrer"
+                >
                   Twitter support
                 </a>
               </li>
-              <li className="text-sm text-gray-400">OUR LOCATION</li>
+              <li className="text-xl text-gray-400">OUR LOCATION</li>
               <li>
-                <a target="_blank" href="https://goo.gl/maps/cvNPBdC7Pkwn8DFA9">
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://goo.gl/maps/cvNPBdC7Pkwn8DFA9"
+                >
                   Owena Street, Parkview, Ikoyi, Lagos, Nigeria.
                 </a>
               </li>
-              <li className="text-sm text-gray-400">CALL US DIRECTLY</li>
+              <li className="text-xl mb-4 text-gray-400">CALL US DIRECTLY</li>
               <li>
                 <a href="tel:(+234)8057091624%E2%80%8B" target="_blank">
                   (+234) 8165810438
                 </a>
               </li>
-              <li className="text-sm text-gray-400">SEND US AN EMAIL</li>
+              <li className="text-xl text-gray-400">SEND US AN EMAIL</li>
               <li>
                 {" "}
                 <a target="_blank" href="mailto:info@helgg.com">
@@ -46,10 +54,10 @@ const Footer = () => {
             </ul>
           </div>
           <div>
-            <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase mb-4">
+            <h3 className="text-xl font-semibold text-gray-400 tracking-wider uppercase mb-6">
               COMPANY
             </h3>
-            <ul className="space-y-4">
+            <ul className="space-y-4 text-lg">
               <li>
                 <Link to="/store" className="hover:text-white">
                   E-Bikes
@@ -73,10 +81,10 @@ const Footer = () => {
             </ul>
           </div>
           <div>
-            <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase mb-4">
+            <h3 className="text-xl font-semibold text-gray-400 tracking-wider uppercase mb-4">
               SUPPORT
             </h3>
-            <ul className="space-y-4">
+            <ul className="space-y-4 text-lg">
               <li>
                 <Link to="/safety" className="hover:text-white">
                   Safety
@@ -99,25 +107,24 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="bg-gray-800 p-8 gap-4 md:p-12 rounded-3xl  w-full border-2 h-[20em] lg:w-[22em] border-[rgba(75,30,133,0.5)] flex  flex-col items-center">
-            <h3 className="text-xl font-bold text-white mb-2">
+          <div className="bg-gray-800 p-8 rounded-3xl border-2 border-[rgba(75,30,133,0.5)] flex flex-col items-center justify-center md:col-span-2 lg:col-span-1">
+            <h3 className="text-xl font-bold text-white mb-2 text-center">
               Join our EV community 🚀
             </h3>
             <p className="text-lg text-gray-400 mb-4 text-center">
               Be part of the change in promoting sustainable transportation and
               reducing carbon footprint.
             </p>
-            <Link to="/community">
+            <Link href="/community" className="w-full sm:w-auto">
               <button
                 aria-label="Community page"
-                className=" text-cutomGreen group relative font-roboto h-15 w-[200px] sm:w-[250px] px-4 sm:px-6 py-2 sm:py-4 text-xs sm:text-sm rounded-full shadow-2xl bg-teal-900 hover:scale-105 hover:bg-customGreen hover:text-black hover:shadow-3xl focus:outline-none"
-                id="downloadButton"
+                className="text-customGreen group relative font-roboto w-full sm:w-[250px] px-6 py-4 text-sm rounded-full shadow-2xl bg-teal-900 hover:scale-105 hover:bg-customGreen hover:text-black hover:shadow-3xl focus:outline-none transition-all duration-300 md:w-full h-18 lg:w-52 lg:h-18"
               >
                 <span className="group-hover:hidden text-lg">
                   Join the Community
                 </span>
                 <span className="hidden group-hover:inline text-lg font-bold animate-drop-in">
-                  It's Easy
+                  It&apos;s Easy
                 </span>
               </button>
             </Link>
@@ -166,6 +173,7 @@ const Footer = () => {
             <a
               target="_blank"
               href="https://www.instagram.com/helgg_/"
+              rel="noopener noreferrer"
               className="text-gray-400 hover:text-white"
             >
               <span className="sr-only">Instagram</span>
@@ -174,6 +182,7 @@ const Footer = () => {
             <a
               target="_blank"
               href="https://twitter.com/helgg_"
+              rel="noopener noreferrer"
               className="text-gray-400 hover:text-white"
             >
               <span className="sr-only">Twitter</span>
@@ -182,6 +191,7 @@ const Footer = () => {
             <a
               target="_blank"
               href="https://ng.linkedin.com/company/helggscooters"
+              rel="noopener noreferrer"
               className="text-gray-400 hover:text-white"
             >
               <span className="sr-only">LinkedIn</span>
@@ -190,6 +200,7 @@ const Footer = () => {
             <a
               target="_blank"
               href="https://www.youtube.com/@helggcommunity1642"
+              rel="noopener noreferrer"
               className="text-gray-400 hover:text-white"
             >
               <span className="sr-only">YouTube</span>

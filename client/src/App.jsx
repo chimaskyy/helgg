@@ -1,13 +1,9 @@
-import { useState } from 'react';
+import { useState } from "react";
 import Header from "./layouts/Header";
 import Footer from "./layouts/Footer";
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-} from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
-import About from "./pages/About"
+import About from "./pages/About";
 import Services from "./pages/Services";
 import Download from "./pages/Download";
 import Career from "./pages/Career";
@@ -20,9 +16,9 @@ import Faq from "./pages/Faq";
 import Agreement from "./pages/Agreement";
 import Safety from "./pages/Safety";
 import Store from "./pages/Store";
-import Blog1 from './pages/Blog1';
-import Locations from './pages/Locations';
-import Blog from './pages/Blog';
+import Blog1 from "./pages/Blog1";
+import Locations from "./pages/Locations";
+import Blog from "./pages/Blog";
 function App() {
   return (
     <div className="p-0 m-0">

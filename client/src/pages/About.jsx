@@ -1,4 +1,4 @@
-import helgg1 from "../assets/helgg1.jpeg";
+import helgg1 from "../assets/gallery/helgg1.jpeg";
 import team from "../assets/Images/team.png";
 import team1 from "../assets/Images/team2.png";
 import team2 from "../assets/Images/team3.png";

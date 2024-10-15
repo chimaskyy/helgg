@@ -1,4 +1,4 @@
-import banner6 from "../assets/banner6.jpg";
+import banner6 from "../assets/gallery/banner6.jpg";
 import ContentSection from "../layouts/imageSection";
 import mockup from "../assets/Images/helggMockup.png";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
@@ -6,7 +6,6 @@ import Sponsors from "../layouts/sponsors";
 import Testimonial from "../layouts/Testimonial";
 import Widget from "../layouts/NewsSection";
 import AppDownload from "../layouts/AppDownload";
-import DownloadIcon from "@mui/icons-material/Download";
 import ReactPlayer from "react-player";
 import PlayCircleIcon from "@mui/icons-material/PlayCircle";
 import { useState } from "react";
@@ -26,7 +25,7 @@ const Home = () => {
       <main className="bg-gray-50">
         {/* Hero section */}
         <section
-          className="mx-2 mb-2 mt-0 rounded-custom-large shadow-3xl  relative bg-cover bg-center object-cover bg-no-repeat h-[100vh] overflow-hidden lg:mx-16 lg:mb-16 lg:mt-0"
+          className="mx-2 mb-2 mt-0 rounded-custom-large shadow-5xl  relative bg-cover bg-center object-cover bg-no-repeat h-[100vh] overflow-hidden md:mx-6 lg:mx-16 lg:mb-16 lg:mt-0"
           style={sectionStyle}
           aria-label="Hero section"
         >
@@ -76,11 +75,11 @@ const Home = () => {
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
               <Link to="/download">
                 <button
-                  aria-label="Download App"
-                  className="flex text-roboto text-sm text-gray-900 justify-center gap-2 items-center mx-auto shadow-xl text-lg bg-customGreen backdrop-blur-md lg:font-semibold isolation-auto border-gray-50 before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-green-500 hover:text-gray-50 before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 relative z-10 px-4 py-2 overflow-hidden border-2 rounded-full group opacity-0 animate-slideIn delay-500"
+                  aria-label="Downlaod buttton"
+                  className="h-12 w-full group  relative px-4 sm:px-6 py-2 sm:py-4 text-lg sm:text-lg rounded-full shadow-xl transition-transform transform bg-customGreen border-2 border-white hover:scale-105 hover:border-green-600  hover:shadow-3xl focus:outline-none md:w-full h-16 lg:w-52 lg:h-16"
                 >
                   Download App
-                  <DownloadIcon style={{ color: "gray" }} />
+                  <ChevronRightIcon aria-hidden="true" className="ml-6 md:ml-4 lg:ml-2 " />
                 </button>
               </Link>
               <a
@@ -89,7 +88,7 @@ const Home = () => {
               >
                 <button
                   aria-label="Play video tutorial"
-                  className="text-roboto text-sm mt-2 text-white opacity-0 animate-slideIn delay-700"
+                  className="text-roboto text-lg m-4 text-white opacity-0 animate-slideIn delay-700 hover:scale-105 hover:text-customGreen"
                 >
                   How to Ride
                   <ChevronRightIcon aria-hidden="true" />

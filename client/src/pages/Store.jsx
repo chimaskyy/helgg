@@ -1,5 +1,4 @@
-import React from "react";
-import banner6 from "../assets/banner6.jpg";
+import banner6 from "../assets/gallery/banner6.jpg";
 import { Link } from "react-router-dom";
 import DownloadIcon from "@mui/icons-material/Download";
 

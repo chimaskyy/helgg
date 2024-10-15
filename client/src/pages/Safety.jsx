@@ -5,7 +5,7 @@ import ElectricScooterIcon from "@mui/icons-material/ElectricScooter";
 import traffic from "../assets/gallery/traffic.jpeg";
 import helmet from "../assets/gallery/helmet.jpg";
 import light from "../assets/gallery/light.jpg";
-import scooter from "../assets/banner6.jpg";
+import scooter from "../assets/gallery/banner6.jpg";
 
 function Safety() {
   return (

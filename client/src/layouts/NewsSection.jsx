@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import helgg from "../assets/helgg1.jpeg";
+import helgg from "../assets/gallery/helgg1.jpeg";
 import riders from "../assets/gallery/pic15.jpg";
 import competition from "../assets/Images/comptition.jpeg";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
