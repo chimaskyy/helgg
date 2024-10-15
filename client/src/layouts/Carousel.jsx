@@ -1,7 +1,7 @@
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
 import "@splidejs/splide/dist/css/splide.min.css";
-import banner2 from "../assets/banner6.jpg";
+import banner2 from "../assets/gallery/banner6.jpg";
 import pic0 from "../assets/gallery/pic0.jpg";
 import pic1 from "../assets/gallery/pic1.jpg";
 import pic2 from "../assets/gallery/pic2.jpg";
@@ -28,7 +28,7 @@ const imageStyle = {
 
 function Carousel() {
   return (
-    <div className="flex h-full bg-white">
+    <section className="flex h-full bg-white">
       <div className="container max-w-screen-xl mx-auto overflow-x-hidden">
         <Splide
           options={{
@@ -96,7 +96,7 @@ function Carousel() {
           </SplideSlide>
         </Splide>
       </div>
-    </div>
+    </section>
   );
 }
 

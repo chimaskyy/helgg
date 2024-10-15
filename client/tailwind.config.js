@@ -24,7 +24,7 @@ export default {
 
       },
       boxShadow: {
-        '5xl': '0 20px 50px rgba(0, 0, 0, 0.7)',
+        '5xl': '0 20px 50px rgba(0, 0, 0, 0.3)',
       },
       animation: {
         fadeIn: "fadeIn 1s ease-in-out forwards",

@@ -1,5 +1,5 @@
-import electricCar from '../assets/electric_car.png';
-import electricScooter from '../assets/electric_scooter.jpeg';
+import electricCar from '../assets/gallery/electric_car.png';
+import electricScooter from '../assets/gallery/electric_scooter.jpeg';
 import gradientDivider from '../assets/gradient-divider.svg';
 import '../styles/ecofriendly.css';
 

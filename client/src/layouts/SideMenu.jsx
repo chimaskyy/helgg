@@ -4,7 +4,7 @@ import Drawer from "@mui/material/Drawer";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
-import Logo from "../assets/helgg-logo-mint-and-cobalt.png";
+import Logo from "../assets/gallery/helgg-logo-mint-and-cobalt.png";
 
 import { Link } from "react-router-dom";
 

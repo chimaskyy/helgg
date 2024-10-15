@@ -1,11 +1,11 @@
-import bicycle from '../assets/electric_bicycle.png';
+import bicycle from '../assets/gallery/electric_bicycle.png';
 import gradientDivider from '../assets/gradient-divider.svg';
 import '../styles/ecofriendly.css';
 
 const EcoFriendly = () => {
   return (
     <>
-    <main>
+    <section>
       <div className='px-5 lg:pt-32 lg:ml-16 flex flex-col-reverse lg:flex-col'>
       <div className=''>
         <img
@@ -71,7 +71,7 @@ const EcoFriendly = () => {
         </div>
       </div>
     </div>
-    </main>
+    </section>
     </>
     
   );

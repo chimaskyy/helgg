@@ -1,8 +1,8 @@
-import sponsor1 from "../assets/spons1.webp";
-import sponsor2 from "../assets/spons2.png";
-import sponsor3 from "../assets/spons3.jpg";
-import sponsor4 from "../assets/spons4.png";
-import sponsor5 from "../assets/spons5.png";
+import sponsor1 from "../assets/Images/spons1.webp";
+import sponsor2 from "../assets/Images/spons2.png";
+import sponsor3 from "../assets/Images/spons3.jpg";
+import sponsor4 from "../assets/Images/spons4.png";
+import sponsor5 from "../assets/Images/spons5.png";
 
 function Sponsors() {
 
