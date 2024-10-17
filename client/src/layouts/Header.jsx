@@ -1,162 +1,200 @@
-import { useEffect, useRef, useState } from 'react';
-import Logo from '../assets/helgg-logo-mint-and-cobalt.png';
-import { Link, NavLink } from 'react-router-dom';
-import Sidemenu from './SideMenu';
+import Logo from "../assets/gallery/helgg-logo-mint-and-cobalt.png";
+import { useState, useEffect, useRef } from "react";
+import { Link, NavLink } from "react-router-dom";
+import { Menu, X, Download } from "lucide-react";
 
-function Header() {
-  const [state, setState] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
-  const navRef = useRef();
+const navigation = [
+  { title: "About us", path: "/about" },
+  { title: "Services", path: "/services" },
+  { title: "Locations", path: "/locations" },
+  { title: "Blog", path: "/blog" },
+  { title: "Ev Store", path: "/store" },
+];
 
-  const navigation = [
-    { title: 'About us', path: '/about' },
-    { title: 'Services', path: '/services' },
-    { title: 'Locations', path: '/locations' },
-    { title: 'Blog', path: '/blog' },
-    { title: 'Ev Store', path: '/store' },
-  ];
+export default function Header() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const headerRef = useRef();
+  const sideMenuRef = useRef();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 80);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   useEffect(() => {
     const body = document.body;
-    const customBodyStyle = ['overflow-hidden', 'lg:overflow-visible'];
-    if (state) body.classList.add(...customBodyStyle);
-    else body.classList.remove(...customBodyStyle);
+    if (mobileMenuOpen) {
+      body.style.overflow = "hidden";
+    } else {
+      body.style.overflow = "";
+    }
+  }, [mobileMenuOpen]);
 
-    const customStyle = ['sticky-nav', 'fixed', 'border-b'];
-    window.onscroll = () => {
-      if (window.scrollY > 80) navRef.current.classList.add(...customStyle);
-      else navRef.current.classList.remove(...customStyle);
-    };
-  }, [state]);
-
-  const toggleMenuHandler = () => {
-    setMenuOpen(!menuOpen);
+  const toggleMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen);
   };
 
   return (
-    <nav
-      ref={navRef}
-      className='bg-white w-full top-0 z-20 shadow-lg h-24'
+    <header
+      ref={headerRef}
+      className={`bg-white w-full top-0 z-20 transition-all duration-300 ${
+        isScrolled ? "shadow-lg fixed" : ""
+      }`}
     >
-      {' '}
-      {/* Increased height here */}
-      <div className='flex items-center justify-between px-8 max-w-screen-xl mx-auto md:px-8 lg:flex lg:justify-between h-full'>
-        {' '}
-        {/* Added h-full for full height alignment */}
-        {/* Logo on the left */}
-        <div className='flex items-center lg:w-1/3'>
-          <Link to='/'>
-            <img
-              src={Logo}
-              width={100}
-              height={80}
-              alt='Helgg UI logo'
-            />
+      <nav
+        className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-4"
+        aria-label="Global"
+      >
+        <div className="flex lg:flex-1">
+          <Link to="/">
+            <img src={Logo} width={100} height={80} alt="Helgg UI logo" />
           </Link>
         </div>
-        {/* Download Button Centered */}
-        <div className='flex items-center justify-center lg:hidden'>
-          {' '}
-          {/* Center on small screens */}
-          <Link to='/download'>
+        <div className="flex items-center justify-between w-full lg:hidden">
+          <div className="flex-1"></div>
+          <Link to="/download" className="flex-1 flex justify-center">
             <button
-              aria-label='Download Button'
-              className='group relative items-center px-4 sm:px-6 py-2 sm:py-4 text-xs sm:text-sm rounded-full shadow-xl transition-transform transform bg-customGreen border-2 border-white hover:scale-105 hover:border-green-600 hover:shadow-green-500/50 hover:shadow-3xl focus:outline-none'
-              id='downloadButton'
+              aria-label="Google Play Store"
+              className="group relative items-center px-4 sm:px-6 py-2 sm:py-4 text-xs sm:text-sm rounded-full shadow-xl transition-transform transform bg-customGreen border-2 border-white hover:scale-105 hover:border-green-600 hover:text-white hover:bg-black hover:shadow-3xl focus:outline-none"
             >
-              <span>Get the App</span>
+              <span className="group-hover:hidden text-sm font-bold">
+                Get the App
+              </span>
+              <span className="hidden group-hover:inline text-sm font-bold animate-drop-in">
+                Download
+              </span>
+            </button>
+          </Link>
+          <div className="flex-1 flex justify-end">
+            <button
+              type="button"
+              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+              onClick={toggleMenu}
+              aria-expanded={mobileMenuOpen}
+              aria-controls="mobile-menu"
+            >
+              <span className="sr-only">
+                {mobileMenuOpen ? "Close main menu" : "Open main menu"}
+              </span>
+              {mobileMenuOpen ? (
+                <X className="h-6 w-6" aria-hidden="true" />
+              ) : (
+                <Menu className="h-6 w-6" aria-hidden="true" />
+              )}
+            </button>
+          </div>
+        </div>
+        <div className="hidden lg:flex  lg:gap-x-8">
+          {navigation.map((item) => (
+            <NavLink
+              key={item.title}
+              to={item.path}
+              className={({ isActive }) =>
+                `text-lg font-semibold leading-6 ${
+                  isActive
+                    ? "text-customBlue"
+                    : "text-gray-900 hover:text-gray-600 hover-bg-gray-200 text-xl"
+                }`
+              }
+            >
+              {item.title}
+            </NavLink>
+          ))}
+        </div>
+        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+          <Link to="/download">
+            <button
+              aria-label="Google Play Store"
+              className="w-40 group relative px-4 sm:px-6 py-2 sm:py-4 text-xs sm:text-sm rounded-full shadow-xl transition-transform transform bg-green-200 border-2 border-white hover:scale-105 hover:border-green-600 hover:shadow-3xl focus:outline-none hover:bg-black hover:text-white"
+              id="downloadButton"
+            >
+              <span className="group-hover:hidden text-lg font-bold">
+                Get the App
+              </span>
+              <span className="hidden group-hover:inline text-lg font-bold animate-drop-in">
+                Download
+              </span>
             </button>
           </Link>
         </div>
-        <div className='flex items-center lg:hidden'>
-          <button
-            className='text-gray-700 outline-none p-2 rounded-md focus:border-gray-400 focus:border'
-            onClick={toggleMenuHandler}
-          >
-            {menuOpen ? (
-              <svg
-                xmlns='http://www.w3.org/2000/svg'
-                className='h-6 w-6'
-                fill='none'
-                viewBox='0 0 24 24'
-                stroke='currentColor'
-              >
-                <path
-                  strokeLinecap='round'
-                  strokeLinejoin='round'
-                  strokeWidth={2}
-                  d='M6 18L18 6M6 6l12 12'
-                />
-              </svg>
-            ) : (
-              <svg
-                xmlns='http://www.w3.org/2000/svg'
-                className='h-6 w-6'
-                fill='none'
-                viewBox='0 0 24 24'
-                stroke='currentColor'
-              >
-                <path
-                  strokeLinecap='round'
-                  strokeLinejoin='round'
-                  strokeWidth={2}
-                  d='M4 6h16M4 12h16m-7 6h7'
-                />
-              </svg>
-            )}
-          </button>
-        </div>
-        {/* Navigation Links */}
-        <div
-          className={`flex-1 justify-between lg:flex lg:items-center ${
-            state
-              ? 'h-screen pb-20 overflow-auto pr-4'
-              : 'hidden lg:flex lg:h-auto'
-          }`}
-        >
-          <ul className='text-lg text-extrabold justify-center items-center space-y-8 lg:flex lg:space-x-6 lg:space-y-0 lg:flex-1'>
-            {navigation.map((item, idx) => (
-              <li
-                key={idx}
-                className='text-gray-600 font-bold hover:text-gray-1000 hover:bg-gray-100 p-2 rounded-lg'
-              >
-                <NavLink
-                  to={item.path}
-                  className={({ isActive }) =>
-                    isActive ? 'bg-gray-100 text-gray-900 p-1 rounded-lg' : ''
-                  }
-                >
-                  {item.title}
-                </NavLink>
-              </li>
-            ))}
-          </ul>
+      </nav>
 
-          {/* Button - hidden on medium screens */}
-          <div
-            className={`hidden lg:block lg:justify-end ${
-              state ? 'lg:hidden' : ''
-            }`}
-          >
-            <Link to='/download'>
-              <button
-                aria-label='Google Play Store'
-                className='group relative px-4 sm:px-6 py-2 sm:py-4 text-xs sm:text-sm rounded-full shadow-xl transition-transform transform bg-green-200 border-2 border-white hover:scale-105 hover:border-green-600 hover:shadow-green-500/50 hover:shadow-3xl focus:outline-none'
-                id='downloadButton'
-              >
-                <span>Get the App</span>
-              </button>
+      {/* Mobile menu */}
+      <div
+        id="mobile-menu"
+        ref={sideMenuRef}
+        className={`fixed inset-y-0 left-0 z-50 w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out ${
+          mobileMenuOpen ? "translate-x-0" : "-translate-x-full"
+        }`}
+        aria-hidden={!mobileMenuOpen}
+      >
+        <div className="px-8 pt-12">
+          <div className="flex items-center justify-between mb-8">
+            <Link
+              to="/"
+              className="-m-1.5 p-1.5"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              <span className="sr-only">Helgg</span>
+              <img className="h-8 w-auto" src={Logo} alt="" />
             </Link>
+            <button
+              type="button"
+              className="-m-2.5 rounded-md p-2.5 text-gray-700"
+              onClick={toggleMenu}
+              aria-label="Close menu"
+            >
+              <X className="h-6 w-6" aria-hidden="true" />
+            </button>
+          </div>
+          <div className="mt-6 flow-root">
+            <div className="-my-6 divide-y divide-gray-500/10">
+              <div className="space-y-2 py-6">
+                {navigation.map((item) => (
+                  <NavLink
+                    key={item.title}
+                    to={item.path}
+                    className={({ isActive }) =>
+                      `-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 ${
+                        isActive
+                          ? "bg-gray-50 text-blue-600"
+                          : "text-gray-900 hover:bg-gray-50"
+                      }`
+                    }
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    {item.title}
+                  </NavLink>
+                ))}
+              </div>
+              <div className="py-6">
+                <Link
+                  to="/download"
+                  className="flex w-full items-center justify-center rounded-md bg-customGreen px-3 py-3 text-center font-semibold shadow-sm hover:bg-green-500 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  <Download className="mr-2 h-5 w-5" aria-hidden="true" />
+                  Get the App
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      {/* Side Menu */}
-      <Sidemenu
-        menuOpen={menuOpen}
-        toggleMenuHandler={toggleMenuHandler}
-      />
-    </nav>
+
+      {/* Overlay */}
+      {mobileMenuOpen && (
+        <div
+          className="fixed inset-0 z-40 bg-black bg-opacity-25"
+          aria-hidden="true"
+          onClick={toggleMenu}
+        ></div>
+      )}
+    </header>
   );
 }
-
-export default Header;

@@ -1,22 +1,33 @@
-import React from "react";
 import pic8 from "../assets/gallery/pic8.jpg";
-import team from "../assets/Images/team5.jpeg";
+import team from "../assets/gallery/mteam.jpeg";
 import team2 from "../assets/Images/team.png";
 import pic3 from "../assets/gallery/pic3.jpg";
+import { MoveLeft } from "lucide-react";
+import { Link } from "react-router-dom";
 import SocialShare from "../layouts/SocialShare";
 
 function Blog1() {
   return (
-    <div className="font-roboto p-8 bg-gray-100 min-h-screen">
-      <div className="max-w-screen-lg mx-auto">
-        <span className="bg-gray-200 text-gray-500 tracking-wide p-1 rounded-xl">
-          HELGG BLOG
-        </span>
-        <h1>
-          How Helgg Scooters is Enabling Planet-Friendly Transport in Nigeria
-        </h1>
-        <img src={pic8} alt="Group of people riding helgg electric scooter" />
-        <p>
+    <div className="font-roboto bg-gray-100 min-h-screen">
+      <article className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <header className="mb-8">
+          <span className="inline-block bg-gray-200 text-gray-700 text-sm font-semibold px-3 py-1 rounded-full mb-4">
+            HELGG BLOG
+          </span>
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight mb-4">
+            How Helgg Scooters is Enabling Planet-Friendly Transport in Nigeria
+          </h1>
+        </header>
+        <div className="prose prose-lg max-w-none">
+          <img
+            src={pic8}
+            width={800}
+            height={400}
+            className="w-full rounded-lg mb-8"
+            alt="Group of people riding helgg electric scooter"
+          />
+        </div>
+        <p className="mb-6 text-xl text-gray-700">
           Helgg scooters is a Nigerian micro-mobility start-up that provides
           commuters with a great way to move around while saving the planet and
           their wallets simultaneously. The company is driven by a vision to
@@ -35,14 +46,20 @@ function Blog1() {
           home in Nigeria, where environmentally friendly vehicles and last-mile
           transit systems are scarce.
         </p>
-        <figure>
-          <img src={team} alt="Co founders of helgg" />
-          <figcaption>
+        <figure className="mb-8">
+          <img
+            src={team}
+            width={600}
+            height={400}
+            className="w-full rounded-lg"
+            alt="Co founders of helgg"
+          />
+          <figcaption className="text-lg text-gray-600 mt-2 text-center">
             Helgg Cofounders from left to right — Oreoluwa Oluwafemi, Paul
             Jaiyeola, and Johnson Jaiyeola
           </figcaption>
         </figure>
-        <p>
+        <p className="mb-8 text-xl text-gray-700">
           On getting back to Nigeria, the cofounders who were students at the
           time started learning as much as they could about last-mile travel,
           electric scooters, and how they could establish this electric
@@ -55,11 +72,13 @@ function Blog1() {
           interest in our micro-mobility service and the feedback has been very
           positive. People are willing to try something new, cool, and fun.”
         </p>
-        <figure>
+        <figure className="mb-8">
           <img src={team2} alt="Helgg team members" />
-          <figcaption>Helgg team members</figcaption>
+          <figcaption className="text-lg text-gray-600 mt-2 text-center">
+            Helgg team members
+          </figcaption>
         </figure>
-        <p>
+        <p className="mb-6 text-xl text-gray-700">
           Helgg’s target market consists of people living in estates and on
           university campuses, as these environments are safe and often have
           smooth roads for vehicles like scooters. This market is also
@@ -84,11 +103,20 @@ function Blog1() {
           market entrants and taking notes of the challenges these other
           companies are facing.
         </p>
-        <figure>
-          <img src={pic3} alt="People riding helgg scooter" />
-          <figcaption>Customers on a ride</figcaption>
+        <figure className="mb-8">
+          <img
+            src={pic3}
+            width={600}
+            height={400}
+            className="w-full rounded-lg"
+            alt="People riding helgg scooter"
+          />
+          <figcaption className="text-lg text-gray-600 mt-2 text-center">
+            Customer riding Helgg Scooter
+          </figcaption>
         </figure>
-        <p>
+
+        <p className="mb-6 mb-6 text-xl text-gray-700">
           The Helgg scooter works via an app, where customers can order and pay
           to use it at any time. To start a ride, you scan the QR code at the
           top of the scooter and it prompts you to pay a 10 Naira fee to unlock
@@ -99,20 +127,42 @@ function Blog1() {
           cars in Nigeria. They aim to one day disrupt the public transport
           sector with enough eco-friendly vehicles to replace gas-fueled ones.
         </p>
-        <div>
+        <footer>
           <a
             target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 hover:underline"
             href="https://medium.com/thebaselineblog/how-helgg-scooters-is-enabling-planet-friendly-transport-in-nigeria-4350f7592daa"
           >
             {" "}
             Article By: The Baseline
           </a>
-        </div>
-        <div>
-          <p>Share on</p>
-          <SocialShare />
-        </div>
-      </div>
+
+          <div className="mt-6">
+            <p className="text-xl font-semibold mb-2">Share on</p>
+            <div className="">
+              <SocialShare />
+            </div>
+          </div>
+          <div className="mt-8">
+            <Link to="/how-helgg-scooters-interna-and-enactcare-won-paadcs-4-5-million-naira-equity-free-funding/">
+              <button
+                type="button"
+                size="lg"
+                className="group relative flex items-center px-6 py-3 text-lg rounded-full shadow-xl transition-all duration-300 hover:bg-gray-800 hover:text-white"
+              >
+                <MoveLeft className="mr-2 h-5 w-5 transition-transform group-hover:-translate-x-1" />
+                <span>PREVIOUS ARTICLE</span>
+              </button>
+            </Link>
+
+            <h2 className="mt-4 text-xl font-semibold text-gray-800">
+              How Helgg Scooters, Interna and Enactcare won PAADC&apos;s 4.5 Million
+              Naira Equity-Free Funding
+            </h2>
+          </div>
+        </footer>
+      </article>
     </div>
   );
 }
