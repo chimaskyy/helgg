@@ -3,7 +3,6 @@ import helgg from "../assets/gallery/helgg1.jpeg";
 import riders from "../assets/gallery/pic15.jpg";
 import competition from "../assets/Images/comptition.jpeg";
 import { ChevronRight } from "lucide-react";
-import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 
 export default function Widget() {
   // Blog data array
@@ -22,14 +21,14 @@ export default function Widget() {
       date: "2 years ago",
       title:
         "How Helgg Scooters, Interna, and Enactcare won PAADCs's 4.5 Million Naira Equity-Free Funding",
-      link: "#",
+      link: "/how-helgg-scooters-interna-and-enactcare-won-paadcs-4-5-million-naira-equity-free-funding/",
     },
     {
       id: 3,
       imgSrc: helgg,
       date: "2 years ago",
       title: "Revolutionizing the Electric Vehicle Industry",
-      link: "#",
+      link: "/revolutionizing-the-electric-vehicle-industry/",
     },
   ];
 
