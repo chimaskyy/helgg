@@ -25,7 +25,7 @@ const Home = () => {
       <main className="bg-gray-50">
         {/* Hero section */}
         <section
-          className="mx-2 mb-2 mt-0 rounded-custom-large shadow-5xl  relative bg-cover bg-center object-cover bg-no-repeat h-[100vh] overflow-hidden md:mx-6 lg:mx-16 lg:mb-16 lg:mt-0"
+          className="mx-4 mb-2 mt-0 rounded-3xl shadow-5xl  relative bg-cover bg-center object-cover bg-no-repeat h-[100vh] overflow-hidden md:mx-6 lg:mx-24 lg:mb-16 lg:mt-0"
           style={sectionStyle}
           aria-label="Hero section"
         >
@@ -41,7 +41,7 @@ const Home = () => {
                   {/* Brush Highlight SVG */}
                   <svg
                     className="w-full h-8 -mt-2 pt-5 lg:h-auto text-customGreen"
-                    viewBox="0 0 233 13"
+                    viewBox="0 0 230 13"
                     xmlns="http://www.w3.org/2000/svg"
                     aria-hidden="true"
                     preserveAspectRatio="none"
@@ -75,13 +75,17 @@ const Home = () => {
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
               <Link to="/download">
                 <button
-                  aria-label="Downlaod buttton"
-                  className="h-12 w-full group  relative px-4 sm:px-6 py-2 sm:py-4 text-lg sm:text-lg rounded-full shadow-xl transition-transform transform bg-customGreen border-2 border-white hover:scale-105 hover:border-green-600  hover:shadow-3xl focus:outline-none md:w-full h-16 lg:w-52 lg:h-16"
+                  aria-label="Download button"
+                  className="group relative flex justify-between items-center h-12 w-full min-w-[160px] px-4 sm:px-6 lg:px-4 py-2  sm:py-4 text-lg sm:text-base lg:text-lg rounded-full shadow-xl transition-transform transform bg-customGreen border-2 border-white hover:scale-105 hover:border-green-600 hover:shadow-3xl focus:outline-none md:w-full lg:w-52 lg:h-16"
                 >
-                  Download App
-                  <ChevronRightIcon aria-hidden="true" className="ml-6 md:ml-4 lg:ml-2 " />
+                  <span className="font-bold">Download App</span>
+                  <ChevronRightIcon
+                    aria-hidden="true"
+                    className="ml-4 h-5 w-5 sm:h-6 sm:w-6 lg:h-6 lg:w-6 md:ml-6 lg:ml-2"
+                  />
                 </button>
               </Link>
+
               <a
                 target="_blank"
                 href="https://www.youtube.com/watch?v=h8lzv_fyRDQ"
@@ -91,7 +95,10 @@ const Home = () => {
                   className="text-roboto text-lg m-4 text-white opacity-0 animate-slideIn delay-700 hover:scale-105 hover:text-customGreen"
                 >
                   How to Ride
-                  <ChevronRightIcon aria-hidden="true" />
+                  <ChevronRightIcon
+                    aria-hidden="true"
+                    className="ml-2 h-5 w-5 sm:h-6 sm:w-6 lg:h-6 lg:w-6"
+                  />
                 </button>
               </a>
             </div>

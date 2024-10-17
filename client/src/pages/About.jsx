@@ -9,7 +9,6 @@ import Rhoda from "../assets/Images/Group-2.png";
 import Ore from "../assets/Images/group3.png";
 import Paul from "../assets/Images/group4.jpg";
 import { MoveDown } from "lucide-react";
-// import ArrowDownwardTwoToneIcon from "@mui/icons-material/ArrowDownwardTwoTone";
 import { Link } from "react-router-dom";
 import riders from "../assets/gallery/pic15.jpg";
 
@@ -61,7 +60,7 @@ function About() {
         </section>
 
         {/* Sticky Nav */}
-        <nav className="mt-8 hidden lg:block pl-6 sticky top-[80px] bg-white text-gray-800 font-bold z-20">
+        <nav className="mt-8 hidden lg:block pl-6 sticky top-[95px] bg-white text-gray-800 font-bold z-20">
           <ul className="flex space-x-8 py-6">
             <li className="cursor-pointer relative group">
               <a href="#our-story">Our Story</a>

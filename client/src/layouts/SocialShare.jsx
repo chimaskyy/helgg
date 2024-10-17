@@ -1,4 +1,3 @@
-import React from "react";
 import {
   FacebookShareButton,
   TwitterShareButton,
@@ -16,32 +15,40 @@ function SocialShare() {
   return (
     <div className="flex space-x-4">
       {/* Facebook Share */}
-      <a href={shareUrl}>
-        <FacebookShareButton url={shareUrl}>
-          <FacebookIcon size={40} round={true} />
-        </FacebookShareButton>
-      </a>
+      <div className="bg-white p-2">
+        <a href={shareUrl}>
+          <FacebookShareButton url={shareUrl}>
+            <FacebookIcon size={40} round={true} />
+          </FacebookShareButton>
+        </a>
+      </div>
 
       {/* Twitter Share */}
-      <a href={shareUrl}>
-        <TwitterShareButton url={shareUrl}>
-          <XIcon size={40} round={true} />
-        </TwitterShareButton>
-      </a>
+      <div className="bg-white p-2">
+        <a href={shareUrl}>
+          <TwitterShareButton url={shareUrl}>
+            <XIcon size={40} round={true} />
+          </TwitterShareButton>
+        </a>
+      </div>
 
       {/* WhatsApp Share */}
-      <a href={shareUrl}>
-        <WhatsappShareButton url={shareUrl}>
-          <WhatsAppIcon size={40} round={true} />
-        </WhatsappShareButton>
-      </a>
+      <div className="bg-white p-2">
+        <a href={shareUrl}>
+          <WhatsappShareButton url={shareUrl}>
+            <WhatsAppIcon size={40} round={true} />
+          </WhatsappShareButton>
+        </a>
+      </div>
 
       {/* LinkedIn Share */}
-      <a href={shareUrl}>
-        <LinkedinShareButton url={shareUrl}>
-          <LinkedInIcon size={40} round={true} />
-        </LinkedinShareButton>
-      </a>
+      <div className="bg-white p-2">
+        <a href={shareUrl}>
+          <LinkedinShareButton url={shareUrl}>
+            <LinkedInIcon size={40} round={true} />
+          </LinkedinShareButton>
+        </a>
+      </div>
     </div>
   );
 }

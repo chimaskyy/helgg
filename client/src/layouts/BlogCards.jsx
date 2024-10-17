@@ -1,19 +1,16 @@
 /* eslint-disable react/prop-types */
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-const BlogCard1 = ({ title, url, imageUrl }) => {
+const BlogCard1 = ({ title, url, image }) => {
   return (
     <div className=''>
-      {/* <Link to={Blog}>Hello</Link> */}
-      <a
-        href={url}
-        target='_blank'
-        rel='noopener noreferrer'
+      <Link
+        to={url}
         className='block w-[340px] h-[365px] relative overflow-hidden group rounded-[4px]'
       >
-        <div className='absolute w-full h-full bg-black z-20 opacity-50'></div>
+        <div className='absolute w-full h-full '></div>
         <img
-          src={imageUrl}
+          src={image}
           alt={title}
           className='absolute w-full h-full object-cover z-10 group-hover:scale-[1.1] transition-transform ease duration-700'
         />
@@ -52,7 +49,7 @@ const BlogCard1 = ({ title, url, imageUrl }) => {
             </span>
           </div>
         </article>
-      </a>
+      </Link>
     </div>
   );
 };
@@ -61,8 +58,8 @@ export const BlogCard2 = ({ title, time, imageUrl, url }) => {
   return (
     <div className=''>
       {/* <Link to={Blog}>Hello</Link> */}
-      <a
-        href={url}
+      <Link
+        to={url}
         target='_blank'
         rel='noopener noreferrer'
         className='block w-[500px] h-[400px] relative overflow-hidden group transition rounded-[4px] mb-6'
@@ -86,7 +83,7 @@ export const BlogCard2 = ({ title, time, imageUrl, url }) => {
             </p>
           </div>
         </article>
-      </a>
+      </Link>
     </div>
   );
 };
