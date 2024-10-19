@@ -19,7 +19,7 @@ function About() {
   return (
     <>
       <main className="">
-        <section className={`mt-24 relative ${sects} `}>
+        <section className={` ${sects} `}>
           <div className="flex flex-col lg:flex-row justify-between  lg:items-start lg:gap-12">
             {/* Text Section */}
             <div className="flex-1 mb-8 lg:mb-0">

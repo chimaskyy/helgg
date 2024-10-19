@@ -98,7 +98,7 @@ export default function Header() {
                 `text-lg font-semibold leading-6 ${
                   isActive
                     ? "text-customBlue"
-                    : "text-gray-900 hover:text-gray-600 hover-bg-gray-200 text-xl"
+                    : "text-gray-700 hover:text-gray-500 hover-bg-gray-200 text-xl"
                 }`
               }
             >
