@@ -11,7 +11,11 @@ function Download() {
             <div className="p-8 top-0 lg:m-8 text-white mb-6 font-roboto lg:w-2/3">
               <h1 className="mb-8 mt-8">GET THE APP</h1>
               <h2 className="font-roboto font-bold mb-12 text-5xl lg:text-8xl">
-                Download the <span className="text-customGreen">Helgg</span> App
+                Download the {""}
+                <span className="growth__background-overlay inline-block relative before:content-[''] before:absolute before:left-0 before:right-0 before:bottom-1 before:h-2 hover:before:h-20 lg:hover:before:h-20 before:bg-green-300 before:-z-10 ">
+                  Helgg
+                </span>{" "}
+                App
               </h2>
               <p className="text-roboto font-bold text-gray-400 text-lg">
                 Don’t forget to leave us a rating or feedback on the <br /> app

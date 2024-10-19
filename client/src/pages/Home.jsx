@@ -12,6 +12,8 @@ import { useState } from "react";
 import { Player } from "@lottiefiles/react-lottie-player";
 import Carousel from "../layouts/Carousel";
 import { Link } from "react-router-dom";
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+
 
 const sectionStyle = {
   backgroundImage: `url(${banner6})`,

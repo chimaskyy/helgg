@@ -15,6 +15,7 @@ export default {
       colors: {
         customGreen: "rgb(173, 237, 171)",
         customBlue: "rgb(26, 115, 232)",
+        deepAzure: '#171F26',
       },
       boxShadow: {
         "5xl": "0 20px 50px rgba(0, 0, 0, 0.3)",
