@@ -1,10 +1,7 @@
 import pic8 from "../assets/Images/blog_image_2.jpeg";
-import team from "../assets/gallery/mteam.jpeg";
-import team2 from "../assets/Images/team.png";
 import first from "../assets/gallery/firstPos.jpeg";
 import second from "../assets/gallery/secondPos.jpeg";
 import third from "../assets/gallery/thirdPos.jpeg";
-import pic3 from "../assets/gallery/pic3.jpg";
 import { MoveLeft, MoveRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import SocialShare from "../layouts/SocialShare";
@@ -22,12 +19,12 @@ function Blog2() {
             Naira Equity-Free Funding
           </h1>
         </header>
-        <div className="prose prose-lg max-w-none">
+        <div className=" max-w-none">
           <img
             src={pic8}
-            width={800}
-            height={400}
-            className="w-full rounded-lg mb-8"
+            width={600}
+            height={100}
+            className="w-full rounded-lg mb-8 h-100"
             alt="Group of people riding helgg electric scooter"
           />
         </div>
@@ -114,7 +111,7 @@ function Blog2() {
         <h1 className="text-2xl font-bold my-8">2nd Place — HELGG Scooters</h1>
 
         <figure className="mb-8">
-          <img src={second} alt="Helgg team members" />
+          <img src={second} width={1200} height={400} alt="Helgg team members" />
           <figcaption className="text-lg text-gray-600 mt-2 text-center">
             Helgg team members
           </figcaption>

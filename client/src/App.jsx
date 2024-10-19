@@ -19,6 +19,7 @@ import Blog1 from './pages/Blog1';
 import Blog2 from './pages/Blog2';
 import Locations from './pages/Locations';
 import Blog from './pages/Blog';
+import NotFound from './pages/404';
 
 function App() {
   return (
@@ -97,6 +98,10 @@ function App() {
           <Route
             path='/how-helgg-scooters-interna-and-enactcare-won-paadcs-4-5-million-naira-equity-free-funding/'
             element={<Blog2 />}
+          />
+          <Route
+            path='*'
+            element={<NotFound />}
           />
         </Routes>
         <Footer />

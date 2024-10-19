@@ -31,7 +31,7 @@ const Home = () => {
         >
           <div className="absolute inset-0 bg-black opacity-70"></div>
           <div className="relative z-20 h-full flex flex-col justify-center items-center text-center px-4 sm:px-6 lg:px-8">
-            <h1 className="group font-roboto text-5xl justify-center text-white font-bold md:text-6xl lg:text-8xl mb-4 opacity-0 animate-slideIn delay-300">
+            <h1 className="animate-fade-right animate-once animate-duration-600 animate-delay-400 animate-ease-linear group font-roboto text-5xl justify-center text-white font-bold md:text-6xl lg:text-8xl mb-4 opacity-0 animate-slideIn delay-300">
               Embrace the Future of
               <br />
               <span className="relative inline-block">
@@ -40,7 +40,7 @@ const Home = () => {
                 <span className="absolute left-0 bottom-0 w-full flex items-center">
                   {/* Brush Highlight SVG */}
                   <svg
-                    className="w-full h-8 -mt-2 pt-5 lg:h-auto text-customGreen"
+                    className="animate-fade-right animate-once animate-duration-200 animate-delay-400 animate-ease-linear w-full h-8 -mt-2 ml-2  pt-5  text-customGreen lg:h-auto lg:ml-8"
                     viewBox="0 0 230 13"
                     xmlns="http://www.w3.org/2000/svg"
                     aria-hidden="true"
@@ -54,7 +54,7 @@ const Home = () => {
 
                   {/* Pencil SVG beside the brush highlight */}
                   <svg
-                    className="w-6 mt-1 -pt-1 lg:h-auto ml-2 text-white"
+                    className="animate-fade-right animate-once animate-duration-500 animate-delay-400 animate-ease-linear w-6 mt-1 -pt-1 lg:h-auto ml-2 text-white"
                     viewBox="0 0 51 51"
                     xmlns="http://www.w3.org/2000/svg"
                   >
@@ -298,7 +298,7 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-              <div className="md:w-1/2 md:pl-12 mt-24">
+              <div className="md:w-1/2 md:pl-12 mt-48">
                 <div className="mb-12">
                   <h1 className="font-roboto text-2xl text-gray-800 font-bold mb-4">
                     Electric Cars
@@ -312,7 +312,7 @@ const Home = () => {
                     <ChevronRightIcon className="ml-1 w-4 h-4" />
                   </button>
                 </div>
-                <div className="mt-24">
+                <div className="mt-32">
                   <h1 className="font-roboto text-gray-800 text-2xl font-bold ">
                     Electric Scooters
                   </h1>

@@ -14,19 +14,20 @@ import riders from "../assets/gallery/pic15.jpg";
 
 const sects = "m-4 p-4";
 const para = "text-xl text-gray-800 font-extrabold mb-8 pt-8";
-const head = "text-3xl font-bold mb-8 text-gray-800";
+const head = "text-3xl font-extrabold mb-8 text-gray-800";
 function About() {
   return (
     <>
-      <main>
+      <main className="">
         <section className={`mt-24 relative ${sects} `}>
-          <div className="flex flex-col lg:flex-row justify-between items-center lg:items-start lg:gap-12">
+          <div className="flex flex-col lg:flex-row justify-between  lg:items-start lg:gap-12">
             {/* Text Section */}
             <div className="flex-1 mb-8 lg:mb-0">
               <p className={para}>About Helgg</p>
               <h1 className={`${head} lg:text-7xl mt-4`}>
                 Helgg
-                <p>isn&apos;t just a company, it&apos;s an experience</p>
+                <br />
+                isn&apos;t just a company, it&apos;s an experience
               </h1>
               <a href="#our-story">
                 <div className="text-extrabold flex items-center space-x-2">
@@ -38,13 +39,13 @@ function About() {
                       color: "black",
                     }}
                   />
-                  <p className="mb-8">
+                  <p className="font-bold">
                     Scroll Down <br /> to Explore
                   </p>
                 </div>
               </a>
             </div>
-            <div className="relative flex-1 mt-32">
+            <div className="relative flex-1 lg:mt-32">
               <div className="animate-bounce">
                 <img
                   src={helgg1}

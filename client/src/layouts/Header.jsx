@@ -60,7 +60,7 @@ export default function Header() {
           <Link to="/download" className="flex-1 flex justify-center">
             <button
               aria-label="Google Play Store"
-              className="group relative items-center px-4 sm:px-6 py-2 sm:py-4 text-xs sm:text-sm rounded-full shadow-xl transition-transform transform bg-customGreen border-2 border-white hover:scale-105 hover:border-green-600 hover:text-white hover:bg-black hover:shadow-3xl focus:outline-none"
+              className="group relative items-center px-4 sm:px-6 py-2 sm:py-4 text-xs sm:text-sm rounded-full shadow-xl transition-transform transform bg-customGreen border-2 border-white hover:scale-105 hover:border-green-600 hover:text-white hover:bg-black hover:shadow-3xl focus:outline-none min-w-[130px] whitespace-nowrap"
             >
               <span className="group-hover:hidden text-sm font-bold">
                 Get the App

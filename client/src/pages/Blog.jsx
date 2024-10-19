@@ -19,14 +19,14 @@ const Blog = () => {
       id: 2,
       title:
         "How Helgg Scooters, Interna, and Enactcare won PAADCs 4.5 Million Naira Equity-Free Funding",
-      url: "/how-helgg-scooters-interna-and-enactcare-won-paadcs-4-5-million-naira-equity-free-funding/",
+      link: "/how-helgg-scooters-interna-and-enactcare-won-paadcs-4-5-million-naira-equity-free-funding/",
       imageUrl: pic2,
       time: "2 years ago",
     },
     {
       id: 3,
       title: "Revolutionizing the Electric Vehicle Industry",
-      url: "/revolutionizing-the-electric-vehicle-industry/",
+      link: "/revolutionizing-the-electric-vehicle-industry/",
       imageUrl: pic3,
       time: "2 years ago",
     },
@@ -35,13 +35,13 @@ const Blog = () => {
   return (
     <>
       <section className="bg-white">
-        <div className="bg-gray-900">
-          <div className="pt-20 mb-12 ml-4 max-w-[1060px] mx-auto">
-            <h1 className="text-[#acedab] text-4xl font-body font-bold">
+        <div className="bg-gray-900 px-4 sm:px-6 lg:px-8">
+          <div className="pt-16 sm:pt-20 mb-8 sm:mb-12 max-w-7xl mx-auto">
+            <h1 className="text-[#acedab] text-4xl font-body sm:text-4x font-bold">
               Our Blog
             </h1>
           </div>
-          <div className="text-white pb-6 mx-12 mb-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 max-w-[1060px] mx-auto">
+          <div className="text-white pb-12 gap-4 max-w-7xl mx-auto lg:gap-0 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 ">
             {blogsList.map((blog) => (
               <BlogCard1
                 key={blog.id}
@@ -65,7 +65,7 @@ const Blog = () => {
         ))}
       </div> */}
 
-        <div className="bg-[#222B35] text-white pt-16 pb-14">
+        <div className="bg-[#222B35] text-white py-24 pb-14">
           <BlogNewsletter />
         </div>
       </section>

@@ -4,7 +4,7 @@ import riders from "../assets/gallery/pic15.jpg";
 import competition from "../assets/Images/comptition.jpeg";
 import { ChevronRight } from "lucide-react";
 
-export default function Widget() {
+function Widget() {
   // Blog data array
   const blogPosts = [
     {
@@ -41,7 +41,7 @@ export default function Widget() {
         {blogPosts.map((post) => (
           <div
             key={post.id}
-            className="bg-white rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105"
+            className="bg-white overflow-hidden transition-transform duration-300 hover:scale-105"
           >
             <Link to={post.link} aria-label={post.title} className="block">
               <div className="relative aspect-video">
@@ -80,3 +80,5 @@ export default function Widget() {
     </section>
   );
 }
+
+export default Widget;
