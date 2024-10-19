@@ -1,3 +1,4 @@
+
 import Logo from "../assets/gallery/helgg-logo-mint-and-cobalt.png";
 import { useState, useEffect, useRef } from "react";
 import { Link, NavLink } from "react-router-dom";
