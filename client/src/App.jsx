@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import Header from './layouts/Header';
 import Footer from './layouts/Footer';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
@@ -17,8 +16,10 @@ import Agreement from './pages/Agreement';
 import Safety from './pages/Safety';
 import Store from './pages/Store';
 import Blog1 from './pages/Blog1';
+import Blog2 from './pages/Blog2';
 import Locations from './pages/Locations';
 import Blog from './pages/Blog';
+import NotFound from './pages/404';
 
 function App() {
   return (
@@ -93,6 +94,14 @@ function App() {
           <Route
             path='/how-helgg-scooters-is-enabling-planet-friendly-transport-in-nigeria/'
             element={<Blog1 />}
+          />
+          <Route
+            path='/how-helgg-scooters-interna-and-enactcare-won-paadcs-4-5-million-naira-equity-free-funding/'
+            element={<Blog2 />}
+          />
+          <Route
+            path='*'
+            element={<NotFound />}
           />
         </Routes>
         <Footer />

@@ -23,14 +23,14 @@
     "@mui/material": "^6.1.1",
     "@splidejs/react-splide": "^0.7.12",
     "@splidejs/splide-extension-auto-scroll": "^0.5.3",
-    "framer-motion": "^11.11.8",
     "lucide-react": "^0.447.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-player": "^2.16.0",
     "react-router-dom": "^6.26.2",
     "react-share": "^5.1.0",
-    "react-toastify": "^10.0.6"
+    "react-toastify": "^10.0.6",
+    "tailwindcss-animated": "^1.1.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",
