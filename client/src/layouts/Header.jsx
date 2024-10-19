@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import Logo from '../assets/helgg-logo-mint-and-cobalt.png';
+import Logo from '../assets/gallery/helgg-logo-mint-and-cobalt.png';
 import { Link, NavLink } from 'react-router-dom';
 import Sidemenu from './SideMenu';
 
