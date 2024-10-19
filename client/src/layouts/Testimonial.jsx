@@ -2,6 +2,11 @@ import { useState, useEffect } from "react";
 import { MessageCircleMore } from "lucide-react";
 import Hand from "../assets/gallery/hand.png";
 import Domi from "../assets/gallery/Domi.jpeg";
+import Dean from "../assets/gallery/Dean.png";
+import Faji from "../assets/gallery/Faji.png";
+import Joy from "../assets/gallery/Joy.png";
+import Adeolu from "../assets/gallery/Adeola.jpg";
+import Daniel from "../assets/gallery/Daniel.jpg";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 
@@ -17,7 +22,7 @@ const Testimonial = () => {
     },
     {
       rating: 4,
-      avatar: Domi,
+      avatar: Joy,
       name: "Joy Eromonsele",
       title: "Student",
       quote:
@@ -25,7 +30,7 @@ const Testimonial = () => {
     },
     {
       rating: 5,
-      avatar: Domi,
+      avatar: Adeolu,
       name: "Adeolu Adegboye",
       title: "Student",
       quote:
@@ -33,7 +38,7 @@ const Testimonial = () => {
     },
     {
       rating: 4,
-      avatar: Domi,
+      avatar: Daniel,
       name: "Daniel Jesusegun",
       title: "Student",
       quote:
@@ -41,7 +46,7 @@ const Testimonial = () => {
     },
     {
       rating: 4,
-      avatar: Domi,
+      avatar: Dean,
       name: "Dean Obi",
       title: "Student",
       quote:
@@ -50,7 +55,7 @@ const Testimonial = () => {
 
     {
       rating: 5,
-      avatar: Domi,
+      avatar: Faji,
       name: "Faji Olaotan",
       title: "Student",
       quote:

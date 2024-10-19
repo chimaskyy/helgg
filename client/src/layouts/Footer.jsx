@@ -132,44 +132,44 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-gray-800 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center p-6 lg:justify-around">
+          <div className="flex flex-col md:flex-row gap-6  items-center p-6 lg:justify-around">
             <div className="flex items-center mb-4 md:mb-0">
               <Link to="/">
                 <img src={Logo} alt="Logo" width={100} height={100} />{" "}
               </Link>
             </div>
-            <nav className="flex flex-wrap justify-center md:justify-end gap-4 mb-4 md:mb-0">
+            <nav className="space-x-2 flex flex-wrap justify-center md:justify-end  gap-4 mb-4 md:mb-0">
               <Link to="/blog" className="text-sm hover:text-white">
                 <WysiwygIcon
                   // style={{ fontSize: 20 }}
-                  className="hidden"
+                  className="hidden mr-2"
                 />
                 Blog
               </Link>
               <Link to="/privacy-policy" className="text-sm hover:text-white">
                 <VerifiedUserTwoToneIcon
                   // style={{ fontSize: 20 }}
-                  className="hidden lg:block"
+                  className="hidden md:inline mr-2"
                 />
                 Privacy Policy
               </Link>
               <Link to="/user-agreement" className="text-sm hover:text-white">
                 <VerifiedUserTwoToneIcon
                   // style={{ fontSize: 20 }}
-                  className="hidden"
+                  className="hidden  mr-2"
                 />
                 User Agreement
               </Link>
               <Link to="/faq" className="text-sm hover:text-white">
                 <LiveHelpTwoToneIcon
                   // style={{ fontSize: 20 }}
-                  className="hidden"
+                  className="hidden  mr-2"
                 />
                 FAQ
               </Link>
             </nav>
           </div>
-          <div className="flex justify-center mt-8 space-x-12 p-8">
+          <div className="flex justify-center mt-6 space-x-12 p-8">
             <a
               target="_blank"
               href="https://www.instagram.com/helgg_/"

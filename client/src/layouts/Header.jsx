@@ -60,7 +60,7 @@ export default function Header() {
           <Link to="/download" className="flex-1 flex justify-center">
             <button
               aria-label="Google Play Store"
-              className="group relative items-center px-4 sm:px-6 py-2 sm:py-4 text-xs sm:text-sm rounded-full shadow-xl transition-transform transform bg-customGreen border-2 border-white hover:scale-105 hover:border-green-600 hover:text-white hover:bg-black hover:shadow-3xl focus:outline-none"
+              className="group relative items-center px-4 sm:px-6 py-2 sm:py-4 text-xs sm:text-sm rounded-full shadow-xl transition-transform transform bg-customGreen border-2 border-white hover:scale-105 hover:border-green-600 hover:text-white hover:bg-black hover:shadow-3xl focus:outline-none min-w-[130px] whitespace-nowrap"
             >
               <span className="group-hover:hidden text-sm font-bold">
                 Get the App
@@ -141,7 +141,7 @@ export default function Header() {
               onClick={() => setMobileMenuOpen(false)}
             >
               <span className="sr-only">Helgg</span>
-              <img className="h-8 w-auto" src={Logo} alt="" />
+              <img className="h-12 w-auto" src={Logo} alt="" />
             </Link>
             <button
               type="button"
@@ -154,13 +154,13 @@ export default function Header() {
           </div>
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
-              <div className="space-y-2 py-6">
+              <div className="space-y-2 py-12">
                 {navigation.map((item) => (
                   <NavLink
                     key={item.title}
                     to={item.path}
                     className={({ isActive }) =>
-                      `-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 ${
+                      `-mx-3 block rounded-lg px-3 py-2 text-base text-xl font-semibold leading-7 ${
                         isActive
                           ? "bg-gray-50 text-blue-600"
                           : "text-gray-900 hover:bg-gray-50"
