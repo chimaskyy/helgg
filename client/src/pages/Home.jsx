@@ -24,7 +24,7 @@ const Home = () => {
 
   return (
     <>
-      <main className="bg-gray-50">
+      <main id="main-content" role="main" className="bg-gray-50">
         {/* Hero section */}
         <section
           className="mx-4 mb-2 mt-0 rounded-3xl shadow-5xl  relative bg-cover bg-center object-cover bg-no-repeat h-[100vh] overflow-hidden md:mx-6 lg:mx-24 lg:mb-16 lg:mt-0"
