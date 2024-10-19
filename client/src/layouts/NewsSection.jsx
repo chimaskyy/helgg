@@ -27,8 +27,8 @@ function Widget() {
       id: 3,
       imgSrc: helgg,
       date: "2 years ago",
-      title: "Revolutionizing the Electric Vehicle Industry",
-      link: "/revolutionizing-the-electric-vehicle-industry/",
+      title: "Revolutionalizing the Electric Vehicle Industry",
+      link: "/revolutionalizing-the-electric-vehicle-industry/",
     },
   ];
 

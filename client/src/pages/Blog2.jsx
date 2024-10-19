@@ -111,7 +111,12 @@ function Blog2() {
         <h1 className="text-2xl font-bold my-8">2nd Place — HELGG Scooters</h1>
 
         <figure className="mb-8">
-          <img src={second} width={1200} height={400} alt="Helgg team members" />
+          <img
+            src={second}
+            width={1200}
+            height={400}
+            alt="Helgg team members"
+          />
           <figcaption className="text-lg text-gray-600 mt-2 text-center">
             Helgg team members
           </figcaption>
@@ -250,7 +255,7 @@ function Blog2() {
         </div>
         <div className="mt-8 flex flex-col sm:flex-row justify-between items-start sm:items-center space-y-6 sm:space-y-0">
           <div className="mt-8 flex flex-col items-start">
-            <Link to="/how-helgg-scooters-interna-and-enactcare-won-paadcs-4-5-million-naira-equity-free-funding/">
+            <Link to="/revolutionalizing-the-electric-vehicle-industry/">
               <button
                 type="button"
                 size="lg"

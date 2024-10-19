@@ -1,6 +1,5 @@
-// import { useState } from 'react';
 import BlogCard1 from "../layouts/BlogCards";
-import { BlogCard2 } from "../layouts/BlogCards";
+// import { BlogCard2 } from "../layouts/BlogCards";
 import pic1 from "../assets/gallery/pic15.jpg";
 import BlogNewsletter from "../layouts/BlogNewsletter";
 import pic2 from "../assets/Images/blog_image_2.jpeg";
@@ -26,7 +25,7 @@ const Blog = () => {
     {
       id: 3,
       title: "Revolutionizing the Electric Vehicle Industry",
-      link: "/revolutionizing-the-electric-vehicle-industry/",
+      link: "/revolutionalizing-the-electric-vehicle-industry/",
       imageUrl: pic3,
       time: "2 years ago",
     },
