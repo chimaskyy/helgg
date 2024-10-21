@@ -163,7 +163,7 @@ const Home = () => {
         </section>
 
         {/* Video Player Section */}
-        <section className="px-4 py-12 sm:px-6 lg:px-8 lg:py-24">
+        <section className="px-4 py-12 sm:px-6 lg:px-24 lg:py-24">
           <div className="max-w-7xl mx-auto">
             <div
               className="relative w-full aspect-video cursor-pointer rounded-2xl sm:rounded-3xl lg:rounded-[40px] overflow-hidden"
@@ -205,7 +205,7 @@ const Home = () => {
         </section>
 
         {/* Features Section */}
-        <section className="px-1 py-12 sm:px-6 lg:px-8 lg:py-24">
+        <section className="px-1 py-12 sm:px-6 lg:px-24 lg:py-24">
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-col lg:flex-row items-center text-gray-800 rounded-lg overflow-hidden">
               <div className="w-full p-6  flex justify-center lg:justify-start lg:p-12 lg:w-1/2">
@@ -235,7 +235,7 @@ const Home = () => {
             </div>
           </div>
         </section>
-        <section className="px-4 py-12 sm:px-6 lg:px-8 lg:py-24">
+        <section className="px-4 py-12 sm:px-6 lg:px-24 lg:py-24">
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-col-reverse lg:flex-row items-center">
               <div className="w-full lg:w-1/2 lg:pr-12 mt-8 lg:mt-0">
@@ -264,7 +264,7 @@ const Home = () => {
             </div>
           </div>
         </section>
-        <section className="bg-gray-100 px-4 py-12 sm:px-6 lg:px-8 lg:py-24">
+        <section className="bg-gray-100 px-4 py-12 sm:px-6 lg:px-24 lg:py-24">
           <div className="max-w-7xl mx-auto">
             <h1 className="font-roboto text-2xl text-center text-gray-800 font-bold mb-12 md:text-center sm:text-4xl lg:text-5xl lg:center">
               A seamless interconnected electric vehhicle ecosystem
@@ -300,7 +300,7 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-              <div className="md:w-1/2 md:pl-12 mt-48">
+              <div className="md:w-1/2 md:pl-12 mt-48 lg:px-24">
                 <div className="mb-12">
                   <h1 className="font-roboto text-2xl text-gray-800 font-bold mb-4">
                     Electric Cars
@@ -337,7 +337,7 @@ const Home = () => {
             </div>
           </div>
         </section>
-        <section className="px-4 py-12 sm:px-6 lg:px-8 lg:py-24">
+        <section className="px-4 py-12 sm:px-6 lg:px-24 lg:py-24">
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-col lg:flex-row items-center">
               <div className="w-full lg:w-1/2 lg:pr-8">
@@ -367,7 +367,7 @@ const Home = () => {
             </div>
           </div>
         </section>
-        <section className="py-12 px-0 sm:px-6 lg:px-8">
+        <section className="py-12 px-0 sm:px-6 lg:px-24">
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-col items-center lg:gap-4 lg:flex-row-reverse  ">
               <div className="font-roboto px-4  w-full space-y-6 lg:w-1/2 ">

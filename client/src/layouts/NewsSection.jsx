@@ -69,13 +69,17 @@ function Widget() {
         ))}
       </div>
       <div className="mt-10 text-center">
-        <button
-          aria-label="View more blog posts"
-          className="bg-customGreen  font-bold py-3 px-6 rounded-full inline-flex items-center transition-all duration-300 hover:bg-green-600 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50"
-        >
-          View more
-          <ChevronRight className="ml-2 w-5 h-5" />
-        </button>
+        <Link
+          to="/blog"
+          >
+          <button
+            aria-label="View more blog posts"
+            className="bg-customGreen  font-bold py-3 px-6 rounded-full inline-flex items-center transition-all duration-30 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-green-200 focus:ring-opacity-50"
+          >
+            View more
+            <ChevronRight className="ml-2 w-5 h-5" />
+          </button>
+        </Link>
       </div>
     </section>
   );

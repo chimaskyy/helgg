@@ -33,7 +33,7 @@ const ContentSection = () => {
     },
   ];
   return (
-    <section className="py-12 px-8 sm:px-6 bg-gray-50 lg:px-8 ">
+    <section className="py-12 px-8 sm:px-6 bg-gray-50 lg:px-28 ">
       <div className="max-w-7xl mx-auto">
         <h1 className="font-roboto text-4xl text-gray-800 font-bold text-center  mb-8 sm:mb-12">
           How to Helgg
@@ -57,7 +57,7 @@ const ContentSection = () => {
               ></div>
               <div className="absolute inset-0 p-6 flex flex-col items-start justify-end text-white">
                 <span className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <step.icon style={{fontSize: 68}} />
+                  <step.icon style={{ fontSize: 68 }} />
                 </span>
                 <h6 className="font-bold text-gray-200 mt-2 text-lg group-hover:text-xl transition-all duration-300">
                   {step.description}
